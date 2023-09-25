@@ -1,0 +1,190 @@
+<div class="home_banner_band">
+  <div class="container">
+      <div class="home_banner_content">
+        {% if section.settings.heading != blank %}
+        <h1>{{ section.settings.heading }}</h1>
+        {% endif %}
+        {% if section.settings.content != blank %}
+        <p class="section-descrip">{{ section.settings.content }}</p>
+        {% endif %}
+        {% if section.settings.mo_image != blank and section.settings.background_mobile == false%}
+          <div class="banner_mo_img">
+            <img src="{{ section.settings.mo_image  | img_url : 'master' }} }}">
+          </div>
+        {% endif %}
+        {% if section.settings.button_text != blank and section.settings.button_link %}
+        <a href="{{ section.settings.button_link }}" class="primary-btn">{{ section.settings.button_text }}</a>
+        {% endif %}
+        {% if section.settings.small_text != blank %}
+          <p class="small-texts"><span>{{ section.settings.small_text }}</span></p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{section.id}} .home_banner_band {
+    background-image:url({{ section.settings.main_image | img_url: 'master' }});
+    background-size: cover;
+  }
+{% if section.settings.desktop_align %}
+#shopify-section-{{section.id}} .home_banner_content h1 {
+      text-align: center;
+      font-family: "FilsonProBold" !important;
+    }
+     #shopify-section-{{section.id}} .home_banner_content .primary-btn {
+          margin: 0 auto;
+          font-family: "FilsonProBold" !important;
+     }
+    #shopify-section-{{section.id}} .home_banner_content {
+      text-align: center;
+      width: 100%;
+    }
+   #shopify-section-{{section.id}} .section-descrip {
+      max-width: 430px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+  @media (max-width: 1440px) and (min-width: 767px){
+    #shopify-section-{{section.id}} .home_banner_band {
+      background-position: 50% 100%!important;
+    }
+
+
+  }
+{% endif %}
+{% if section.settings.background_mobile %}
+  @media (max-width: 767px) and (min-width: 430px){
+    #shopify-section-{{section.id}}  .home_banner_content {
+          margin-top: calc({{ section.settings.content_margin_top}}px + 42vw) !important;
+      }
+  }
+{% endif %}
+@media (max-width: 767px) {
+    {% if section.settings.background_mobile and section.settings.mo_image != blank %}
+      #shopify-section-{{section.id}} .home_banner_band {
+        background-image:url({{ section.settings.mo_image | img_url: 'master' }});
+        background-position: 50% 0% !important;
+        background-size: cover;
+      }
+    {% endif %}
+    {% if section.settings.background_mobile %}
+      #shopify-section-{{section.id}}  .home_banner_content {
+          margin-top: {{ section.settings.content_margin_top}}px;
+          max-width: 100%;
+      }
+      #shopify-section-{{section.id}}  .home_banner_content p.section-descrip {
+        font-size: 17px !important;
+      }
+      #shopify-section-{{section.id}} .home_banner_band .primary-btn {
+        margin-top: 30px;
+        width: 100%;
+        font-family: FilsonProBold!important;
+      }
+    {% endif %}
+    .home_banner_content h1 {
+        margin-top: 0 !important;
+        margin-bottom: 25px;
+        padding-bottom: 0;
+    }
+    {% if section.settings.background_mobile == false %}
+      .home_banner_band {
+          background-image: none !important;
+          padding: 70px 0 30px;
+      }
+    {% endif %}
+    .home_banner_content p.section-descrip {
+        margin-bottom: 0px;
+        font-size: 20px !important;
+        letter-spacing: .2px;
+    }
+
+    .banner_mo_img img {
+        display: block;
+        width: 78%;
+        margin: 0 auto;
+    }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Home Banner Section",
+  "tag": "section",
+  "class": "home_banner_section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "main_image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "mo_image"
+    },
+    {
+      "type": "checkbox",
+      "id": "background_mobile",
+      "label": "Make Mobile Image as a background",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id":"content_margin_top",
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "unit": "px",
+      "label": "Content top padding in mobile",
+      "default":0,
+      "info": "Works if the mobile image is used as a background"
+    },
+    {
+      "type": "text",
+      "label": "Banner Heading",
+      "id": "heading"
+    },
+    {
+      "type": "textarea",
+      "label": "Banner Content",
+      "id": "content"
+    },
+    {
+      "type": "text",
+      "label": "Button Text",
+      "id": "button_text"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+    {
+      "type": "text",
+      "label": "Banner Small Text",
+      "id": "small_text"
+    },
+    {
+      "type": "checkbox",
+      "id": "desktop_align",
+      "label": "Desktop content align center",
+      "default": false
+    }   
+    
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Home Banner Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

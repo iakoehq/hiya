@@ -1,0 +1,87 @@
+<div class="custom-review" style="display:none;">
+  <div data-oke-reviews-product-listing-rating class="kids-daily-essential">{{ all_products["kids-daily-essential"].metafields.okendo.ProductListingSnippet }}</div>
+  <div data-oke-reviews-product-listing-rating class="kids-daily-probiotic">{{ all_products["kids-daily-probiotic"].metafields.okendo.ProductListingSnippet }}</div>
+</div>
+
+{% assign essential_price =  all_products['kids-daily-essential'].price | money_without_trailing_zeros  %}
+{% assign probiotic_price =  all_products['kids-daily-probiotic'].price | money_without_trailing_zeros  %}
+{% assign half_price1 = all_products['kids-daily-essential'].price | times: 0.5 %}
+{% assign no_trailing1 = half_price1 | money_without_trailing_zeros %}
+{% assign half_price2 = all_products['kids-daily-probiotic'].price | times: 0.5 %}
+{% assign no_trailing2 = half_price2 | money_without_trailing_zeros %}
+
+<div class="our_kids_product_wrapper" {% if template.name != 'index' %} style="display: none;" {% else %} style="display: block;"{% endif %}> 
+ <div class="our_kids_product"> 
+   <p class="order_badge">50% OFF YOUR FIRST ORDER!</p> 
+   <h2>Our Kids Products</h2> 
+   <ul> 
+     <li> 
+        <div class="kids_product_img">
+          <a href="https://hiyahealth.com/products/kids-daily-essential" >
+            <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/hiya-multivitamin-kit-1.jpg?v=1672327788" />
+          </a>
+        </div> 
+       <a href="https://hiyahealth.com/products/kids-daily-essential" >
+         <h3>Multivitamin</h3>
+        </a>
+         <p class="rating"> 
+          <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/StarRating_icon_e1ee76a8-1373-4c17-9a37-995aa811b72d.png?v=1671172634" /><span></span>
+         </p> 
+         <p class="price"><s>{{ essential_price }}</s> {{ no_trailing1 }}/kid</p>
+      
+   </li>
+   <li>
+         <div class="kids_product_img">
+           <a href="https://hiyahealth.com/products/kids-daily-probiotic" >
+             <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/hiya-probiotic-kit-1.jpg?v=1672327788" /><span class="badge">NEW</span>
+           </a>
+         </div> 
+         <a href="https://hiyahealth.com/products/kids-daily-probiotic">
+           <h3>Probiotic</h3>
+         </a> 
+         <p class="rating"> <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/StarRating_icon_e1ee76a8-1373-4c17-9a37-995aa811b72d.png?v=1671172634" /><span></span> </p> 
+         <p class="price"><s>{{ probiotic_price }}</s> {{ no_trailing2 }}/kid</p> 
+       </li> 
+   </ul> 
+ </div>
+</div>
+
+ <script>
+  $(document).ready(function(){
+      $('.prod-variants').prependTo('#tt-pageContent .shogun-root');
+      var kids_daily_essential = $('.custom-review .kids-daily-essential .okeReviews-reviewsSummary-ratingCount span:first-child').text();
+      var kids_daily_probiotic = $('.custom-review .kids-daily-probiotic .okeReviews-reviewsSummary-ratingCount span:first-child').text();
+      $('.our_kids_product_wrapper ul li:nth-child(1) p.rating span').text(kids_daily_essential);
+      $('.our_kids_product_wrapper ul li:nth-child(2) p.rating span').text(kids_daily_probiotic);    
+  })
+</script>
+ 
+
+<style>
+@media (max-width: 767px) {
+    .our_kids_product_wrapper {
+        padding-bottom: 0;
+    }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Our Kids Product",
+  "tag": "section",
+  "class": "our_kids_product_wrapper",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Our Kids Product"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

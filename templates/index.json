@@ -1,0 +1,209 @@
+{
+  "sections": {
+    "33602132-60c6-4435-9243-47b8753122f4": {
+      "type": "home-banner",
+      "settings": {
+        "main_image": "shopify:\/\/shop_images\/hero-content.jpg",
+        "mo_image": "shopify:\/\/shop_images\/hero-content_mob.jpg",
+        "background_mobile": true,
+        "content_margin_top": 360,
+        "heading": "It’s Finally Here — Kids Bedtime Essentials",
+        "content": "Give your kids the support they need <br>for easy nights of calm and relaxation.",
+        "button_text": "Shop",
+        "button_link": "shopify:\/\/products\/kids-bedtime-essentials",
+        "small_text": "For Kids 2+ | Delivered Fresh Monthly",
+        "desktop_align": true
+      }
+    },
+    "c0c82be2-485a-4183-a650-7f6dffcdb538": {
+      "type": "Reimagining-daily-sec",
+      "blocks": {
+        "0c35e162-dd0a-4a43-9583-5954f6d6b57c": {
+          "type": "image",
+          "settings": {
+            "main_image": "shopify:\/\/shop_images\/hiya-lifelong-health-icon-1_822bc149-46b6-4e90-b688-0b60a1420591.svg",
+            "reimagining_list_heading": "DESIGNED FOR LIFELONG HEALTH*",
+            "reimagining_list_content": "Our pediatricians studied diets & genetics to include what's ideal for kids of all ages.",
+            "reimagining_list_link_text": "Learn more...",
+            "reimagining_list_link": "https:\/\/hiyahealth.com\/pages\/our-vitamin"
+          }
+        },
+        "cb91252c-6d53-48eb-a691-149261b6a8b9": {
+          "type": "image",
+          "settings": {
+            "main_image": "shopify:\/\/shop_images\/hiya-essentials-icon-2_69011ff2-ce15-447c-9107-ab6881abe453.svg",
+            "reimagining_list_heading": "SIMPLIFIED TO <br class=\"hide-it\"> THE ESSENTIALS",
+            "reimagining_list_content": "Supercharged with 15 essential vitamins -- with no added sugar and no gummy junk.",
+            "reimagining_list_link_text": "Learn more...",
+            "reimagining_list_link": "https:\/\/hiyahealth.com\/pages\/ingredients"
+          }
+        },
+        "1bb1b1b9-04b9-4d9c-9fb4-ef7d03add909": {
+          "type": "image",
+          "settings": {
+            "main_image": "shopify:\/\/shop_images\/vitamins-made-fun.png",
+            "reimagining_list_heading": "VITAMINS MADE FUN",
+            "reimagining_list_content": "Includes refillable bottle and sticker pack so kids can personalize their bottle.",
+            "reimagining_list_link_text": "Learn more...",
+            "reimagining_list_link": "https:\/\/hiyahealth.com\/pages\/eco-pack"
+          }
+        }
+      },
+      "block_order": [
+        "0c35e162-dd0a-4a43-9583-5954f6d6b57c",
+        "cb91252c-6d53-48eb-a691-149261b6a8b9",
+        "1bb1b1b9-04b9-4d9c-9fb4-ef7d03add909"
+      ],
+      "settings": {
+        "reimagining_heading": "Reimagining the daily children's vitamin",
+        "reimagining_content": "Formulated by leading nutritionists, pediatricians, and parents who care.",
+        "bottom_link": "https:\/\/hiyahealth.com\/products\/kids-daily-essential"
+      }
+    },
+    "cd25e307-c167-4865-b9fa-715495903962": {
+      "type": "our_kids_products",
+      "settings": {
+      }
+    },
+    "85c0029a-7a98-49ab-ad55-06b1d2b70b71": {
+      "type": "good-bye-suger-sec",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/download_11.webp",
+        "heading": "Goodbye<br>sugar monsters",
+        "content": "As a precaution, millions of parents give their kids vitamins. But look closely and you’ll see these vitamins are often filled with added sugar, unnecessary dyes, and gummy additives not ideal for growing bodies.",
+        "button_text": "See the Difference",
+        "button_text_link": "https:\/\/hiyahealth.com\/pages\/our-vitamin"
+      }
+    },
+    "0efd9b06-1d89-4ab8-9cd0-e65feff47699": {
+      "type": "experts_are_saying",
+      "blocks": {
+        "467e580f-d98e-4a43-a12a-5e6330d1d1af": {
+          "type": "image",
+          "settings": {
+            "main_image": "shopify:\/\/shop_images\/Dr-Mark-Hyman.png",
+            "heading1": "“So many vitamins are loaded with excess sugar and gummy junk. Hiya is really clean.”",
+            "heading2": "Dr. Mark Hyman",
+            "heading3": "New York Times Best Selling Author"
+          }
+        },
+        "e430167e-51c6-4584-a36e-3ce4476abab5": {
+          "type": "image",
+          "settings": {
+            "main_image": "shopify:\/\/shop_images\/Dr-Monica-Madan.png",
+            "heading1": "“Hiya gives my patients the nutrients they need without the sugary junk.”",
+            "heading2": "Dr. Monica Madan",
+            "heading3": "Beverly Hills Pediatric Specialist"
+          }
+        },
+        "470686fb-f160-4d57-bc1a-66c2cef64ad9": {
+          "type": "image",
+          "settings": {
+            "main_image": "shopify:\/\/shop_images\/Dr-Jonathan-Snow.png",
+            "heading1": "“I recommend Hiya over sugar-filled gummies to all the patients in my office.”",
+            "heading2": "Dr. Jonathan Snow",
+            "heading3": "Pediatric Dentist"
+          }
+        }
+      },
+      "block_order": [
+        "467e580f-d98e-4a43-a12a-5e6330d1d1af",
+        "e430167e-51c6-4584-a36e-3ce4476abab5",
+        "470686fb-f160-4d57-bc1a-66c2cef64ad9"
+      ],
+      "settings": {
+        "small_image": "shopify:\/\/shop_images\/hiya-testimonials-icon_f816140c-7dc8-44aa-9298-3b13c462815c.svg",
+        "top_heading": "What the experts are saying"
+      }
+    },
+    "a411d4ff-767a-47e6-b3d0-21e3d5b15a77": {
+      "type": "image_with_content_sec",
+      "blocks": {
+        "613ecec1-354a-464d-83d5-3873c57dbc08": {
+          "type": "image",
+          "settings": {
+            "content_position": false,
+            "heading": "Why Kids Need Hiya",
+            "content": "<p>Many children’s vitamins are based on nutritional guidelines from the 1980s, when many experts had a radically different view about children’s health.<\/p>",
+            "main_image": "shopify:\/\/shop_images\/why-kids-need-hiya.png",
+            "small_image": "shopify:\/\/shop_images\/hiya-lightbulb-1_9abfdab2-319d-40a9-b0c6-7d5e8626983b.svg",
+            "button_text": "Explore the Science",
+            "button_link": "shopify:\/\/pages\/our-vitamins"
+          }
+        },
+        "f1366779-2658-4812-a46d-6e520d875c6e": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "content_position": true,
+            "heading": "Created by dads who care",
+            "content": "<p>As new dads, we were shocked when we learned the truth about gummy vitamins. Thats why we created Hiya -- to create a healthier world for our kids and yours.<\/p>",
+            "main_image": "shopify:\/\/shop_images\/created-by-dads-who-care.png",
+            "small_image": "shopify:\/\/shop_images\/hiya-tablet-2_c8653f2c-8630-47e3-b34d-f032db98d2b6.svg",
+            "button_text": "Read our Story",
+            "button_link": "shopify:\/\/pages\/our-story-1"
+          }
+        }
+      },
+      "block_order": [
+        "613ecec1-354a-464d-83d5-3873c57dbc08",
+        "f1366779-2658-4812-a46d-6e520d875c6e"
+      ],
+      "settings": {
+        "image_with_content_background": "",
+        "block_button_text": "",
+        "block_button_link": ""
+      }
+    },
+    "0cfce406-e517-4fcf-afc8-16331c4e0ff5": {
+      "type": "created-by-dads",
+      "settings": {
+        "dads_heading": "Created by Dads, <br> Backed by Science.",
+        "dads_image": "shopify:\/\/shop_images\/Created-by-Dads.png"
+      }
+    },
+    "353d8ba0-a15e-40c6-a668-7dd2240beaab": {
+      "type": "image_with_content_sec",
+      "blocks": {
+        "aed2b687-108f-4e2d-8b61-216007751019": {
+          "type": "image",
+          "settings": {
+            "content_position": true,
+            "heading": "Kids nutrition<br>made easy",
+            "content": "<p>Get full-body nourishment delivered monthly to your door for $1\/day<\/p>",
+            "main_image": "shopify:\/\/shop_images\/kids-nutrition-made-easy.png",
+            "button_text": "Get Hiya",
+            "button_link": "shopify:\/\/products\/kids-daily-essential"
+          }
+        }
+      },
+      "block_order": [
+        "aed2b687-108f-4e2d-8b61-216007751019"
+      ],
+      "settings": {
+        "image_with_content_background": "#dcfdf2",
+        "block_button_text": "",
+        "block_button_link": ""
+      }
+    },
+    "f0df0dc3-4ec8-417a-a7b4-d3ddcde872d4": {
+      "type": "join-the-hiya-life-sec",
+      "settings": {
+        "heading": "Join the Hiya Life",
+        "content": "<span>#hiyalife<\/span> <span>@hiyahealth<\/span>",
+        "main_image": "shopify:\/\/shop_images\/Hiya-Instagram_b371ad4f-860f-43a0-975c-20330225349e.svg"
+      }
+    }
+  },
+  "order": [
+    "33602132-60c6-4435-9243-47b8753122f4",
+    "c0c82be2-485a-4183-a650-7f6dffcdb538",
+    "cd25e307-c167-4865-b9fa-715495903962",
+    "85c0029a-7a98-49ab-ad55-06b1d2b70b71",
+    "0efd9b06-1d89-4ab8-9cd0-e65feff47699",
+    "a411d4ff-767a-47e6-b3d0-21e3d5b15a77",
+    "0cfce406-e517-4fcf-afc8-16331c4e0ff5",
+    "353d8ba0-a15e-40c6-a668-7dd2240beaab",
+    "f0df0dc3-4ec8-417a-a7b4-d3ddcde872d4"
+  ]
+}

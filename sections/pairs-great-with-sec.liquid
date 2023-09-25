@@ -1,0 +1,172 @@
+{% assign sing_product = section.settings.product %}
+{% assign nameOFproduuct = sing_product.handle %}
+{% assign sing_product = all_products[nameOFproduuct] %}
+
+<div class="pairs-great-with-sec">
+  <div class="container">
+    <h2>{{ section.settings.title }}</h2>
+    <div class="pair-box">
+      <div class="inner">
+        
+        <div class="image">
+          <img src="{{sing_product.featured_image| img_url:"grande"}}" alt="{{ sing_product.title }}">
+        </div>
+        <div class="reviews-info">
+          <div class="rev-stars-info">
+            <div data-oke-reviews-product-listing-rating>{{ sing_product.metafields.okendo.ProductListingSnippet }}</div>
+          </div>
+          <h2>{{ sing_product.title }}</h2>
+          <p class="price recharge-inner-most-price">
+            <span class="dollar">$15</span> 
+            <s class="strike-through">$30</s>
+            <span>per kid</span>
+          </p>
+        </div>
+
+        <div class="add-cart-part">
+          {% comment %}
+          <div class="form-group select_box">
+            <label>Select No. Kids</label>
+            <select id="select-variant" class="selection">
+              <option data-qty="-29063" value="39450680066129">1 Kid - $15/bottle (Reg: $̶3̶0̶)</option>
+              <option data-qty="-12649" value="39450680098897">2 Kids - $14/bottle (Reg:&nbsp;$̶2̶8̶)</option>
+              <option data-qty="-3142" value="39450680131665">3 Kids - $12.50/bottle (Reg:&nbsp;$̶2̶5̶)</option>
+              <option data-qty="-964" value="39450680164433">4 Kids - $12/bottle (Reg:&nbsp;$̶2̶4̶)</option>
+              <option data-qty="-1012" value="39450680197201">5 Kids - $11.50/bottle (Reg:&nbsp;$̶2̶3̶)</option> 
+            </select>
+          </div>
+          <a href="javascript:void(0)" class="pairs_great_button" id="buy_now_new_button" data-var-id="39450680066129">Add To Cart  |  <span class="dollars">$15</span></a>
+          <p class="note_msg">Easy Cancellation | Delivers Fresh Monthly</p>
+          {% endcomment %}
+           {%- form 'product', sing_product, data-productid: sing_product.id, id:'buy_now_new_form' -%}
+          <input type="hidden" class="input_variant" name="id" data-productid="{{ sing_product.id }}" value="{{ sing_product.selected_or_first_available_variant.id }}">
+          <div class="form-group select_box">
+            <label>Select No. Kids</label>
+            <select id="select-variant" class="selection">
+              {% for variant in sing_product.variants %}
+              {% if variant.available %}
+              <option data-qty="{{ variant.inventory_quantity }}" value="{{ variant.id }}">{{ variant.title }}</option>
+             {% endif %}
+             {% endfor %}  
+            </select>
+          </div>
+           <input type="submit" value="Add to Cart" class="pairs_great_button" id="buy_now_new_button" data-var-id="{{ sing_product.selected_or_first_available_variant.id }}">
+          <a href="javascript:void(0)" class="pairs_great_button" id="buy_now_new_button" data-var-id="{{ sing_product.selected_or_first_available_variant.id }}">Add To Cart&nbsp;|&nbsp;<span class="dollars">$15</span></a>
+          <p class="note_msg">Easy Cancellation | Delivers Fresh Monthly</p>
+        {%- endform -%}       
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<svg class="bottom-curve" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 97.9" style="enable-background:new 0 0 1920 97.9;" xml:space="preserve">
+  <path id="Path_2" class="st59" d="M1920,17.3c0,0-256,80.6-960,80.6S0,17.3,0,17.3V0h1920L1920,17.3z"></path>
+</svg>
+
+<script>
+  $(document).ready(function(){
+    
+    $("#select-variant").change(function() {
+      var SelectID = $(this).find('option:selected').val();
+      $('input.pairs_great_button').attr('data-var-id', SelectID);
+      $(this).parent().parent().find('input.input_variant').val(SelectID);
+    });
+
+    document.querySelector('input.pairs_great_button').addEventListener('click',function(){
+      var VID = document.querySelector('input.pairs_great_button').getAttribute('data-var-id');
+       document.querySelector("#buy_now_new_form > input.input_variant").value = VID;
+      var isResolved = false;
+      var formData = {
+       'items': [{
+        'id': VID,
+         'selling_plan': 448168017,
+        'quantity': 1
+        }]
+      };
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (response) {
+
+          //updateCartDrawer(true);
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    });
+
+  });
+</script>
+
+<script> 
+  var select_id = document.getElementById("select-variant");
+  async function doStuff() {
+    await wait(1000);
+    waitForElement();
+  }  
+  let infoIcon, gone, details;
+  const wait = (amount = 0) => new Promise(resolve => setTimeout(resolve, amount));
+  function waitForElement() {
+    var select_id = document.getElementById("select-variant");
+    if (select_id) {
+      select_id.addEventListener('change', (event) => {
+        const result = document.querySelector('.dollar');
+        const dollars = document.querySelector('.dollars');
+        const strikeThrough = document.querySelector('.strike-through');
+        result.textContent = "$" + select_id.options[select_id.selectedIndex].innerText.split('$')[1].slice(0,2);
+        dollars.textContent =  "$" + Number(select_id.options[select_id.selectedIndex].innerText.slice(0,2)) * parseFloat((select_id.options[select_id.selectedIndex].innerText.split('$')[1].slice(0,2))).toFixed(2);
+        strikeThrough.textContent = "$" + select_id.options[select_id.selectedIndex].innerText.split('$')[2].replace(')','');  
+        if (select_id.selectedIndex === 2) {
+          result.textContent = "$12.50";
+           dollars.textContent = "$" + Number(select_id.options[select_id.selectedIndex].innerText.slice(0,2)) * parseFloat((12.50)).toFixed(2) + '0';       
+        }
+        if (select_id.selectedIndex === 4) {        
+          result.textContent = "$11.50";
+          dollars.textContent = "$" + Number(select_id.options[select_id.selectedIndex].innerText.slice(0,2)) * parseFloat((11.50)).toFixed(2) + '0';
+        }
+      });      
+    }  
+  }
+  doStuff();
+</script>
+
+{{ 'pairs-great-with-sec.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Pairs Great With Sec",
+  "tag": "section",
+  "class": "pairs-great-with-main",
+   "settings": [
+     {
+      "type": "text",
+      "label": "Title",
+      "id": "title",
+      "default": "Pairs Great With:"
+    },
+    {
+      "type": "product",
+      "label": "Select Product",
+      "id": "product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pairs Great With Sec"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

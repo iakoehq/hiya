@@ -1,0 +1,69 @@
+<section class="teaches-healthy-habits-sec">
+  <div class="container">
+      <div class="inner">
+        <div class="contnet">
+          {% if section.settings.heading != blank %}
+                    <h2>{{ section.settings.heading }}</h2>
+                  {% endif %}
+          {% if section.settings.content != blank %}
+                   {{ section.settings.content }}
+                  {% endif %}
+          {% if section.settings.button_text != blank %}
+                    <a href="{{ section.settings.button_url }}" class="primary-btn shop-btn">{{ section.settings.button_text }}</a>
+                  {% endif %}
+        </div>
+        <div class="image">
+           {% if section.settings.main_image != blank %}
+          <img src="{{ section.settings.main_image | img_url: 'master' }}" alt="img">
+         {% endif %}
+        </div>
+      </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Teches Healthy Section",
+  "tag": "section",
+  "class": "teches-healthy-main",
+  "settings": [
+                  {
+                    "type": "text",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "textarea",
+                    "label": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "type": "image_picker",
+                    "label": "Main Image",
+                    "id": "main_image"
+                  },
+                  {
+                    "type": "text",
+                    "label": "Button Text",
+                    "id": "button_text"
+                  },
+                  {
+                    "type": "url",
+                    "label": "Button Url",
+                    "id": "button_url"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Teches Healthy Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

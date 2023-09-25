@@ -1,0 +1,43 @@
+<div class="video-frame-sec">
+  <div class="container">
+    <h2>{{ section.settings.title }}</h2>
+    <div class="video-main">
+      <iframe class="shogun-video-embed" src="{{ section.settings.video_link }}?start=0&amp;end=0&amp;autoplay=0&amp;loop=0&amp;rel=1" allowfullscreen="" title="Embedded Youtube Video" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+{{ 'video-frame.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Video Frame Sec",
+  "tag": "section",
+  "class": "video-frame-sec-main",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title",
+      "default": "Kids love Hiya!"
+    },
+    {
+      "type": "url",
+      "label": "Video Link",
+      "id": "video_link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Frame Sec"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

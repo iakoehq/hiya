@@ -1,0 +1,39 @@
+{% include 'product-content.zipifypages', contentprt: 'header' %}{{ 'product.css' | asset_url | stylesheet_tag }}
+
+{% section 'product-banner-sec' %}
+
+{% section 'pairs-great-with-sec' %}
+
+{% section 'our-vitamin-sec' %}
+
+{% section 'video-frame-sec' %}
+
+{% section 'review-boxes-sec' %}
+
+{% section 'makes_hiya_different' %}
+
+{% section 'image_with_content_sec' %}
+
+{% section 'faq' %}
+
+<div class="reviews_stamped">
+  <div class="container-indent">
+    <div class="container container-fluid-custom-mobile-padding">
+  {% include 'okendo-reviews-widget' %}
+    </div>
+  </div>
+</div>
+<div class="yellow-btn pb20btn">
+  <a href="#MainContent" class="ybtn">Get Hiya</a>
+</div>
+
+<style>
+@media (max-width: 767px) {
+    .product-multivitamin .guarantee_text {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+</style>
+
+{{ 'unicode-converter.js' | asset_url | script_tag }}{% include 'product-content.zipifypages', contentprt: 'footer' %}

@@ -1,0 +1,98 @@
+
+<div class="review-boxes-sec">
+  <div class="inner">
+    {%- for block in section.blocks -%}
+    <div class="boxes-wrapper">
+      <div class="box">
+        {% if block.settings.image != blank %}
+        <div class="image">
+          <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" />
+        </div>
+        {% endif %}
+        {% if block.settings.review_image != blank %}
+        <img class="star-image" src="{{ block.settings.review_image | img_url: 'master' }}" alt="star-img" />
+        {% endif %}
+        {% if block.settings.review_title != blank %}
+        <h3>{{ block.settings.review_title | escape }}</h3>
+        {% endif %}
+        {% if  block.settings.review_content != blank %}
+        <p>{{ block.settings.review_content }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.product-multivitamin .review-boxes-sec .box .image {
+    margin-bottom: 25px;
+}
+@media (max-width: 767px) {
+    .review-boxes-sec .inner {
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    .review-boxes-sec .boxes-wrapper {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+
+    .review-boxes-sec .boxes-wrapper .box {
+        max-width: calc(100% - 30px);
+    }
+
+    .review-boxes-sec .box .image {
+        margin-bottom: 20px;
+    }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Review Boxes Sec",
+  "tag": "section",
+"class": "review-boxes-main",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "reviews",
+      "name": "reviews",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "image",
+          "id": "image"
+        },
+        {
+          "type": "image_picker",
+          "label": "review Image",
+          "id": "review_image"
+        },
+        {
+          "type": "text",
+          "label": "Review Title",
+          "id": "review_title"
+        },
+        {
+          "type": "textarea",
+          "label": "Review Content",
+          "id": "review_content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Boxes Sec"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

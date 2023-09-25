@@ -1,0 +1,13 @@
+{% if section.settings.footer_coopyright != blank %}
+    <div class="row-dt">
+        <div class="col-dt">
+            <div class="footer__copyright">
+                {% if template == 'product.variant-swatches' %}
+                    {{section.settings.footer_coopyright_variant_swatches}}
+                {% else %}
+                    {{section.settings.footer_coopyright}}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}

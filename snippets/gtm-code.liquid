@@ -1,0 +1,268 @@
+<!-- [START] 2.1 Debug -->
+<script src="https://cloudfront.loggly.com/js/loggly.tracker-2.2.4.min.js" async></script>
+<script> 
+  window._LTracker = window._LTracker || [];
+  _LTracker.push({ 'logglyKey': '375a14e2-0c0f-4eb2-b0b6-e916218676d4', 'tag': 'hiya', });
+  
+  window._debug_page = {
+    hostname: document.location.hostname,
+    path: document.location.pathname,
+    url: document.location.href,
+    referrer: document.referrer,
+    title: document.title,
+  };
+</script>
+<!-- [END] 2.1 Debug -->
+
+<!-- [START] GTM Data Layer -->
+<script>
+  !function(){
+    var data = {};
+    data.page_type = {{ template | json }};
+    data.currency = {{ shop.currency | json }} || 'USD';
+
+    {%- if customer -%}
+    data.customer_id = {{ customer.id | json }};
+    data.first_name = {{ customer.first_name | json }};
+    data.last_name = {{ customer.last_name | json }};
+    data.email = {{ customer.email | json }};
+    data.order_count = {{ customer.orders_count | divided_by: 1 }};
+    data.total_spent = {{ customer.total_spent | divided_by: 100.0 }};
+    {%- endif -%}
+
+    {%- if search and template contains "search" -%}
+    data.event = 'search';
+    data.search_term = {{ search.terms | json }};
+    {%- if search.results_count -%}
+    data.search_results = {{ search.results_count }};
+    {%- endif -%}
+    {%- endif -%}
+
+    {%- if collection and template contains "collection" -%}
+    data.event = "view_item_list";
+    data.collection_id = {{ collection.id | append: '' | json }};
+    data.collection_name = {{ collection.title | json }};
+    data.products = [];
+
+    {%- for product in collection.products -%}
+      data.products.push({
+        id: {{ product.id | append: '' | json }},
+        name: {{ product.title | json }},
+        vendor: {{ product.vendor | json }},
+        type: {{ product.type | json }},
+        collection_id: data.collection_id,
+        collection_name: data.collection_name,
+        price: {{ product.price | divided_by: 100.0 }},
+        quantity: 1
+      });
+    {%- endfor -%}
+
+    data.ecommerce = {
+      item_list_id: data.collection_id,
+      item_list_name: data.collection_name,
+      items: []
+    };
+
+    for(var i = 0; i < data.products.length; i++) {
+      data.ecommerce.items.push({
+        item_id: data.products[i].id,
+        item_name: data.products[i].name,
+        item_brand: data.products[i].vendor,
+        item_category: data.products[i].type,
+        item_list_id: data.products[i].collection_id,
+        item_list_name: data.products[i].collection_name,
+        price: data.products[i].price,
+        quantity: data.products[i].quantity
+      });
+    }
+    {%- endif -%}
+
+    {%- if product and template contains "product" -%}
+    data.event = "view_item";
+    data.products = [{
+      id: {{ product.id | append: '' | json }},
+      name: {{ product.title | json }},
+      vendor: {{ product.vendor | json }},
+      type: {{ product.type | json }},
+      collection_id: {{ collection.id | append: '' | json }},
+      collection_name: {{ collection.title | json }},
+      price: {{ product.price | divided_by: 100.0 }},
+      quantity: 1
+    }];
+    
+    data.ecommerce = {
+      currency: data.currency,
+      value: data.products[0].price,
+      items: [{
+        item_id: data.products[0].id,
+        item_name: data.products[0].name,
+        item_brand: data.products[0].vendor,
+        item_category: data.products[0].type,
+        item_list_id: data.products[0].collection_id,
+        item_list_name: data.products[0].collection_name,
+        price: data.products[0].price,
+        quantity: data.products[0].quantity
+      }]
+    };
+    {%- endif -%}
+
+    {%- if cart and template contains 'cart' -%}
+    data.event = 'view_cart';
+    data.cart_total = {{ cart.total_price | divided_by: 100.0 }};
+    data.cart_discount = {{ cart.total_discount | divided_by: 100.0 }};
+    data.products = [];
+
+    {%- for item in cart.items -%}
+      data.products.push({
+        id: {{ item.product.id | append: '' | json }},
+        name: {{ item.product.title | json }},
+        vendor: {{ item.product.vendor | json }},
+        type: {{ item.product.type | json }},
+        collection_id: {{ item.collection.id | append: '' | json }},
+        collection_name: {{ item.collection.title | json }},
+        variant_id: {{ item.variant.id | append: '' | json }},
+        variant_name: {{ item.variant.title | json }},
+        sku: {{ item.variant.sku | json }},
+        price: {{ item.price | divided_by: 100.0 }},
+        original_price: {{ item.original_price | divided_by: 100.0 }},
+        final_price: {{ item.final_price | divided_by: 100.0 }},
+        quantity: {{ item.quantity | default: 1 | divided_by: 1 }}
+      });
+      {%- endfor -%}
+
+    data.ecommerce = {
+      currency: data.currency,
+      value: data.cart_total,
+      items: []
+    };
+
+    for(var i = 0; i < data.products.length; i++) {
+      data.ecommerce.items.push({
+        item_id: data.products[i].id,
+        item_name: data.products[i].name,
+        item_brand: data.products[i].vendor,
+        item_category: data.products[i].type,
+        item_list_id: data.products[i].collection_id,
+        item_list_name: data.products[i].collection_name,
+        item_variant: data.products[i].variant_name,
+        item_sku: data.products[i].sku,
+        price: data.products[i].price,
+        quantity: data.products[i].quantity
+      });
+    }
+    {%- endif -%}
+
+    {%- if checkout -%}
+    if(window.Shopify && Shopify.Checkout) {
+      data.page_type = 'checkouts';
+      data.checkout_id = {{ checkout.id | append: '' | json }};
+      data.order_id = {{ checkout.order_id | append: '' | json }};
+      data.order_number = {{ checkout.order_number | append: '' | json }};
+      data.order_name = {{ checkout.order_name | json }};
+      data.order_total = {{ checkout.total_price | divided_by: 100.0 }};
+      data.order_subtotal = {{ checkout.line_items_subtotal_price | divided_by: 100.0 }};
+      data.order_tax = {{ checkout.tax_price | divided_by: 100.0 }};
+      data.order_shipping = {{ checkout.shipping_price | divided_by: 100.0 }};
+      data.coupon_code = {{ checkout.discount_applications | map: 'title' | join: ', ' | json }}
+      data.marketing_opt_in = {{ checkout.buyer_accepts_marketing | json }};
+      data.email = {{ checkout.email | json }};
+      data.billing_state_code = {{ checkout.billing_address.province_code | json }};
+      data.billing_state_name = {{ checkout.billing_address.province | json }};
+      data.billing_country_code = {{ checkout.billing_address.country_code | json }};
+      data.billing_country_name = {{ checkout.billing_address.country | json }};
+      data.shipping_state_code = {{ checkout.shipping_address.province_code | json }};
+      data.shipping_state_name = {{ checkout.shipping_address.province | json }};
+      data.shipping_country_code = {{ checkout.shipping_address.country_code | json }};
+      data.shipping_country_name = {{ checkout.shipping_address.country | json }};
+
+      data.products = [];
+      
+      {%- for item in checkout.line_items -%}
+        data.products.push({
+          id: {{ item.product.id | append: '' | json }},
+          name: {{ item.product.title | json }},
+          vendor: {{ item.product.vendor | json }},
+          type: {{ item.product.type | json }},
+          collection_id: {{ item.collection.id | append: '' | json }},
+          collection_name: {{ item.collection.title | json }},
+          variant_id: {{ item.variant.id | append: '' | json }},
+          variant_name: {{ item.variant.title | json }},
+          sku: {{ item.variant.sku | json }},
+          price: {{ item.price | divided_by: 100.0}},
+          original_price: {{ item.original_price | divided_by: 100.0}},
+          final_price: {{ item.final_price | divided_by: 100.0}},
+          quantity: {{ item.quantity | default: 1 | divided_by: 1 }}
+        });
+        {%- endfor -%}
+      
+      data.ecommerce = {
+        value: data.order_subtotal,
+        tax: data.order_tax,
+        shipping: data.order_shipping,
+        currency: data.currency,
+        coupon: data.coupon_code,
+        items: []
+      };
+
+      for(var i = 0; i < data.products.length; i++) {
+        data.ecommerce.items.push({
+          item_id: data.products[i].id,
+          item_name: data.products[i].name,
+          item_brand: data.products[i].vendor,
+          item_category: data.products[i].type,
+          item_list_id: data.products[i].collection_id,
+          item_list_name: data.products[i].collection_name,
+          item_variant: data.products[i].variant_name,
+          item_sku: data.products[i].sku,
+          price: data.products[i].price,
+          quantity: data.products[i].quantity
+        });
+      }
+
+      if(Shopify.Checkout.step) {
+        data.checkout_page = '/checkouts/' + Shopify.Checkout.step;
+        data.checkout_step = Shopify.Checkout.step;
+        if(Shopify.Checkout.step == 'contact_information') {
+          data.event = 'begin_checkout';
+        }
+        if(Shopify.Checkout.step == 'shipping_method') {
+          data.event = 'add_shipping_info';
+        }
+        if(Shopify.Checkout.step == 'payment_method') {
+          data.event = 'add_payment_info';
+        }
+        if(Shopify.Checkout.step == 'thank_you') {
+          // purchase event set in 'additional scripts' section based on post-purchase status
+          data.ecommerce.transaction_id = data.order_number;
+          data.checkout_flow = (document.location.pathname.indexOf('/checkouts/co/') !== -1) ? 'shop app express' : 'other';
+        }
+      }
+      if(Shopify.Checkout.isOrderStatusPage) {
+        data.checkout_page = '/checkouts/order_status';
+        data.checkout_step = 'order_status';
+      }
+    }
+    {%- endif -%}
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(data);
+    window._debug_data = data; //2.1 Debug
+  }();
+</script>
+<!-- [END] GTM Data Layer -->
+
+<!-- [START] GTM Script -->
+<script>
+  (function (w, d, s, l, i, t) {
+    w[l] = w[l] || [];
+    t = new Date().getTime();
+    w[l].push({ "gtm.start": t, event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl + "&cb=" + Math.floor(t/1000/60/60/24);
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-M8JGZR3");
+</script>
+<!-- [END] GTM Script -->

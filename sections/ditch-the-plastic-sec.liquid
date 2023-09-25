@@ -1,0 +1,66 @@
+<section class="ditch-the-plastic-sec">
+        <div class="container">
+          {% if section.settings.heading != blank %}
+            <h1>{{ section.settings.heading }}</h1>
+          {% endif %}
+            <svg class="divider-dot-img" style="width:20px" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 12.1 12.1" xml:space="preserve">
+                <style type="text/css">
+                    .st20 {
+                        fill: #3A5CAF;
+
+                    }
+                </style>
+                <circle class="st20" cx="6.1" cy="6.1" r="6.1"></circle>
+            </svg>
+          {% if section.settings.content != blank %}
+            <p>{{ section.settings.content }}</p>
+          {% endif %}
+        </div>
+        <svg class="clip-bottom-img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 97.9"
+            style="enable-background:new 0 0 1920 97.9;" xml:space="preserve">
+            <style type="text/css">
+                .st59 {
+                    fill: #ffe64b;
+                }
+            </style>
+            <path id="Path_2" class="st59" d="M1920,17.3c0,0-256,80.6-960,80.6S0,17.3,0,17.3V0h1920L1920,17.3z">
+            </path>
+        </svg>
+    </section>
+
+    
+
+{% schema %}
+{
+  "name": "Ditch the Plastic section",
+  "tag": "section",
+  "class": "ditch-the-plastic-main",
+  "settings": [
+                  {
+                    "type": "html",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "textarea",
+                    "label": "Content",
+                    "id": "content"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Ditch the Plastic section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

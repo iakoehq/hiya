@@ -1,0 +1,56 @@
+<section class="goodbye-suger-sec">
+        <div class="container">
+            <div class="inner">
+                <div class="content">
+                  {% if section.settings.heading != blank %}
+                    <h1>{{ section.settings.heading }}</h1>
+                  {% endif %}
+                  {% if section.settings.content != blank %}
+                    <p>{{ section.settings.content }}</p>
+                  {% endif %}
+                </div>
+                <div class="image">
+                  {% if section.settings.main_image != balnk %}
+                    <img src="{{ section.settings.main_image | img_url: 'master' }}" alt="img">
+                 {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% schema %}
+{
+  "name": "Best Ingredient Sec",
+  "tag": "section",
+  "class": "best-ingrdient-main",
+  "settings": [
+              {
+                    "type": "html",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "textarea",
+                    "label": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "type": "image_picker",
+                    "label": "Image",
+                    "id": "main_image"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Best Ingredient Sec"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

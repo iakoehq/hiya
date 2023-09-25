@@ -1,0 +1,130 @@
+{{ 'fifteen-essentials-faq.css' | asset_url | stylesheet_tag }}
+
+<section class="fifteen-essentials">
+    <div class="container">
+        <div class="inner">
+          {% if section.settings.heading != blank %}
+            <h2>{{ section.settings.heading }}</h2>
+          {% endif %}
+          {% if section.settings.content != blank %}
+            <p>{{ section.settings.content }}</p>
+          {% endif %}
+            <div class="fifteen-essentials-faq">
+                <div class="faq-wrapper-main">
+                  {% for block in section.blocks %}
+                    <div class="faq-wrapper">
+                        <button class="accordion">
+                          {% if block.settings.heading_box != blank %}
+                            <h4>{{ block.settings.heading_box }}</h4>
+                          {% endif %}
+                        {% if block.settings.small_heading_box != blank %}
+                            <p>{{ block.settings.small_heading_box }}</p>
+                          {% endif %}
+                        </button>
+
+                        <div class="accordion-content">
+                          {% if block.settings.content_box != blank %}
+                           {{ block.settings.content_box }}
+                          {% endif %}
+                        </div>
+                    </div>
+                  {% endfor %}
+                </div>
+                {% if section.settings.button_text != blank %}
+                <a href="javascript:void(0)" class="primary-btn">{{ section.settings.button_text }}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="popup-img">
+      <div class="inner">
+        <img src="{{ section.settings.button_url }}" alt="popup-img" />
+        <span class="close-popup"></span>
+      </div>
+    </div>
+</section>
+
+<script>
+  const accordionBtns = document.querySelectorAll(".fifteen-essentials-faq .accordion");
+  accordionBtns.forEach((accordion) => {
+  accordion.onclick = function () {
+    this.classList.toggle("is-open");
+
+    let content = this.nextElementSibling;
+    console.log(content);
+
+    if (content.style.maxHeight) {
+      //this is if the accordion is open
+      content.style.maxHeight = null;
+    } else {
+      //if the accordion is currently closed
+      content.style.maxHeight = content.scrollHeight + "px";
+      console.log(content.style.maxHeight);
+    }
+  };
+});
+</script>
+
+{% schema %}
+{
+  "name": "Fifteen Essentials Faq",
+  "tag": "section",
+  "class": "fifteen-essentials-faq-main",
+  "settings": [
+                {
+                    "type": "text",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "text",
+                    "label": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "type": "text",
+                    "label": "Button Text",
+                    "id": "button_text"
+                  },
+                  {
+                    "type": "text",
+                    "label": "Button Url",
+                    "id": "button_url"
+                  }
+  ],
+  "blocks": [
+    {
+      "type": "box",
+      "name": "Box",
+      "settings": [
+                  {
+                    "type": "text",
+                    "label": "Heading",
+                    "id": "heading_box"
+                  },
+                   {
+                    "type": "html",
+                    "label": "Small Heading",
+                    "id": "small_heading_box"
+                  },
+                  {
+                    "type": "html",
+                    "label": "Content",
+                    "id": "content_box"
+                  }
+      ]
+    }   
+  ],
+  "presets": [
+    {
+      "name": "Fifteen Essentials Faq"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

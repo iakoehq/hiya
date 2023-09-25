@@ -1,0 +1,291 @@
+<nav class="navMobile splittask" id="mobileNavigation">
+  <div class="inner-dropdown">
+    <div class="nav-catag">
+      <div class="nav-inner">
+        <div class="nav-catag-wrap">
+          <a class="nav-catag-link" href="/products/kids-daily-essential">
+            <div class="nav-catag-img-wrap">
+              <img
+                class="nav-catag-img"
+                src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/hiya-multivitamin-hero1_30cdb92a-0d6e-4065-9706-c4617349c5e1.jpg?v=1691706690"
+                alt="Multivitamins">
+            </div>
+            <h5>Kids Daily <br>Multivitamins</h5>
+          </a>
+        </div>
+        <div class="nav-catag-wrap">
+          <a class="nav-catag-link" href="/products/kids-daily-probiotic">
+            <div class="nav-catag-img-wrap">
+              <img
+                class="nav-catag-img"
+                src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/hiya-probiotic-hero-Jar_e70cfa48-6fdc-4f17-90fb-df9e0548281a.jpg?v=1691706690"
+                alt="Probiotic">
+            </div>
+            <h5>Kids Daily <br>Probiotic</h5>
+          </a>
+        </div>
+            <div class="nav-catag-wrap">
+        <a class="nav-catag-link" href="/products/kids-bedtime-essentials">
+        <div class="nav-catag-img-wrap new">
+          <img class="nav-catag-img" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/hiya-nightly-hero-Jar_337f8367-4fa9-40f2-9a2b-fe661814004c.jpg?v=1691706690" alt="Bedtime"><span class="nav-new"><img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/new-badge.svg?v=1692123708"></span>
+      </div>
+        <h5>Kids Bedtime<br>Essentials</h5>
+      </a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-nav-links">
+      <ul class="mobile-nav-links-list">
+        <li class="mobile-nav-links-link">
+          <a href="/pages/our-story" class="mobile-nav-links-link">Our Story</a>
+        </li>
+        <li class="mobile-nav-links-link">
+          <a href="http://hiyahealth.superfiliate.com/" class="mobile-nav-links-link ">Refer &amp; Earn</a>
+        </li>
+        <li class="mobile-nav-links-link">
+          <a href="/pages/ingredients" class="mobile-nav-links-link">Ingredients</a>
+        </li>
+        <li class="mobile-nav-links-link">
+          <a href="/pages/influencer-join" class="mobile-nav-links-link">Ambassadors</a>
+        </li>
+        <li class="mobile-nav-links-link">
+          <a href="/pages/faqs" class="mobile-nav-links-link">FAQ</a>
+        </li>
+        <li class="mobile-nav-links-link">
+          <a href="/account" class="mobile-nav-links-link">My Account</a>
+        </li>
+      </ul>
+    </div>
+    <div class="big-content-nav">
+      <div class="big-content-nav-stars-wrap">
+        <img
+          class="big-content-nav-stars"
+          src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/stars.png?v=1684422947"
+          alt="stars">
+      </div>
+      <p>
+        “My son LOVES Hiya. As soon as he started decorating his own bottle, he was hooked, making my life a bit easier. Thank you for all you are doing!”
+        <br>
+        <strong>Kelsey P.</strong>
+      </p>
+    </div>
+  </div>
+
+  <ul class="navMobile__menu">
+    {%- for link in linklists[section.settings.mobile_menu].links -%}
+      {% if link.links != blank %}
+        <li>
+          <a href="{{ link.url }}" class="navMobile__link {% if link.active %}active{% endif %}">{{ link.title }}</a>
+          <ul class="navMobile__submenu">
+            {% for childlink in link.links %}
+              <li>
+                <a href="{{ childlink.url }}">{{ childlink.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% else %}
+        <li class="navMobile__item">
+          {%- assign labelDowncase = link.title | downcase -%}
+          <a href="{{ link.url }}" class="navMobile__link {% if link.active %}active{% endif %} {% if labelDowncase  contains "probiotic" %}new_element{% endif %}">{{ link.title }}</a>
+        </li>
+      {% endif %}
+    {%- endfor -%}
+  </ul>
+</nav>
+
+<style>
+
+  .nav-catag {
+  overflow-y : hidden;
+  overflow-x : scroll;
+}
+
+.nav-inner {
+  width : 200px;
+  justify-content : unset !important;
+}
+
+div.nav-catag::-webkit-scrollbar {
+    display: none;
+}
+
+div.nav-catag {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+  
+.splittask .inner-dropdown .nav-catag div:not(.nav-inner) img {
+  width:88%;
+  border-radius:10px;
+  margin-bottom:0 !important;
+}
+  
+.navMobile.splittask,
+.menu-open header.header--has-menu {
+  background-color:#ffffff !important;
+}
+  
+.splittask .inner-dropdown .big-content-nav {
+      background: #FEF8E8 !important;
+}
+.nav-catag-img-wrap.new {
+  position:relative;
+}
+.nav-new {
+    position: absolute;
+    z-index: 1;
+    width: 48px;
+    height: 18px;
+    bottom: 3px;
+    left: calc(50% - 22px);
+}
+
+.nav-new img {
+   border-radius: 0 !important;
+   max-width: initial !important;
+   width: initial !important;
+}
+
+  
+  #menu-drawer > div > div > img,
+  #menu-drawer > div > div > ul { display:none; }
+  {% if section.settings.mobile_menu_links_under %}
+    .splittask ul.navMobile__menu {
+      display: none;
+    }
+  {% else %}
+    .splittask ul.mobile-nav-links {
+      display: none;
+    }
+  {% endif %}
+  .mobile-nav-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .mobile-nav-links-link {
+    font-family: "Filson Pro", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .navMobile.splittask {
+    background-color: #fff8e6;
+    background-color: #FEF8E8;
+
+  }
+  .split-mob-nav nav#mobileNavigation {
+    background-color: #fff8e6;
+    background-color: #FEF8E8;
+  }
+  .splittask .inner-dropdown {
+    padding: 0 !important;
+  }
+  .splittask .inner-dropdown .nav-catag {
+    border-bottom: 3px solid #407AB9;
+  }
+  .splittask .inner-dropdown .nav-catag div.nav-inner {
+    display: flex;
+    justify-content: space-around;
+  }
+  .splittask .inner-dropdown .nav-catag div:not(.nav-inner) {
+    text-align: center;
+    margin: 0 !important;
+    width: 144px;
+  }
+  .splittask .inner-dropdown .nav-catag div:not(.nav-inner) img {
+    max-width: 144px;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
+    margin-bottom: 10px;
+  }
+  .splittask .inner-dropdown .nav-catag div:not(.nav-inner) h5 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #3F7AB9;
+    margin: 5px auto 20px !important;
+    font-family:FilsonProBold, sans-serif;
+  }
+  .splittask .inner-dropdown .mobile-nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid #407AB9;
+    padding: 5px 0;
+  }
+  .splittask .inner-dropdown .mobile-nav-links ul {
+    list-style-type: none;
+    margin: 5px 0 !important;
+    padding: 0 !important;
+  }
+  .splittask .inner-dropdown .mobile-nav-links ul li {
+    flex: 0 1 50%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #3F7AB9;
+    padding-bottom: 5px;
+  }
+  .splittask .inner-dropdown .big-content-nav {
+    position: relative;
+    padding: 25px 20px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .splittask .inner-dropdown .big-content-nav .big-content-nav-stars-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .splittask .inner-dropdown .big-content-nav .big-content-nav-stars {
+    width: 120px;
+    height: 20px;
+  }
+  .splittask .inner-dropdown .big-content-nav p {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #3F7AB9;
+    padding-top: 15px;
+    margin: 0 !important;
+    line-height: 1.31 !important;
+  }
+  .splittask .inner-dropdown .big-content-nav p strong {
+    font-family: FilsonProBold !important;
+    margin-top: 10px;
+    display: inline-block;
+    font-style: normal;
+  }
+  .splittask .inner-dropdown .big-content-nav p span {
+    font-size: 46px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+  }
+  .split-mob-nav nav#mobileNavigation {
+    height: auto !important;
+    padding-top: 4rem !important;
+  }
+  .nav-catag-link {
+    display: block;
+  }
+
+  @media (min-width: 550px) {
+
+  div.nav-inner {
+  width : auto;
+  justify-content : space-around !important;
+}
+  }
+  
+</style>

@@ -1,0 +1,9 @@
+{% comment %}
+assigning the multivitamin reviews id unless it's the probiotic affiliate product
+we're assigning the id of the main versions of the product to pull the same reviews
+{% endcomment %}
+{% assign reviewsID = 4528169320529 %}
+{% if product.id == 7086847033425 %}
+  {% assign reviewsID = 6612825079889 %}
+{% endif %}
+<div data-oke-reviews-widget data-oke-reviews-product-id="shopify-{{ reviewsID }}">{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>

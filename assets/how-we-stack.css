@@ -1,0 +1,198 @@
+.product-probiotic .how-we-stack-sec .container {
+    max-width: 1000px;
+}
+
+.how-we-stack-sec {
+    background-color: #ffe3e1;
+    padding: 80px 0;
+}
+
+.how-we-stack-sec h2 {
+    font-size: 42px;
+    line-height: 1.1em !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    color: #3f7ab9;
+    font-family: "FilsonProBold" !important;
+    font-weight: 600 !important;
+    margin-bottom: 25px !important;
+}
+
+.how-we-stack-sec p {
+    font-weight: 400;
+    font-size: 20px;
+    color: #3f7ab9;
+    line-height: 26px !important;
+    max-width: 770px;
+    text-align: center !important;
+    margin-inline: auto !important;
+    margin-bottom: 50px !important;
+}
+
+.how-we-stack-sec .table-main {}
+
+.how-we-stack-sec .table-main table {
+    max-width: calc(100% - 180px);
+    max-width: 100%;
+    margin-inline: auto;
+    box-shadow: none;
+    border-bottom: 3px solid #3f7ab9 !important;
+}
+
+.how-we-stack-sec .table-main thead {}
+
+.how-we-stack-sec .table-main thead tr {}
+
+.how-we-stack-sec .table-main thead th {
+    border: 0;
+    padding: 3px 10px;
+    font-size: 16px;
+    font-family: FilsonProBold;
+    font-weight: 600 !important;
+    line-height: 20px;
+    color: #3f7ab9;
+}
+
+.how-we-stack-sec .table-main thead th img {}
+
+.how-we-stack-sec .table-main tbody {}
+
+.how-we-stack-sec .table-main tbody tr {}
+
+.how-we-stack-sec .table-main tbody tr:nth-child(odd) {
+    background-color: #fff;
+    border-bottom: 3px solid #3f7ab9;
+    border-top: 3px solid #3f7ab9;
+}
+
+.how-we-stack-sec .table-main tbody tr td {
+    border: 0;
+}
+
+.how-we-stack-sec .table-main tbody td {
+    padding-top: 13.5px;
+    padding-bottom: 15px;
+}
+
+.how-we-stack-sec .table-main tbody tr td:first-child {
+    width: 60%;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Filson Pro', sans-serif;
+    color: #3f7ab9;
+    line-height: 40px;
+    padding-left: 30px !important;
+}
+
+.how-we-stack-sec .table-main tbody tr td:nth-child(2),
+.how-we-stack-sec .table-main tbody tr td:nth-child(3) {
+    width: 20%;
+    text-align: center;
+}
+
+.how-we-stack-sec .table-main tbody tr td img {
+    max-height: 50.22px;
+}
+
+.product-probiotic .how-we-stack-sec h2,
+.product-probiotic .how-we-stack-sec p {
+    letter-spacing: 0 !important;
+}
+
+.product-probiotic .how-we-stack-sec p {
+    max-width: 730px;
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .product-probiotic .how-we-stack-sec .table-main tbody tr td:first-child {
+        letter-spacing: 0;
+    }
+
+    .product-probiotic .how-we-stack-sec {
+        background-color: #ffe3e1;
+        padding: 72px 0;
+    }
+
+    .product-probiotic .how-we-stack-sec .table-main thead th img {
+        height: 48px;
+    }
+
+    .product-probiotic .how-we-stack-sec .table-main table {
+        max-width: calc(100% - 140px);
+        max-width: 833px;
+    }
+
+    .product-probiotic .how-we-stack-sec .table-main tbody td {
+        padding-top: 15px;
+        padding-bottom: 14px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-probiotic .how-we-stack-sec {
+        padding: 76px 0;
+    }
+
+    .product-probiotic .how-we-stack-sec .container {
+        max-width: 800px;
+    }
+  
+    .product-probiotic .how-we-stack-sec .table-main table {
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .product-probiotic #shopify-section-how-we-stack-sec > div > div > div > table > tbody > tr > td:nth-child(1) {
+      line-height:26px;
+    }
+  
+    .product-probiotic .how-we-stack-sec h2 {
+        margin-bottom: 38px !important;
+        font-size: 26px;
+        font-family: "FilsonProBold" !important;
+        font-weight: 600 !important;
+        letter-spacing: 0 !important;
+    }
+
+    .product-probiotic .how-we-stack-sec {
+        padding: 83px 0;
+    }
+
+    .product-probiotic .how-we-stack-sec p {
+        max-width: 520px;
+        margin-bottom: 50px !important;
+    }
+
+    .product-probiotic .how-we-stack-sec .table-main table {
+        max-width: calc(100% - 10px);
+    }
+
+    .product-probiotic .how-we-stack-sec .table-main tbody tr td:first-child {
+        width: 60%;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 40px;
+        padding-left: 10px !important;
+        letter-spacing: 0px;
+    }
+
+    .product-probiotic .how-we-stack-sec .table-main thead th {
+        letter-spacing: 0px;
+        font-size: 12px;
+    }
+
+    .product-probiotic .how-we-stack-sec .table-main tbody td {
+        padding: 17px 0;
+    }
+
+    .product-probiotic .how-we-stack-sec .table-main tbody tr td:nth-child(2) img {
+        width: 33px;
+    }
+
+    .product-probiotic .how-we-stack-sec .table-main tbody tr td:nth-child(3) img {
+        width: 26px;
+    }
+
+    .product-probiotic .how-we-stack-sec {
+        padding: 75px 0;
+    }
+}

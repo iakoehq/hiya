@@ -1,0 +1,115 @@
+<div class="container">
+
+  <div class="title-box">
+    <h2 class="section-title">
+      {% if section.settings.heading != blank %}
+            {{ section.settings.heading }}
+           {% endif %}
+    </h2>
+    
+    <p class="subtitle">
+     {% if section.settings.content != blank %}
+         {{ section.settings.content }}
+           {% endif %}
+    </p>
+    
+  </div>
+
+   {%- form 'contact' -%}
+
+          {%- if form.posted_successfully? -%}
+          <p style="width: 100%; text-align: center;">Successfull</p>
+          {%- endif -%}
+
+          {{ form.errors | default_errors }}
+     
+<!--   <form class="form-box"> -->
+    <div class="left-form">
+       <div class="form-group">
+<!--           <input type="text" required="" name="contact[name]" value="" class="form-control" id="inputName" placeholder="Your Name**"> -->
+         <input type="text" required name="contact[name]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}" class="form-control" id="inputName" placeholder="Your Name**">
+       </div>
+        <div class="form-group">
+<!--           <input type="text" required="" name="contact[company]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="CompanyName" placeholder="Company Name*"> -->
+       <input type="text" required name="contact[company]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="CompanyName" placeholder="Company Name*">
+        </div>
+        <div class="form-group">
+<!--           <input type="tel" required="" name="contact[phone]" pattern="[0-9\-]*" value="" class="form-control" id="inputSubject" placeholder="Phone Number*"> -->
+       <input type="tel" required name="contact[phone]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% endif %}" class="form-control" id="inputSubject" placeholder="Phone Number*">
+        </div>
+        <div class="form-group">
+<!--           <input type="text" required="" name="contact[address]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="Address" placeholder="Address*"> -->
+       <input type="text" required name="contact[address]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="Address" placeholder="Address*">
+        </div>
+        <div class="form-group">
+<!--           <input type="text" required="" name="contact[about-us]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="AboutUs" placeholder="How did you hear about us?*"> -->
+        <input type="text" required name="contact[about-us]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="AboutUs" placeholder="How did you hear about us?*">
+        </div>
+        <div class="form-group">
+<!--           <textarea required="" name="contact[influencer-list]" class="form-control" rows="6" placeholder="Are you currently an affiliate for other brands? If so, please list them here.*" id="InfluencerList"></textarea> -->
+        <textarea required name="contact[influencer-list]" class="form-control" rows="8" placeholder="Are you currently an affiliate for other brands? If so, please list them here.*" id="InfluencerList"> {%- if form.body -%}{{ form.body }}{%- endif -%}</textarea>
+        </div>
+    </div>
+    <div class="right-form">
+       <div class="form-group">
+<!--           <input type="email" required="" name="contact[email]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="inputEmail" placeholder="Your Email**"> -->
+          <input type="email" required="" name="contact[email]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="inputEmail" placeholder="Your Email**">
+        
+       </div>
+        <div class="form-group">
+<!--           <input type="text" required="" name="contact[website]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="WebsiteAddress" placeholder="Website Address*"> -->
+        <input type="text" required name="contact[website]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="WebsiteAddress" placeholder="Website Address*">
+        </div>
+        <div class="form-group">
+<!--           <input type="text" required="" name="contact[tax]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="Tax" placeholder="Tax ID or VAT*"> -->
+        <input type="text" required name="contact[tax]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="Tax" placeholder="Tax ID or VAT*">
+        </div>
+        <div class="form-group">
+<!--           <input type="text" required="" name="contact[email-list]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="EmailList" placeholder="What is the approximate size of your email list?*"> -->
+        <input type="text" required name="contact[email-list]" autocorrect="off" autocapitalize="off" value="" class="form-control" id="EmailList" placeholder="What is the approximate size of your email list?*">
+        </div>
+        <div class="form-group">
+<!--           <textarea required="" name="contact[body]" class="form-control" rows="6" placeholder="Please tell us more about your website and what you do?*" id="textareaMessage"></textarea> -->
+        <textarea required name="contact[body]" class="form-control" rows="8" placeholder="Please tell us more about your website and what you do?*" id="textareaMessage">{%- if form.body -%}{{ form.body }}{%- endif -%}</textarea>
+        </div>
+    </div>
+    <div class="button-box">
+<!--       <button type="submit" class="button btn">Send Message</button> -->
+      <button type="submit" class="button btn">Send Message</button>
+    </div>
+  {%- endform -%}
+<!--   </form> -->
+</div>
+
+
+{% schema %}
+{
+  "name": "Become Ambassador",
+  "tag": "section",
+  "class": "become-ambassador",
+  "settings": [
+                  {
+                    "type": "text",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "textarea",
+                    "label": "Content",
+                    "id": "content"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Become Ambassador"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

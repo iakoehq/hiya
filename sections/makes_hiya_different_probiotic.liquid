@@ -1,0 +1,133 @@
+{{ 'makes-hiya-different.css' | asset_url | stylesheet_tag }}
+
+<div class="makes_hiya_diff_section">
+  <div class="container">
+    {% if section.settings.title != blank %}
+    <h2>{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.sub_text != blank %}
+    <p>{{ section.settings.sub_text }}</p>
+    {% endif %}
+    <div class="diff_tabs_list">
+      <ul>
+        {% for tab_title in section.blocks %}
+        <li id="diff{{ forloop.index }}" class="{% if forloop.first %}active{% endif %}">{{ tab_title.settings.tab_text }}</li>
+        {% endfor %}
+       {% comment %} <li id="diff2">Hiya</li>{% endcomment %}
+      </ul>
+    </div>
+    <div class="diff_tabs_content">
+      {% for block in section.blocks %}
+         <div class="diff_tabs_box {% if forloop.first %}active{% endif %}" data-id="diff{{ forloop.index }}">
+        <div class="main_img">
+          <img src="{{ block.settings.image | img_url: 'master' }}">
+        </div>
+        <div class="hiya_diff_list">
+          {{ block.settings.tab_content }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="hiya-diff-testi">
+      <div class="image">
+        <img src="{{ section.settings.dr_image | img_url: 'master' }}" alt="{{ section.settings.dr_image.alt }}" />
+      </div>
+      <div class="hiya-diff-testi-content">
+        {% if section.settings.dr_review_title != blank %}
+        <h3>{{ section.settings.dr_review_title }}</h3>
+        {% endif %}
+        <div class="content-info">
+          {% if section.settings.dr_name != blank %}
+          <h4>{{ section.settings.dr_name }}</h4>
+            {% endif %}
+            {% if section.settings.location %}
+          <p>{{ section.settings.location }}</p>
+              {% endif %}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Makes Hiya Different ProB",
+  "tag": "section",
+"class": "makes_hiya_diff_band",
+  "settings": [
+    {
+      "type": "text",
+      "label": "title",
+      "id": "title",
+      "default": "What makes Hiya different?"
+    },
+    {
+      "type": "textarea",
+      "label": "sub text",
+      "id": "sub_text",
+      "default": "Here’s why we formulated Hiya as a great-tasting daily chewable, not a sugar-filled gummy."
+    },
+    {
+      "type": "text",
+      "label": "DR. review title",
+      "id": "dr_review_title",
+      "default": "“Hiya gives my patients the nutrients they need without the sugary junk.”"
+    },
+    {
+      "type": "text",
+      "label": "DR. Name",
+      "id": "dr_name",
+      "default": "Dr. Monica Madan"
+    },
+    {
+      "type": "text",
+      "label": "location",
+      "id": "location",
+      "default": "Beverly Hills Pediatric Specialist"
+    },
+    {
+      "type": "image_picker",
+      "label": "DR image",
+      "id": "dr_image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab_data",
+      "name": "tab data",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "label": "tab text",
+          "id": "tab_text"
+        },
+        {
+          "type": "image_picker",
+          "label": "image",
+          "id": "image"
+        },
+        {
+          "type": "textarea",
+          "label": "tab content",
+          "id": "tab_content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Makes Hiya Different ProB"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

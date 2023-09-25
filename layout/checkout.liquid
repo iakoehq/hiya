@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <!-- Begin Monetate ExpressTag Sync v8.1. Place at start of document head. DO NOT ALTER. -->
+    <script type="text/javascript">var monetateT = new Date().getTime();</script>
+    <script type="text/javascript" src="//se.monetate.net/js/2/a-a4e2581f/p/hiyahealth.com/entry.js"></script>
+    <!-- End Monetate tag. -->
+
+    <!--SplitTesting Installed Google Optimize 4 Container-->
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-WDCLBSG"></script>
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+    
+    {% render 'gtm-code' %}
+    {% render 'shogun-head' %}
+    <style>
+        @font-face {
+          font-family: "Slabo 13px";
+          font-style: normal;
+          font-weight: 400;
+          src: local('Slabo 13px Regular'), local('Slabo13px-Regular'), url(https://fonts.shopifycdn.com/slabo_13px/slabo13px_n4.8b6899f3a88cf4e7fdc10c01b040d698d984eed9.woff2?valid_until=MTY5MDM5NDc3Nw&hmac=18e74177e204d637e6cadb90c44b28421fc76520c52a46de43421bcc9eef91ac) format('woff2'),url(https://fonts.shopifycdn.com/slabo_13px/slabo13px_n4.b3092d4cb9897f1605799db5c48f60f2b62203c6.woff?valid_until=MTY5MDM5NDc3Nw&hmac=68ee2752dd04a0bdee83e2e1bc878af452ca465bf17afea898496ea8ccfc40cc) format('woff');
+        }
+    </style>
+  
+  
+
+  
+
+  {% include "trackify_x" %}
+</head>
+
+  <!-- Split Testing styles for checkout logo 12/12/22 -->
+  <style>
+    body { font-family: "Slabo 13px", serif; }
+    header a.logo--left, .page--logo-main .main .logo {
+      display: none;
+    }
+    .hide-d {
+      display: block;
+    }
+    .hide-m {
+      display: none;
+      margin-top: 20px;
+    }
+    .r-hiya-logo {
+      width: 95px;
+      margin-left: -10px;
+      margin-bottom: 10px;
+    }
+    @media screen and (max-width: 999px) {
+      .hide-d {
+        display: none;
+      }
+      .hide-m {
+        display: block;
+      }
+      .r-hiya-logo {
+        margin-left: -10px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+
+  <!-- Split Testing styles for timer 12/12/22 -->
+  <style>
+    .checkout-info {
+      margin: 1.5em 0;
+    }
+    .step__footer.step__footer--content {
+      flex-direction: column;
+      align-items: unset;
+    }
+    .step__footer.step__footer--content .step__footer__continue-btn {
+      min-width: 170px;
+    }
+    .dynamic-checkout__buttons span div {
+      display: none !important;
+    }
+    .checkout-timer-container {
+      display: none;
+      padding: 35px 25px 25px 0;
+    }
+    .checkout-timer-heading {
+      padding-left: 15px;
+      margin-bottom: 11px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+    }
+    .checkout-timer {
+      background: #e2f0ff;
+      border-radius: 5px;
+      border: 1px solid #c8c8c8;
+      padding: 15px 0 15px 35px;
+    }
+    .checkout-timer-description {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 21px;
+      color: #000000;
+    }
+    @media only screen and (max-width: 787px) {
+      .checkout-timer-container {
+        padding: 20px 0px;
+        margin-top: -15px;
+      }
+      .checkout-timer {
+        padding: 15px 0px;
+        text-align: center;
+      }
+      .checkout-timer-heading {
+        padding-left: 0px;
+        font-size: 14px;
+        text-align: center;
+      }
+      .checkout-timer-description {
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <!-- Split Testing styles for Cancellation Block and BTF Reviews 12/12/22 -->
+  <style>
+    .ec-main {
+      display: flex;
+      margin: 10px 0 30px 0;
+      background: #ffffff;
+      border: 1px solid #e9e9e9;
+      box-sizing: border-box;
+      box-shadow: 2px 4px 20px rgb(0 0 0 / 10%);
+      border-radius: 0px;
+      padding: 25px 30px 25px 20px;
+    }
+    .ec-imgDiv {
+      width: 60%;
+      display: flex;
+      align-items: center;
+    }
+    .ec-img {
+    }
+    .ec-detailsDiv {
+      margin: 5px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .ec-head {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 26px;
+      color: #353535;
+    }
+    .ec-desc {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: #6f6f6f;
+      margin-top: 10px;
+    }
+    .rv-items-m, .r-mDiv {
+      display: none;
+    }
+    .rv-main {
+      margin: 0 auto;
+      border-top: 1px solid #e6e6e6;
+      width: 90%;
+      max-width: 78.5714285714em;
+    }
+    .rv-mBox {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 30px 0;
+    }
+    .rv-items {
+      display: flex;
+      flex-direction: row;
+      padding: 35px 40px 40px 40px;
+      background: #ffffff;
+      border: 1px solid #e9e9e9;
+      box-sizing: border-box;
+      box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 0px;
+      margin: 30px 0;
+    }
+    .rv-img-div {
+      width: 80px;
+    }
+    .rv-img {
+      min-width: 80px;
+    }
+    .rv-caption {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      color: #9b9b9b;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      flex-direction: column;
+    }
+    .rv-details {
+      display: flex;
+      flex-direction: column;
+      margin: 0 30px;
+    }
+    .rv-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 27px;
+      color: #3f7ab9;
+      margin-top: 10px;
+    }
+    .rv-star {
+      width: 115px;
+      margin-top: 8px;
+    }
+    .rv-desc {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      color: #353535;
+      margin-top: 20px;
+    }
+    @media only screen and (max-width: 999px) and (min-width: 520px) {
+      .ec-detailsDiv {
+        margin: 32px 20px;
+      }
+    }
+    @media (max-width: 999px) {
+      .rv-mBox {
+        margin: 20px 0;
+      }
+      .rv-items {
+        display: none;
+      }
+      .rv-items-m {
+        display: block;
+        width: 100%;
+      }
+      .r-mDiv {
+        display: flex;
+        margin: 12px 0 40px 0;
+      }
+      .r-dDiv {
+        display: none;
+      }
+      .rv-i-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #ffffff;
+        border: 1px solid #e9e9e9;
+        box-sizing: border-box;
+        box-shadow: 2px 4px 20px rgb(0 0 0 / 10%);
+        margin: 20px 0;
+        padding: 25px 10px;
+      }
+      .rv-img {
+        width: 70px;
+      }
+      .rv-star {
+        width: 90px;
+        margin: 15px 0 5px 0;
+      }
+      .rv-desc {
+        text-align: center;
+      }
+      .rv-title {
+        max-width: 290px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .rv-caption {
+        margin: 25px 0 5px 0;
+        flex-direction: row;
+      }
+    }
+    @media (max-width: 420px) {
+      .ec-imgDiv {
+        width: 50%;
+      }
+      .ec-head {
+        font-size: 14px;
+      }
+      .ec-desc {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+    @media (max-width: 360px) {
+      .ec-head {
+        font-size: 13px;
+      }
+      .ec-desc {
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+    @media (max-width: 345px) {
+      .ec-head {
+        font-size: 12px;
+      }
+      .ec-desc {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+    @media (max-width: 320px) {
+      .ec-imgDiv {
+        width: 65%;
+      }
+      .ec-detailsDiv {
+        margin: 5px 10px;
+      }
+    }
+  </style>
+
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Split Testing JS for checkout USPs 3/22/23 -->
+    <script>
+      setTimeout(function () {
+        function cancellationDiv1() {
+          ecDiv = document.createElement('div');
+          ecDiv.className = 'ec-main upsell_icon_wrapper';
+          ecDiv.innerHTML = `
+              <div class="upsell_icons">
+              <ul>
+                  <li><img src="//cdn.shopify.com/s/files/1/0255/3249/8001/t/119/assets/New-Free-Shipping-with-Every-Order.png?v=140641777467727778021677214252">Free Shipping with Every Order</li>
+                  <li><img src="//cdn.shopify.com/s/files/1/0255/3249/8001/t/119/assets/Delivered-Fresh-Monthly.png?v=170065621086856978431677136042">Delivered <span>Fresh Monthly</span></li>
+                  <li><img src="//cdn.shopify.com/s/files/1/0255/3249/8001/t/119/assets/New-Manufactured-in-the-USA.png?v=122724203750252202591677214272">Manufactured in <span>the USA</span></li>
+              </ul>
+          </div>
+              `;
+        }
+
+        (function miniPoll1() {
+          if (document.querySelector('.order-summary__sections')) {
+            cancellationDiv1();
+            ecMDiv = ecDiv.cloneNode(true);
+            ecMDiv.classList.add('r-mDiv');
+            ecDiv.classList.add('r-dDiv');
+            document.querySelector('.main').prepend(ecMDiv);
+            document.querySelector('.order-summary__sections').appendChild(ecDiv);
+            console.log('div added');
+          } else {
+            setTimeout(miniPoll1, 25);
+            console.log('polling');
+          }
+        })();
+      }, 1500);
+    </script>
+
+    <!-- Split Testing CSS for Checkout USPs 3/22/23 -->
+    <style>
+      .upsell_icon_wrapper {
+        border: none;
+        box-shadow: none;
+        padding: 15px 0px !important;
+      }
+      .upsell_icons {
+        width: 100%;
+      }
+      .ec-main.r-dDiv:not(.upsell_icon_wrapper) {
+        display: none;
+      }
+      .ec-main.r-mDiv:not(.upsell_icon_wrapper) {
+        display: none;
+      }
+      .upsell_icon_wrapper .upsell_icons ul {
+        display: flex;
+        row-gap: 0px;
+        column-gap: 15px;
+      }
+      .upsell_icon_wrapper .upsell_icons ul li {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgb(59, 121, 184);
+        text-align: center;
+      }
+      .upsell_icon_wrapper .upsell_icons ul li span {
+        display: block;
+      }
+      .upsell_icon_wrapper .upsell_icons ul li img {
+        max-height: 80px;
+        display: block;
+        margin: 0px auto 15px auto;
+      }
+      @media (max-width: 767px) {
+        .upsell_icon_wrapper .upsell_icons ul li {
+          font-size: 12px;
+        }
+        .upsell_icon_wrapper {
+          padding: 15px;
+        }
+        .upsell_icon_wrapper .upsell_icons ul li img {
+          max-height: 60px;
+        }
+      }
+    </style>
+    {{ tracking_code }}
+
+    <!-- Split Testing JS for checkout logo 12/12/22 -->
+    <script>
+      let desktopHtml, mobileHtml;
+      function addLogo() {
+        deskopHtml = '<a href="/" class="r-hiya-logo hide-d splittesting" itemprop="url"><img src="https://splitbase.s3.ca-central-1.amazonaws.com/hiya-icon_95x.png" srcset="https://splitbase.s3.ca-central-1.amazonaws.com/hiya-icon_95x.png" alt="Hiya Logo" class="tt-retina" itemprop="logo"></a>';
+        mobileHtml = '<a href="/" class="r-hiya-logo hide-m splittesting" itemprop="url"><img src="https://splitbase.s3.ca-central-1.amazonaws.com/hiya-icon_95x.png" srcset="https://splitbase.s3.ca-central-1.amazonaws.com/hiya-icon_95x.png" alt="Hiya Logo" class="tt-retina" itemprop="logo"></a>';
+
+        if (document.querySelector('header.main__header')) {
+          document.querySelector('header.main__header').insertAdjacentHTML('afterbegin', deskopHtml);
+          document.querySelector('header div.wrap').insertAdjacentHTML('afterbegin', mobileHtml);
+          console.log('node added!');
+        }
+      }
+      addLogo();
+    </script>
+
+    <!-- Split Testing JS for timer 12/12/22 -->
+
+    <script>
+      let timerDiv, context;
+
+      function createTimerDiv() {
+        timerDiv = document.createElement('div');
+        timerDiv.className = 'checkout-timer-container';
+        timerDiv.innerHTML = `
+        <p class="checkout-timer-heading">This popular product is in high demand ⭐️</p>
+        <div class="checkout-timer">
+            <p class="checkout-timer-description">
+            We'll reserve your order for <span class="timer-seconds">10:00</span> minutes.
+            </p>
+        </div>
+        `;
+        console.log('timer added');
+        document.querySelector('.main__header .shown-if-js').parentNode.insertBefore(timerDiv, document.querySelector('.main__header .shown-if-js'));
+        setTimerFunc();
+      }
+      createTimerDiv();
+
+      function setTimerFunc() {
+        context = document.querySelector('.checkout-timer-container');
+        if (context) {
+          context.style.display = 'block';
+          if (!sessionStorage.getItem('productValid')) {
+            sessionStorage.setItem('productValid', new Date());
+          }
+          var productValid = sessionStorage.getItem('productValid');
+          var d1 = new Date(productValid), d2 = new Date(d1);
+          d2.setMinutes(d1.getMinutes() + 10);
+
+          var countDownDate = d2.getTime();
+          var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.querySelector('.timer-seconds').innerHTML = ('00' + minutes).substr(-2) + ':' + ('00' + seconds).substr(-2);
+            if (distance < 0) {
+              clearInterval(x);
+              context.style.display = 'none';
+            }
+          }, 1000);
+        }
+      }
+
+      function hideTimerDiv() {
+        context = document.querySelector('.checkout-timer-container');
+        if (context) {
+          context.style.display = 'none';
+        }
+      }
+
+      (function ($) {
+        $(document).on('page:load page:change', function () {
+          const CheckoutStep = Shopify.Checkout.page;
+          if (CheckoutStep == 'thank_you') {
+            console.log('Hide Timer');
+            hideTimerDiv();
+          }
+        });
+      })(Checkout.$);
+    </script>
+
+    <!-- Splittesting JS for Cancellation Block and Reviews BTF 12/12-22 -->
+    <script>
+      let ecMDiv, ecDiv, rvDiv, mainContent;
+
+      //adding cancellation policy block
+      function cancellationDiv() {
+        ecDiv = document.createElement('div');
+        ecDiv.className = 'ec-main';
+        ecDiv.innerHTML = `
+        <div class="ec-imgDiv">
+            <img class="ec-img" src="//splitbase-s3.s3.amazonaws.com/svg_cancel_seal.svg" alt="Cancel Anytime" width="100%" height="auto">
+        </div>
+        <div class="ec-detailsDiv">
+            <span class="ec-head">Easy Cancellation</span>
+            <span class="ec-desc">Zero commitment, total flexibility, cancel anytime.</span>
+        </div>
+        `;
+      }
+      (function miniPoll() {
+        if (document.querySelector('.order-summary__sections')) {
+          cancellationDiv();
+          ecMDiv = ecDiv.cloneNode(true);
+          ecMDiv.classList.add('r-mDiv');
+          ecDiv.classList.add('r-dDiv');
+          document.querySelector('.main').prepend(ecMDiv);
+          document.querySelector('.order-summary__sections').appendChild(ecDiv);
+          console.log('div added');
+        } else {
+          setTimeout(miniPoll, 25);
+          console.log('polling');
+        }
+      })();
+
+      //reviews to add
+      rvDiv = document.createElement('div');
+      rvDiv.className = 'rv-main';
+      rvDiv.innerHTML = `
+        <div class="rv-mBox">
+            <div class="rv-items">
+                <div class="rv-img-div">
+                    <img class="rv-img" src="https://splitbase.s3.ca-central-1.amazonaws.com/review1.png" alt="Cancel Anytime" width="100%" height="auto">
+                    <span class="rv-caption">Madelyn F <br><b>Mother of 1</b></span>
+                </div>
+                <div class="rv-details">
+                    <span class="rv-title">Finally! A Good-for-You Vitamin that Actually Tastes Good…</span>
+                    <img class="rv-star" src="https://splitbase.s3.ca-central-1.amazonaws.com/star.svg" alt="Review Star" width="100%" height="auto">
+                    <span class="rv-desc">"I have spent most of my days cringing as I hand two gummy vitamins to my toddler son (the only one he would take) until now! Thank you, hiya. You've made this momma a whole lot happier, and my son, a whole lot healthier!"</span>
+                </div>
+            </div>
+            <div class="rv-items">
+                <div class="rv-img-div">
+                    <img class="rv-img" src="https://splitbase.s3.ca-central-1.amazonaws.com/review2.png" alt="Cancel Anytime" width="100%" height="auto">
+                    <span class="rv-caption">Markus <br><b>Father of 2</b></span>
+                </div>
+                <div class="rv-details">
+                    <span class="rv-title">Helpful During COVID-19</span>
+                    <img class="rv-star" src="https://splitbase.s3.ca-central-1.amazonaws.com/star.svg" alt="Review Star" width="100%" height="auto">
+                    <span class="rv-desc">With everything going on, this is a particularly scary time for parents, so I was thrilled when I heard about Hiya. It helps keep our two kids healthy at a time when we're all terrified of getting sick. My wife LOVES the design and the packaging and more importantly our two boys (4 and 8) love the taste. I tried one (b/c how couldn't you) and I really think monkfruit tastes better than sugar -- and is CLEARLY better for you. Five stars!</span>
+                </div>
+            </div>
+            <div class="rv-items-m">
+                <div class="rv-i-div">
+                    <img class="rv-img" src="https://splitbase.s3.ca-central-1.amazonaws.com/review1.png" alt="Cancel Anytime" width="100%" height="auto">
+                    <img class="rv-star" src="https://splitbase.s3.ca-central-1.amazonaws.com/star.svg" alt="Review Star" width="100%" height="auto">
+                    <span class="rv-title">Finally! A Good-for-You Vitamin that Actually Tastes Good…</span>
+                    <span class="rv-desc">"I have spent most of my days cringing as I hand two gummy vitamins to my toddler son (the only one he would take) until now! Thank you, hiya. You've made this momma a whole lot happier, and my son, a whole lot healthier!"</span>
+                    <span class="rv-caption">Madelyn F - <b>&nbsp;Mother of 1</b></span>
+                </div>
+            </div>
+            <div class="rv-items-m">
+                <div class="rv-i-div">
+                    <img class="rv-img" src="https://splitbase.s3.ca-central-1.amazonaws.com/review2.png" alt="Cancel Anytime" width="100%" height="auto">
+                    <img class="rv-star" src="https://splitbase.s3.ca-central-1.amazonaws.com/star.svg" alt="Review Star" width="100%" height="auto">
+                    <span class="rv-title">Helpful During COVID-19</span>
+                    <span class="rv-desc">With everything going on, this is a particularly scary time for parents, so I was thrilled when I heard about Hiya. It helps keep our two kids healthy at a time when we're all terrified of getting sick. My wife LOVES the design and the packaging and more importantly our two boys (4 and 8) love the taste. I tried one (b/c how couldn't you) and I really think monkfruit tastes better than sugar -- and is CLEARLY better for you. Five stars!</span>
+                    <span class="rv-caption">Markus - <b>&nbsp;Father of 2</b></span>
+                </div>
+            </div>
+        </div>
+        `;
+      mainContent = document.querySelector('.content');
+      mainContent.appendChild(rvDiv);
+
+      (function miniPoll() {
+        if (document.querySelector('.rv-mBox')) {
+          document.querySelector('.rv-mBox').after(document.querySelector('.main__footer'));
+        } else {
+          setTimeout(miniPoll, 25);
+        }
+      })();
+    </script>
+
+    <script>
+      (function ($) {
+        $(document).on('page:load page:change', function () {
+          if (Shopify.Checkout.step === 'contact_information') {
+            document.head.insertAdjacentHTML('beforeend', `<style>
+            .skeleton-while-loading.order-summary__small-text {position: relative;}
+            .skeleton-while-loading.order-summary__small-text:before {content: "Free"; color: #333333; position: absolute; background-color: white; left: 0; right: 0;}
+            </style>`
+            );
+          }
+
+          if (Shopify.Checkout.step === 'shipping_method') {
+            // change shipping method text
+            var shippingPrice = document.querySelector('.content-box__emphasis');
+
+            if (shippingPrice.innerText.toLowerCase().includes('free')) {
+              var doc = shippingPrice.closest('.radio__label__accessory');
+              doc.querySelectorAll('.content-box__small-text')[0].innerHTML = '';
+              doc.closest('.radio__label').querySelectorAll('.radio__label__primary')[0].innerHTML = 'Free Shipping';
+            } else {
+              var doc = shippingPrice.closest('.radio__label__accessory');
+              console.log(doc.querySelectorAll('.content-box__small-text')[0].innerHTML);
+              doc.querySelectorAll('.content-box__small-text')[0].innerHTML = 'Flat Rate';
+            }
+          }
+
+          if (Shopify.Checkout.step === 'payment_method') {
+            // change shipping method text
+            var shippingEl = document.querySelector('.emphasis.skeleton-while-loading--inline');
+            if (shippingEl.innerText.toLowerCase().includes('free')) {
+              shippingEl.innerHTML = '';
+              shippingEl.closest('p').innerHTML = 'Free Shipping';
+            }
+
+            // check the agreemnet and hide it
+            $('#checkout_subscription_agreement').prop('checked', true);
+            $('.section--subscription-agreement').hide();
+
+            // create content block and insert it between payment and back buttons
+            let content = "<div class='checkout-info'><p>By providing your billing information and agreeing to purchase, you understand that you have read, understand, and agree to be bound by Hiya Health Products LLC's <a href='/pages/terms-of-service'>Terms of Service</a> - including the delivery, billing, and payment subscription terms set forth therein. You can cancel at any time, no questions asked - simply email <a href='mailto:support@hiyahealth.com'>support@hiyahealth.com</a> or text us at <a href='tel:8443884492'>(844) 388-4492</a>.</p></div>";
+            $(content).insertBefore(".step[data-step='payment_method'] .step__footer .step__footer__previous-link");
+            $(".step[data-step='payment_method'] .step__footer").addClass('step__footer--content');
+          }
+        });
+      })(Checkout.$);
+    </script>
+    <div data-rebuy-id="102723"></div>
+    <!-- Old widget keeping it commented out for easy revert if needed -->
+     <!-- <div data-rebuy-id="95763"></div> -->
+    <script async src="https://cdn.rebuyengine.com/onsite/js/rebuy.js?shop=hiya-kids.myshopify.com"></script>
+
+    <!-- [START] Address Validation & Capture+ -->
+    {% render 'loqate' %}
+    <!-- [END] Address Validation & Capture+ -->
+
+  </body>
+</html>

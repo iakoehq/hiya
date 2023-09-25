@@ -1,0 +1,50 @@
+<section class="vitamin-info-sec">
+        <div class="container">
+            <div class="inner">
+                <div class="image">
+                  {% if section.settings.image %}
+                    <img src="{{ section.settings.image | img_url : 'master' }}"
+                        alt="img">
+                  {% endif %}
+                </div>
+                <div class="contnet">
+                  {% if section.settings.content != blank %}
+                    <p>{{ section.settings.content }}</p>
+                   {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+{% schema %}
+{
+  "name": "Vitamin Info Section",
+  "tag": "section",
+  "class": "vitamin-info-main",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "textarea",
+      "label": "Content",
+      "id": "content"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Vitamin Info Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

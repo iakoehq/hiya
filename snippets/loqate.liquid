@@ -1,0 +1,444 @@
+{% comment %} [START] Address Validation Tool {% endcomment %}
+<div class="address-val-popup" id="address-val-popup" style="display: none">
+  <div class="address-val-popup__wrap">
+    <h2 class="address-val-popup__title">Please, select Shipping Address</h2>
+    <p class="address-val-popup__text">To ensure prompt and accurate delivery, we suggest a modified shipping address.</p>
+    <div class="address-val-popup__content">
+      <div class="address-val-popup__address address-val-popup__address--suggested">
+        <h3 class="address-val-popup__address-title">Suggested Address</h3>
+        <p class="address-val-popup__address-text" id="suggested_address"></p>
+        <p class="address-val-popup__address-info"><span id="suggested_city"></span><span id="suggested_province"></span><span id="suggested_zip"></span></p>
+      </div>
+      <div class="address-val-popup__address address-val-popup__address--original">
+        <h3 class="address-val-popup__address-title">Original Address</h3>
+        <p class="address-val-popup__address-text" id="original_address"></p>
+        <p class="address-val-popup__address-info"><span id="original_city"></span><span id="original_province"></span><span id="original_zip"></span></p>
+      </div>
+    </div>
+    <div class="address-val-popup__btns">
+      <button class="address-val-popup__btn address-val-popup__btn--orig btn" id="address-val-btn-orig">
+        Use Original
+        <svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
+          <use xlink:href="#spinner-button"></use>
+        </svg>
+      </button>
+      <button class="address-val-popup__btn address-val-popup__btn--replace btn" id="address-val-btn-replace">
+        Replace
+        <svg class="icon-svg icon-svg--size-18 btn__spinner icon-svg--spinner-button" aria-hidden="true" focusable="false">
+          <use xlink:href="#spinner-button"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+<style>
+  .address-val-popup {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #00000072;
+    z-index: 2;
+  }
+  .address-val-popup__wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  .address-val-popup__title {
+    margin-bottom: 10px;
+    color: #3f7ab9;
+  }
+  .address-val-popup__text {
+    color: rgb(155, 155, 155);
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b8b8b8;
+  }
+  .address-val-popup__address-title {
+    color: #3f7ab9;
+  }
+  .address-val-popup__address {
+    padding: 20px 0;
+  }
+  .address-val-popup__address--suggested {
+    border-bottom: 1px solid #b8b8b8;
+  }
+  .address-val-popup__address--original {
+    opacity: 0.85;
+  }
+  .address-val-popup__btns {
+    display: flex;
+    justify-content: space-around;
+  }
+  .address-val-popup__btn {
+    min-width: 140px;
+  }
+  .address-val-popup__content {
+    margin-bottom: 20px;
+  }
+  .address-val-popup__btn--orig {
+    background-color: #b8b8b8;
+  }
+  .address-val-popup__btn--orig:hover {
+    background-color: #797979;
+  }
+  .address-val-popup__btn--active {
+    font-size: 0;
+  }
+  .address-val-popup__btn--active .icon-svg {
+    opacity: 1;
+    animation: move 0.5s infinite linear;
+  }
+  @keyframes move {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @media (max-width: 1024px) {
+    .address-val-popup__wrap {
+      max-width: 80%;
+      margin: 0;
+    }
+    .address-val-popup__btns {
+      flex-direction: column-reverse;
+    }
+    .address-val-popup__btn {
+      padding: 15px !important;
+      height: 50px;
+    }
+    .address-val-popup__btn--replace {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+<script>
+  window.preventAction = true;
+  let suggested_country_name = "";
+  let suggested_address = "";
+  let suggested_city = "";
+  let suggested_province = "";
+  let suggested_zip = "";
+  let original_country = "";
+  let original_address = "";
+  let original_city = "";
+  let original_province = "";
+  let original_zip = "";
+
+  async function addressValidation(Address, Country, Locality, PostalCode) {
+    let formData = {
+      Key: "GW96-EZ96-JN89-NE17",
+      Geocode: false,
+      Addresses: [
+        {
+          Address: Address,
+          Country: Country,
+          Locality: Locality,
+          PostalCode: PostalCode,
+        },
+      ],
+    };
+
+    let response = await fetch("https://api.addressy.com/Cleansing/International/Batch/v1.00/json4.ws", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      let json = await response.json();
+
+      suggested_address = json[0].Matches[0].Address1;
+      suggested_city = json[0].Matches[0].Locality;
+      suggested_country_name = json[0].Matches[0].CountryName;
+      suggested_province = json[0].Matches[0].AdministrativeArea;
+      suggested_zip = json[0].Matches[0].PostalCode;
+
+      window.preventAction = false;
+
+      if (
+        (suggested_address != undefined && original_address.toLowerCase() != suggested_address.toLowerCase()) ||
+        (suggested_city != undefined && original_city.toLowerCase() != suggested_city.toLowerCase()) ||
+        (suggested_province != undefined && original_province.toLowerCase() != suggested_province.toLowerCase()) ||
+        (suggested_zip != undefined && original_zip.toLowerCase() != suggested_zip.toLowerCase())
+      ) {
+        document.getElementById("suggested_address").innerHTML = suggested_address;
+        document.getElementById("suggested_city").innerHTML = suggested_city;
+        if (suggested_province != undefined) {
+          document.getElementById("suggested_province").innerHTML = ", " + suggested_province;
+        } else {
+          document.getElementById("suggested_province").innerHTML = ", " + original_province;
+        }
+        if (suggested_zip != undefined) {
+          document.getElementById("suggested_zip").innerHTML = ", " + suggested_zip;
+        } else {
+          document.getElementById("suggested_zip").innerHTML = ", " + original_zip;
+        }
+        document.getElementById("original_address").innerHTML = original_address;
+        document.getElementById("original_city").innerHTML = original_city;
+        document.getElementById("original_province").innerHTML = ", " + original_province;
+        document.getElementById("original_zip").innerHTML = ", " + original_zip;
+        document.getElementById("address-val-popup").style.display = "block";
+      } else {
+        document.getElementById("continue_button").click();
+      }
+    } else {
+      alert("Error HTTP: " + response.status);
+    }
+  }
+
+  (function ($) {
+    $(document).on("page:load page:change", function () {
+      const CheckoutStep = Shopify.Checkout.step;
+      if (CheckoutStep == "contact_information") {
+        function checkAddress(evt) {
+          if (window.preventAction == true) {
+            evt.preventDefault();
+          }
+
+          original_country = document.getElementById("checkout_shipping_address_country").selectedOptions[0].dataset.code;
+          original_address = document.getElementById("checkout_shipping_address_address1").value;
+          original_city = document.getElementById("checkout_shipping_address_city").value;
+          original_province = document.getElementById("checkout_shipping_address_province").selectedOptions[0].value;
+          original_zip = document.getElementById("checkout_shipping_address_zip").value;
+
+          addressValidation(original_address, original_country, original_city, original_zip);
+        }
+
+        function useOriginalAddress(evt) {
+          document.getElementById("continue_button").click();
+          this.classList.add("address-val-popup__btn--active");
+        }
+
+        function replaceOriginalAddress(evt) {
+          document.getElementById("checkout_shipping_address_country").value = suggested_country_name;
+          document.getElementById("checkout_shipping_address_address1").value = suggested_address;
+          document.getElementById("checkout_shipping_address_city").value = suggested_city;
+          if (suggested_province != undefined) {
+            document.getElementById("checkout_shipping_address_province").value = suggested_province;
+          }
+          if (suggested_zip != undefined) {
+            document.getElementById("checkout_shipping_address_zip").value = suggested_zip;
+          }
+          document.getElementById("continue_button").click();
+          this.classList.add("address-val-popup__btn--active");
+        }
+
+        document.getElementById("continue_button").addEventListener("click", checkAddress, false);
+        document.getElementById("address-val-btn-orig").addEventListener("click", useOriginalAddress, false);
+        document.getElementById("address-val-btn-replace").addEventListener("click", replaceOriginalAddress, false);
+      }
+    });
+  })(Checkout.$);
+</script>
+{% comment %} [END] Address Validation Tool{% endcomment %}
+
+{% comment %} [START] Address Capture+ {% endcomment %}
+<style>
+  .field__input-wrapper {
+    position: relative;
+  }
+  .checkout-ship-address-list {
+    overflow: auto;
+    max-height: 135px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 99.7%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    transform: translateY(5px);
+    z-index: 3;
+  }
+  .checkout-ship-address-list button {
+    text-align: left;
+    padding: 10px 10px;
+    border-bottom: 1px solid #d9d9d9;
+    transition: all 0.2s ease;
+  }
+  .checkout-ship-address-list .checkout-ship-address-error {
+    text-align: left;
+    padding: 10px 10px;
+    border-bottom: 1px solid #d9d9d9;
+    transition: all 0.2s ease;
+    color: #ff6d6d;
+  }
+  .checkout-ship-address-list button:hover {
+    background-color: #d9d9d9;
+  }
+  .hide {
+    display: none;
+  }
+</style>
+<script>
+  let checkoutShippingAddress_list = document.createElement("div");
+  checkoutShippingAddress_list.classList.add("checkout-ship-address-list");
+  checkoutShippingAddress_list.classList.add("hide");
+  let checkoutShippingAddress_field = document.getElementById("checkout_shipping_address_address1");
+  checkoutShippingAddress_field.after(checkoutShippingAddress_list);
+
+  checkoutShippingAddress_field.addEventListener("input", (input) => {
+    findAddress();
+
+    if (event.target.value == "") {
+      checkoutShippingAddress_list.classList.add("hide");
+    }
+  });
+
+  document.addEventListener("click", function (e) {
+    if (
+      !e.target.classList.contains("checkout-ship-address-btn") &&
+      !e.target.classList.contains("heckout-ship-address-list") &&
+      e.target.id != "checkout_shipping_address_address1"
+    ) {
+      checkoutShippingAddress_list.classList.add("hide");
+    }
+  });
+
+  function showError(message) {
+    checkoutShippingAddress_list.innerHTML = `<p class="checkout-ship-address-error">${message}</p>`;
+    var error = document.querySelector(".checkout-ship-address-error");
+    error.style.display = "block";
+
+    setTimeout(function () {
+      error.style.display = "none";
+    }, 10000);
+  }
+
+  function findAddress(SecondFind) {
+    var Text = document.getElementById("checkout_shipping_address_address1").value;
+
+    if (Text === "") {
+      showError("Please enter an address");
+      return;
+    }
+
+    var Container = "";
+
+    if (SecondFind !== undefined) {
+      Container = SecondFind;
+    }
+
+    var Key = "GW96-EZ96-JN89-NE17",
+      IsMiddleware = false,
+      Origin = "",
+      Countries = document.getElementById("checkout_shipping_address_country").selectedOptions[0].dataset.code,
+      Limit = "20",
+      Language = "en-gb",
+      url = "https://services.postcodeanywhere.co.uk/Capture/Interactive/Find/v1.10/json3.ws";
+    var params = "";
+    params += "&Key=" + encodeURIComponent(Key);
+    params += "&Text=" + encodeURIComponent(Text);
+    params += "&IsMiddleware=" + encodeURIComponent(IsMiddleware);
+    params += "&Container=" + encodeURIComponent(Container);
+    params += "&Origin=" + encodeURIComponent(Origin);
+    params += "&Countries=" + encodeURIComponent(Countries);
+    params += "&Limit=" + encodeURIComponent(Limit);
+    params += "&Language=" + encodeURIComponent(Language);
+    var http = new XMLHttpRequest();
+    http.open("POST", url, true);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.onreadystatechange = function () {
+      if (http.readyState == 4 && http.status == 200) {
+        var response = JSON.parse(http.responseText);
+        if (response.Items.length == 1 && typeof response.Items[0].Error != "undefined") {
+          showError(response.Items[0].Description);
+        } else {
+          if (response.Items.length == 0) showError("Sorry, there were no results");
+          else {
+            let results = "";
+
+            for (var i = 0; i < response.Items.length; i++) {
+              results =
+                results +
+                `
+                <button 
+                  class="checkout-ship-address-btn"
+                  data-type="${response.Items[i].Type}"
+                  data-value="${response.Items[i].Id}"
+                >${response.Items[i].Text} ${response.Items[i].Description}</button>`;
+              checkoutShippingAddress_list.innerHTML = results;
+            }
+
+            checkoutShippingAddress_list.classList.remove("hide");
+            selectAddress(Key);
+          }
+        }
+      }
+    };
+    http.send(params);
+  }
+
+  function selectAddress(Key) {
+    document.querySelectorAll(".checkout-ship-address-list button").forEach((button) => {
+      button.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        if (button.dataset.type === "Address") {
+          retrieveAddress(Key, button.dataset.value);
+        } else {
+          findAddress(button.dataset.value);
+        }
+      });
+    });
+  }
+
+  function retrieveAddress(Key, Id) {
+    var Field1Format = "";
+    var url = "https://services.postcodeanywhere.co.uk/Capture/Interactive/Retrieve/v1.00/json3.ws";
+    var params = "";
+    params += "&Key=" + encodeURIComponent(Key);
+    params += "&Id=" + encodeURIComponent(Id);
+    params += "&Field1Format=" + encodeURIComponent(Field1Format);
+
+    var http = new XMLHttpRequest();
+    http.open("POST", url, true);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.onreadystatechange = function () {
+      if (http.readyState == 4 && http.status == 200) {
+        var response = JSON.parse(http.responseText);
+
+        if (response.Items.length == 1 && typeof response.Items[0].Error != "undefined") {
+          showError(response.Items[0].Description);
+        } else {
+          if (response.Items.length == 0) showError("Sorry, there were no results");
+          else {
+            var res = response.Items[0];
+
+            document.getElementById("checkout_shipping_address_address1").value = res.Line1;
+            document.getElementById("checkout_shipping_address_city").value = res.City;
+            if (suggested_province != undefined) {
+              document.getElementById("checkout_shipping_address_province").value = res.ProvinceCode;
+            }
+            if (suggested_zip != undefined) {
+              document.getElementById("checkout_shipping_address_zip").value = res.PostalCode;
+            }
+
+            checkoutShippingAddress_list.classList.add("hide");
+          }
+        }
+      }
+    };
+    http.send(params);
+  }
+</script>
+{% comment %} [END] Address Capture+ {% endcomment %}

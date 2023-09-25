@@ -1,0 +1,123 @@
+<div class="experts_are_saying_band">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="experts_top_heading">
+          {% if section.settings.small_image != blank %}
+            <img src="{{ section.settings.small_image | img_url : 'master' }}" alt="image" class="image">
+          {% endif %}          
+          {% if section.settings.top_heading != blank %}
+            <h2>{{ section.settings.top_heading }}</h2>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="row what-expert-slider">
+      {%- for block in section.blocks -%}
+      <div class="col-md-4">        
+        <div class="experts_box">
+          {% if block.settings.main_image != blank %}
+            <img src="{{ block.settings.main_image | img_url : 'master' }}" alt="image" class="image">
+          {% endif %}          
+          {% if block.settings.heading1 != blank %}
+          <h3>{{ block.settings.heading1 }}</h3>
+          {% endif %}          
+          {% if block.settings.heading2 != blank %}
+          <h4>{{ block.settings.heading2 }}</h4>
+          {% endif %}          
+          {% if block.settings.heading3 != blank %}
+          <h5>{{ block.settings.heading3 }}</h5>
+          {% endif %}          
+        </div>
+      </div>
+         {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+@media (max-width: 767px) {
+    .experts_are_saying_band h2 {
+        font-size: 28px;
+    }
+
+    .experts_are_saying_band .row .col-md-12 {
+        padding: 0 15px 40px;
+    }
+
+    .experts_are_saying_band .slick-prev,
+    .experts_are_saying_band .slick-next {
+        display: none !important;
+    }
+
+    .experts_are_saying_band .experts_box img {
+        padding-top: 20px;
+        margin-bottom: 55px;
+    }
+
+    .experts_are_saying_band .experts_box h3 {
+        line-height: 35px;
+    }
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "Experts Are Saying",
+  "tag": "section",
+  "class": "experts_are_saying",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Heading Icon",
+      "id": "small_image"
+    },
+    {
+      "type": "text",
+      "label": "Heading Expert Saying",
+      "id": "top_heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Experts Are Saying",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "main_image"
+        },
+        {
+          "type": "text",
+          "label": "Expert Saying",
+          "id": "heading1"
+        },
+        {
+          "type": "text",
+          "label": "Expert Saying Name",
+          "id": "heading2"
+        },
+        {
+          "type": "text",
+          "label": "Expert Designation",
+          "id": "heading3"
+        }
+                  
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Experts Are Saying"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

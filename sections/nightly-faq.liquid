@@ -1,0 +1,127 @@
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+
+<section class="faq-sec">
+    <div class="container">
+       {% if section.settings.heading != blank %}
+        <h1>{{ section.settings.heading }}</h1>
+       {% endif %}
+       {% if section.settings.content != blank %}
+        <p>{{ section.settings.content }}</p>
+       {% endif %}
+        <div class="faq-wrapper">
+          {% for block in section.blocks %}
+            <div class="faq">
+                <div class="faq-question">
+                 {% if block.settings.questions != blank %} 
+                    <h3>{{ block.settings.questions }}</h3>
+                  {% endif %}
+                    <div class="image">
+                        <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/t/147/assets/down-icon.png"
+                            alt="arrow">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                  {% if block.settings.answer != blank %}
+                    <p>{{ block.settings.answer }}</p>
+                  {% endif %}
+                </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% if section.settings.block_button_text != blank and section.settings.block_button_link != blank %}
+        <a href="{{ section.settings.block_button_link }}" class="primary-btn shop-btn">{{ section.settings.block_button_text }}</a>
+      {% endif %}
+    </div>
+</section>
+
+<script>
+  $(document).ready(function(){
+    $(document).ready(function() {
+      $(".faq > .faq-question").on("click", function() {
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active");
+          $(this)
+            .siblings(".faq-answer")
+            .slideUp(200);
+          $(".faq > .faq-question i")
+            .removeClass("fa-minus")
+            .addClass("fa-plus");
+        } else {
+          $(".faq > .faq-question i")
+            .removeClass("fa-minus")
+            .addClass("fa-plus");
+          $(this)
+            .find("i")
+            .removeClass("fa-plus")
+            .addClass("fa-minus");
+          $(".faq > .faq-question").removeClass("active");
+          $(this).addClass("active");
+          $(".faq-answer").slideUp(200);
+          $(this)
+            .siblings(".faq-answer")
+            .slideDown(200);
+        }
+      });
+    });
+
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Faq Section Nightly",
+  "tag": "section",
+  "class": "faq-main",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "textarea",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "text",
+      "label": "Block Button Text",
+      "id": "block_button_text"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "block_button_link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Faq",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Questions",
+          "id": "questions"
+        },
+        {
+          "type": "textarea",
+          "label": "Answer",
+          "id": "answer"
+        }
+      ]
+    }           
+  ],
+  "presets": [
+    {
+      "name": "Faq Section Nightly"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,8 @@
+{% comment %}
+assigning the multivitamin unless its the probiotic product
+{% endcomment %}
+{% assign reviewsID = 4528169320529 %}
+{% if product.id == 6612825079889 %}
+  {% assign reviewsID = 6612825079889 %}
+{% endif %}
+<div data-oke-reviews-widget data-oke-reviews-product-id="shopify-{{ reviewsID }}">{{ product.metafields.okendo.ProductReviewsWidgetSnippet }}</div>

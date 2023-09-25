@@ -1,0 +1,47 @@
+<div class="col-dt footer__subscribe">
+    <div class="footer__menu__title">{{section.settings.newsletter-title}}</div>
+    <div class="form-inline form-default">
+        {%- assign formId = 'footer-form' -%}
+        {%- form 'customer', id: formId -%}
+        <div class="footer-form-errors hide" id="email-error">
+            <ul>
+                <li>Email entered incorrectly !</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <input name="contact[tags]" type="hidden" value="newsletter">
+            <input type="email" name="contact[email]" id="{{ formId }}-email" class="newsletter__input form-control" value="" required="">
+            <button class="btn newsletter__submit" id="Subscribe" name="commit" type="submit">{% render 'asset_svg' with 'subscribe-btn-icon' %}</button>
+        </div>
+        {%- endform -%}
+    </div>
+    <div class="footer__social">
+        <a href="{{section.settings.insta-link}}" target="_blank">{% render 'asset_svg' with 'insta-icon' %}</a>
+        <a href="{{section.settings.fb-link}}" target="_blank">{% render 'asset_svg' with 'fb-icon' %}</a>
+    </div>
+</div>
+
+<script>
+    function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      $("#footer-form").submit(function (event) {
+        var email = $("#footer-form-email").val();
+        if (validateEmail(email)) {
+          console.log("true");
+          $("#email-error").addClass("hide");
+        } else {
+          event.preventDefault();
+          console.log("false");
+          $("#email-error").removeClass("hide");
+        }
+      });
+    
+      function sub() {
+        $("#footer-form").submit();
+      }
+    });
+  </script>

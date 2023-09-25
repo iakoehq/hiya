@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "2798329c-d83b-4b5c-a5b6-d8be74c22720": {
+      "type": "ditch-the-plastic-sec",
+      "settings": {
+        "heading": "Ditch the plastic — save the\n          <span>environment<\/span>",
+        "content": "As parents, we all care deeply about our kids and the world we’re creating for them. That’s why we make sure to do our part."
+      }
+    },
+    "9583493a-edb7-4800-a581-6d96ada5a271": {
+      "type": "zero-plastic-sec",
+      "settings": {
+        "heading": "Zero plastic",
+        "content": "Rather than send plastic bottles of vitamins that tend to pile up, we send a refillable bottle for you to keep and personalize, then every month we send refill pouches to pour into your bottle.",
+        "main_image": "shopify:\/\/shop_images\/download.webp",
+        "button_text": "shop",
+        "button_url": "\/products\/kids-daily-essential"
+      }
+    },
+    "c8fa98b1-9c24-4414-919b-52b6058a75f3": {
+      "type": "optimized-for-freshness-sec",
+      "settings": {
+        "heading": "Optimized for freshness",
+        "content": "Many other vitamins are designed to sit on a store shelf and packed in clear plastic bottles that may attract light. Our vitamins are delivered monthly with a refillable glass bottle optimized for freshness so you can be sure your kids are getting the nourishment they need.",
+        "main_image": "shopify:\/\/shop_images\/download_1.webp",
+        "button_text": "shop",
+        "button_url": "\/products\/kids-daily-essential"
+      }
+    },
+    "6e913686-6dd0-46e7-8f63-984d8f626657": {
+      "type": "image_with_content_sec",
+      "blocks": {
+        "b131448d-9956-4d55-9bd6-93c910d9f719": {
+          "type": "image",
+          "settings": {
+            "content_position": true,
+            "heading": "Teaches healthy habits",
+            "content": "<p>When vitamins look too much like candy, we are unintentionally training our kids to associate healthy eating with dessert. This habit is all part of our society’s troubling addiction to sugar, which is an epidemic with consequences we are just now beginning to understand.<\/p><p>Hiya teaches healthy habits that kids can carry forward in life, not early dependence on sugar that may lead to a variety of health problems throughout childhood and beyond.<\/p>",
+            "main_image": "shopify:\/\/shop_images\/download_2.webp",
+            "button_text": "Shop",
+            "button_link": "shopify:\/\/products\/kids-daily-essential"
+          }
+        }
+      },
+      "block_order": [
+        "b131448d-9956-4d55-9bd6-93c910d9f719"
+      ],
+      "settings": {
+      }
+    },
+    "be1ff841-e3ae-413e-8f31-7007f3423113": {
+      "type": "join-the-hiya-life-sec",
+      "settings": {
+        "heading": "Join the Hiya Life",
+        "content": "<span>#hiyalife<\/span>\n<span>@hiyahealth<\/span>",
+        "main_image": "shopify:\/\/shop_images\/Hiya-Instagram_b371ad4f-860f-43a0-975c-20330225349e.svg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2798329c-d83b-4b5c-a5b6-d8be74c22720",
+    "9583493a-edb7-4800-a581-6d96ada5a271",
+    "c8fa98b1-9c24-4414-919b-52b6058a75f3",
+    "6e913686-6dd0-46e7-8f63-984d8f626657",
+    "be1ff841-e3ae-413e-8f31-7007f3423113"
+  ]
+}

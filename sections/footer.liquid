@@ -1,0 +1,59 @@
+{{ 'custom-footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="footer">
+    <div class="container-dt">
+        <div class="row-dt">
+          {% if product.tags contains 'affiliate' %}
+            {%- render "footer-menu-affiliate" -%}
+          {% else %}
+            {%- render "footer-menu" -%}
+            {%- render "footer-subscribe" -%}
+          {% endif %}
+        </div>
+        {%- render "footer-copyright" -%}
+    </div>
+</footer>
+{% schema %}
+  {
+      "name": "Footer",
+       "settings": [
+          {
+              "type": "html",
+              "id": "footer_coopyright",
+              "label": "Copyright Text",
+              "default": "&copy; Hiya 2020. All Rights Reserved"
+          },
+          {
+              "type": "html",
+              "id": "footer_coopyright_variant_swatches",
+              "label": "Copyright Text on Variant Swatches product",
+              "default": "&copy; Hiya 2020. All Rights Reserved"
+          },
+          {
+              "type": "text",
+              "id": "newsletter-title",
+              "label": "Newsletter title",
+              "default": "Subscribe to our newsletter"
+          },
+          {
+              "type": "text",
+              "id": "account-title",
+              "label": "Account title",
+              "default": "Account"
+          },
+          {
+              "type": "text",
+              "id": "insta-link",
+              "label": "Instagram Link",
+              "default": "https://www.instagram.com/hiyahealth/"
+          },
+          {
+              "type": "text",
+              "id": "fb-link",
+              "label": "Facebook Link",
+              "default": "https://www.facebook.com/hiyahealth/"
+          }
+      ]
+  }
+  {% endschema %}
+  

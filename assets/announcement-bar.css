@@ -1,0 +1,169 @@
+/*! CSS Used from: https://cdn.shopify.com/s/files/1/0255/3249/8001/t/151/assets/theme.css?v=7112453938754602241683122073 ; media=all */
+@media all {
+    *,*::before,*::after {
+        box-sizing: border-box;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    svg:not(:root) {
+        overflow: hidden;
+    }
+
+    @media print {
+        *,*::before,*::after {
+            text-shadow: none!important;
+            box-shadow: none!important;
+        }
+
+        p {
+            orphans: 3;
+            widows: 3;
+        }
+    }
+
+    p {
+        margin: 16px 0 0 0px;
+    }
+
+    @media (max-width: 575px) {
+        p {
+            margin:10px 0 0 0px;
+        }
+    }
+
+    
+/*     p {
+        line-height: 26px!important;
+    }
+
+    @media (max-width: 789px) {
+        p {
+            margin:15px 0px!important;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        p {
+            margin:15px 0px!important;
+        }
+    }
+
+    @media screen and (max-width: 999px) and (min-width:790px) {
+        p {
+            margin:15px 0px!important;
+        }
+    } */
+}
+
+/*! CSS Used from: https://cdn.shopify.com/s/files/1/0255/3249/8001/t/151/assets/bundle.theme.css?v=53368361213710981751683122105 ; media=all */
+@media all {
+    *,:before,:after {
+        border-style: solid;
+        border-width: 0;
+        box-sizing: border-box;
+    }
+
+    svg:not(:root) {
+        overflow: hidden;
+    }
+
+    svg {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    .announcement {
+        padding: .375em 1.5em;
+        background-color: var(--bgAnnouncement);
+        text-align: center;
+    }
+
+    .announcement__close {
+        position: absolute;
+        top:1%;
+        right: 16px;
+        cursor: pointer;
+    }
+  
+    @media (min-width: 48em) {
+        .announcement__close {
+            top:0%;
+        }
+        .announcement {
+            padding:.5em 1.5em;
+        }
+    }
+
+    .announcement__desc {
+        color: var(--announcementTextColor);
+        margin: 0!important;
+        font-size: .625em;
+        line-height: normal!important;
+        letter-spacing: .5px;
+    }
+
+    @media (min-width: 48em) {
+        .announcement__desc {
+            font-size:.75em;
+        }
+    }
+
+    .announcement__desc span {
+        font-weight: 500;
+        font-size: 1em;
+        display: block;
+        /*font-family: fp;*/
+        position: relative;
+    }
+
+    @media (min-width: 40em) {
+        .announcement__desc span {
+            display:initial;
+        }
+
+        .announcement__desc span:after {
+            content: "";
+            width: 1px;
+            height: 1em;
+            background-color: #fff;
+            margin: 0 7.5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .announcement__close {
+            right: 24px;
+        }
+    }
+}
+
+/*! CSS Used from: Embedded */
+.announcement {
+    --bgAnnouncement: #f28072;
+    --announcementTextColor: #ffffff;
+}
+
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: fp;
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://cdn.shopify.com/s/files/1/0255/3249/8001/t/151/assets/FilsonProMedium.woff) format("woff");
+}
+
+@font-face {
+    font-family: "fp";
+    font-style: normal;
+    font-weight: 500;
+    src: url("https://cdn.shopify.com/s/files/1/0255/3249/8001/t/151/assets/FilsonProMedium.woff") format("woff");
+}
+@media (max-width:767px){
+  .announcement > p > b {
+    display: block;
+  }
+}

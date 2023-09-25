@@ -1,0 +1,26 @@
+{% for link in linklists.footer-menu-new.links %}
+<div class="col-dt {% if forloop.index == 1 %}accordion-open{% endif %}">
+    <div class="footer__menu__title js-accordion">
+        {{link.title}}
+        <span class="footer__menu__arrow">{%- render 'asset_svg' with 'accordion-arrow' -%}</span>
+    </div>
+    {% assign target_links = 'Privacy Policy, Shipping & Returns, Terms and conditions' | split: ', ' %}
+    {% if link.links != blank %}
+        <ul class="footer__menu">
+            {% for childlink in link.links %}
+                {%- assign labelDowncase = childlink.title | downcase -%}
+                <li class="footer__menu__list"><a href="{{ childlink.url }}" {% if target_links contains childlink.title %}target="_blank"{% endif %} class="{% if labelDowncase  contains "bedtime" %}new_element{% endif %}">{{ childlink.title }}</a></li>
+            {% endfor %}
+            {% if forloop.index == 3 %}
+                {%- if shop.customer_accounts_enabled and customer -%}<li class="footer__menu__list"><a href="/account">My Orders</a></li>{%- endif -%}
+                    {%- if shop.customer_accounts_enabled -%}
+                    {%- if customer -%}<li class="footer__menu__list"><a href="/account/logout">Sign Out</a></li>
+                    {%- else -%}<li class="footer__menu__list"><a href="/account/login">Sign In</a></li>
+                    {%- if shop.customer_accounts_optional -%}<li class="footer__menu__list"><a href="/account/register">Register</a></li>{%- endif -%}
+                    {%- endif -%}
+                {%- endif -%} 
+            {% endif %}
+        </ul>
+    {% endif %}
+</div>
+{% endfor %}

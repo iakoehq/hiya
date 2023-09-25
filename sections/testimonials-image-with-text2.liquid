@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="content">
+    <div class="image-box">
+      {% if section.settings.main_image != blank %}
+      <img src="{{ section.settings.main_image | img_url : 'master' }}" alt="image" class="image">
+     {% endif %}
+    </div>
+    <div class="text-box">
+      {% if section.settings.content != blank %}
+     <h5>{{ section.settings.content }}</h5>
+      {% endif %}
+      <p>
+        {% if section.settings.author != blank %}
+          <strong>{{ section.settings.author }}</strong>
+        {% endif %}
+          <br>
+        {% if section.settings.text != blank %}
+          <em>{{ section.settings.text }}</em>
+        {% endif %}
+        </p>
+      
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "testimonials Image text",
+  "tag": "section",
+  "class": "influencer-image-text testimonials",
+  "settings": [
+                {
+                    "type": "html",
+                    "label": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "type": "image_picker",
+                    "label": "Image",
+                    "id": "main_image"
+                  },
+                  {
+                    "type": "text",
+                    "label": "Author Name",
+                    "id": "author"
+                  },
+                  {
+                    "type": "text",
+                    "label": "Text",
+                    "id": "text"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "testimonials Image text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

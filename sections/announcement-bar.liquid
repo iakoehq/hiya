@@ -1,0 +1,71 @@
+{{ 'announcement-bar.css' | asset_url | stylesheet_tag }}
+
+{%- if template == 'product.variant-swatches' -%}
+    {%- if product.metafields.my_fields.discount != blank -%}
+        {%- if section.settings.enable_announcement and section.settings.announcement_text != blank -%}
+            <div class="announcement">
+                <p class="announcement__desc"><span>{{product.metafields.my_fields.discount}}% Off on First Order</span>Discount auto-applies on checkout</p>
+                <div class="announcement__close js-announcement-close">
+                    {% render 'asset_svg' with 'cross' %}
+                </div>
+            </div>
+        {%- endif -%}
+    {%- endif -%}
+{%- else -%}
+    {%- if section.settings.enable_announcement and section.settings.announcement_text != blank -%}
+        <div class="announcement">
+            <p class="announcement__desc">{{ section.settings.announcement_text }}</p>
+            <div class="announcement__close js-announcement-close">
+                {% render 'asset_svg' with 'cross' %}
+            </div>
+        </div>
+    {%- endif -%}
+{%- endif -%}
+<style>
+    .announcement {
+        --bgAnnouncement: {{section.settings.announcement_bgcolor}};
+        --announcementTextColor: {{section.settings.announcement_textcolor}};
+    }
+  .announcement-bar.fixed {
+    position:fixed;
+    width:100%;
+  }
+</style>
+<script>
+    let close = document.querySelector('.js-announcement-close');
+    let announcementBar = document.querySelector('.announcement');
+    close.addEventListener('click' , function() {
+        announcementBar.classList.add('hide');
+    });
+</script>
+
+{% schema %}
+    {
+        "name":"Announcement Bar",
+        "class": "announcement-bar",
+        "settings":[
+            {
+                "type":"text",
+                "id":"announcement_text",
+                "label":"Announcement Bar Text"
+            },
+            {
+                "type":"checkbox",
+                "id":"enable_announcement",
+                "label":"Announcement Bar Enable/disable"
+            },
+            {
+                "type": "color",
+                "id": "announcement_bgcolor",
+                "label": "Announcement Bar background color",
+                "default": "#f28072"
+            },
+            {
+                "type": "color",
+                "id": "announcement_textcolor",
+                "label": "Announcement Bar text color",
+                "default": "#ffffff"
+            }
+        ]
+    }
+{% endschema %}

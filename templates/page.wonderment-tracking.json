@@ -1,0 +1,197 @@
+{
+  "sections": {
+    "981dddb9-0740-4de7-a566-f66e35532aea": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14890182803537__981dddb9-0740-4de7-a566-f66e35532aea-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Order Status",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--14890182803537__981dddb9-0740-4de7-a566-f66e35532aea-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16867559239473e80c": {
+      "type": "apps",
+      "blocks": {
+        "d9ca52c1-206e-43e2-a939-53e3f7bb608c": {
+          "type": "shopify:\/\/apps\/wonderment\/blocks\/wonderBlock\/89d63369-6ee7-4097-ac41-8229c6f90001",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "d9ca52c1-206e-43e2-a939-53e3f7bb608c"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main": {
+      "type": "wonderment-starter",
+      "blocks": {
+        "starter": {
+          "type": "starter",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "starter"
+      ],
+      "disabled": true,
+      "settings": {
+        "width_override": true
+      }
+    },
+    "hero": {
+      "type": "wonderment-hero",
+      "disabled": true,
+      "settings": {
+        "width_override": true,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "faq": {
+      "type": "wonderment-faq",
+      "blocks": {
+        "faq-getting-started": {
+          "type": "section_heading",
+          "settings": {
+            "title": "FAQs"
+          }
+        },
+        "when-shipping-question": {
+          "type": "question",
+          "settings": {
+            "title": "When will my order ship?",
+            "text": "<p>You product will be sent within 3-5 business days using USPS, UPS, or FEDEX, yet may take longer due to unforeseen delays.<\/p><p><\/p>"
+          }
+        },
+        "when-arriving-question": {
+          "type": "question",
+          "settings": {
+            "title": "How does your subscription work?",
+            "text": "<p>As parents ourselves, we know parents have enough to worry about let alone worrying about their daily vitamin order. That's why we created an easy-to-start, easy-to-cancel subscription for all orders. Your first month you receive a 30-day supply of fresh vitamins and a refillable glass bottle meant to be personalized with stickers. Each month thereafter you receive a recyclable refill pouch to fill up your bottle with fresh vitamins. The monthly experience is delivered automatically on a pediatrician-approved 30-day schedule to help teach your children healthy habits and care for the environment.<\/p><p><\/p>"
+          }
+        },
+        "ship-international-question": {
+          "type": "question",
+          "settings": {
+            "title": "How do I adjust\/cancel my order",
+            "text": "<p>All orders are easy-to-start, easy-to-cancel. If you want to adjust or cancel your order, please email us directly at support@hiyahealth.com, or you may update your account by clicking 'Manage Account' in your initial order email.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-getting-started",
+        "when-shipping-question",
+        "when-arriving-question",
+        "ship-international-question"
+      ],
+      "settings": {
+        "show_answers": false,
+        "text_size": 100,
+        "alignment": "center",
+        "text_color": "#121212",
+        "background_color": "linear-gradient(184deg, rgba(255, 255, 255, 1) 7%, rgba(255, 255, 255, 1) 94%)",
+        "border_color": "#121212",
+        "base_width": 80,
+        "max_width": "",
+        "inner_padding": 100,
+        "outer_margin": 0,
+        "custom_css": "",
+        "mobile_custom_css": "",
+        "override_theme_font": false,
+        "heading_font": "serif",
+        "main_font": "sans-serif"
+      }
+    },
+    "rebuy": {
+      "type": "wonderment-rebuy",
+      "disabled": true,
+      "settings": {
+        "rebuy-widget-id": ""
+      }
+    },
+    "fairing": {
+      "type": "wonderment-fairing",
+      "disabled": true,
+      "settings": {
+        "fairing-key": "",
+        "fairing-padding-tb": 10,
+        "fairing-padding-lr": 10,
+        "fairing-border-color": "#000000",
+        "fairing-border-size": 0,
+        "fairing-border-radius": 0,
+        "fairing-title-text-align": "center",
+        "fairing-title-margin-top": 20,
+        "fairing-title-margin-bottom": 20,
+        "fairing-title-max-width": 100,
+        "fairing-response-border-color": "#000000",
+        "fairing-response-border-size": 0,
+        "fairing-response-border-radius": 0,
+        "fairing-response-padding": 5,
+        "fairing-responses-margin": 20
+      }
+    },
+    "b766df0b-0b69-40bf-b980-0e4104c0a54e": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "wonderment",
+        "products_to_show": 4,
+        "columns_desktop": 2,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "981dddb9-0740-4de7-a566-f66e35532aea",
+    "16867559239473e80c",
+    "main",
+    "hero",
+    "faq",
+    "rebuy",
+    "fairing",
+    "b766df0b-0b69-40bf-b980-0e4104c0a54e"
+  ]
+}

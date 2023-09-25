@@ -1,0 +1,33 @@
+@media (max-width: 767px) {
+    .ingredients-pros-sec .box-wrapper .content img {
+        width: 100%;
+    }
+
+    .pages-ingredients .ingredients-pros-sec .box-wrapper .content p {
+        font-size: 20px;
+    }
+
+    .pages-ingredients .fifteen-essentials .inner>p {
+        font-size: 20px;
+    }
+
+    .pages-ingredients .fifteen-essentials .fifteen-essentials-faq button.accordion {
+        border: 0;
+        padding-inline: 30px;
+        border-radius: 10px !important;
+    }
+
+    .pages-ingredients .fifteen-essentials .fifteen-essentials-faq button.accordion.is-open {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        padding-inline: 30px;
+        padding-bottom: 30px;
+    }
+
+    .fifteen-essentials .fifteen-essentials-faq .primary-btn {
+        font-family: 'Filson Pro' !important;
+        font-weight: 100 !important;
+        font-size: 17px !important;
+        margin-inline: auto;
+    }
+}

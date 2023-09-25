@@ -1,0 +1,43 @@
+<div class="tt-listing-post{{ half }}">
+
+  
+  
+  
+  {%- assign item_count = 0 -%}
+
+  {%- for article in blog.articles -%}
+
+  {%- if item_count > 0 -%}
+
+  {%- include 'custom-blog' -%}
+
+  {%- else -%}
+  <div class="container container-fluid-custom-mobile-padding one">
+
+    {%- include 'blog-listing-item' -%}
+  </div>
+  <div class="white-blog-list">
+    <div class="container container-fluid-custom-mobile-padding two">
+      
+      <div class="schooll-image">
+        <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/hiya-back-to-school.svg?v=1621597730" alt="">
+      </div>             
+
+
+      {%- endif -%}
+
+      {%- assign item_count = item_count | plus: 1 -%}
+
+      {%- endfor -%}
+      <div style="clear:both"></div>
+    </div>      
+  </div>
+  
+
+  <div class="blog-grid-pagination">
+  {%- if paginate.pages > 1 -%}
+  {%- include 'pagination' -%}
+  {%- endif -%}
+	</div>
+
+</div>

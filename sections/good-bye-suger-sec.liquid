@@ -1,0 +1,90 @@
+<section class="goodbye-suger-sec">
+    <div class="container">
+        <div class="inner">
+            <div class="content">
+               {% if section.settings.heading != blank %}
+                <h2>{{ section.settings.heading }}</h2>
+               {% endif %}
+               {% if section.settings.content != blank %}
+                <p>{{ section.settings.content }}</p>
+              {% endif %}
+              {% if section.settings.button_text != blank and section.settings.button_text_link != blank %}
+                <p><a href="{{ section.settings.button_text_link }}"><strong>{{ section.settings.button_text }}</strong></a></p>
+              {% endif %}
+            </div>
+            <div class="image">
+              {% if section.settings.image != blank %}
+                <img src="{{ section.settings.image | img_url: 'master' }}" alt="img">
+             {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+jQuery(document).ready(function($){
+  if (screen && screen.width < 768) {
+    $('.goodbye-suger-sec .inner .content p a').appendTo('.goodbye-suger-sec .inner');  
+  }
+});
+</script>
+
+<style>
+@media (max-width: 767px) {
+    .goodbye-suger-sec .inner .image+a {
+        color: #2275B4;
+        font-size: 18px;
+        text-decoration: underline;
+        display: block;
+        font-family: FilsonProBold, sans-serif;
+        margin: 50px auto 0;
+    }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Good Bye Suger Section",
+  "tag": "section",
+  "class": "good-bye-suger-main",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "text",
+      "label": "Button Text",
+      "id": "button_text"
+    },
+    {
+      "type": "url",
+      "label": "Button Text Link",
+      "id": "button_text_link"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Good Bye Suger Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

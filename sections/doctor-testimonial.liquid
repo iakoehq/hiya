@@ -1,0 +1,65 @@
+<div class="makes_hiya_diff_section">
+  <div class="container">
+    <div class="hiya-diff-testi">
+      <div class="image">
+        <img src="{{ section.settings.dr_image | img_url: 'master' }}" alt="{{ section.settings.dr_image.alt }}" />
+      </div>
+      <div class="hiya-diff-testi-content">
+        {% if section.settings.dr_review_title != blank %}
+        <h3>{{ section.settings.dr_review_title }}</h3>
+        {% endif %}
+        <div class="content-info">
+          {% if section.settings.dr_name != blank %}
+          <h4>{{ section.settings.dr_name }}</h4>
+            {% endif %}
+            {% if section.settings.location %}
+          <p>{{ section.settings.location }}</p>
+              {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Doctor Testimonials",
+  "tag": "section",
+  "class": "makes_hiya_diff_band",
+  "settings": [
+    {
+      "type": "text",
+      "label": "DR. review title",
+      "id": "dr_review_title",
+      "default": "“So many vitamins are loaded with excess sugar and gummy junk. Hiya is really clean.”"
+    },
+    {
+      "type": "text",
+      "label": "DR. Name",
+      "id": "dr_name",
+      "default": "Dr. Mark Hyman"
+    },
+    {
+      "type": "text",
+      "label": "location",
+      "id": "location",
+      "default": "New York Times Best Selling Author"
+    },
+    {
+      "type": "image_picker",
+      "label": "DR image",
+      "id": "dr_image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Doctor Testimonials"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

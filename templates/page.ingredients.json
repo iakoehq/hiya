@@ -1,0 +1,249 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "113da88e-cd1a-41ca-9e82-ae1388a510dd": {
+      "type": "only-the-best-ingredient-sec",
+      "settings": {
+        "heading": "Only the best \n                        <span>ingredients<\/span>",
+        "content": "Instead of added sugar, artificial dyes, and gummy\nfillers, our vitamins focus on what kids need — without all the extras.",
+        "main_image": "shopify:\/\/shop_images\/download_3.webp"
+      }
+    },
+    "288a2300-aecb-4b15-bb25-b28e020eb05c": {
+      "type": "image_with_content_sec",
+      "blocks": {
+        "48232eaf-3e7b-41bb-908d-773cc675acca": {
+          "type": "image",
+          "settings": {
+            "content_position": false,
+            "heading": "Made with Honest Ingredients",
+            "content": "<p>We take 15 essential vitamins and minerals and a blend of 12 fruits and veggies and turn them into into one daily chewable to help fill in common nutritional gaps.<\/p>",
+            "main_image": "shopify:\/\/shop_images\/download_2_38e63aaa-5ad0-4327-8e03-8d19980c5189.webp",
+            "small_image": "shopify:\/\/shop_images\/hiya-real-food-icon_84a61ba4-10a7-4564-b02e-95bc0e96e6a3.svg",
+            "button_text": "",
+            "button_link": ""
+          }
+        },
+        "ffec32b1-965c-4759-858d-88d798bcba88": {
+          "type": "image",
+          "settings": {
+            "content_position": true,
+            "heading": "No Added Sugar",
+            "content": "<p>Instead of added sugar, our sweetener blend includes monk fruit extract, a tropical melon 100 times sweeter than sugar, and mannitol, a sweetener found in strawberries and pumpkins. Children’s vitamins no longer need added sugar to taste great.<\/p>",
+            "main_image": "shopify:\/\/shop_images\/download_3_5895d3c9-2c91-405d-b299-659c3d376469.webp",
+            "small_image": "shopify:\/\/shop_images\/hiya-sweetened-icon_3d860f49-0ed1-434a-ba1b-d57cad2a6f08.svg",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "48232eaf-3e7b-41bb-908d-773cc675acca",
+        "ffec32b1-965c-4759-858d-88d798bcba88"
+      ],
+      "settings": {
+        "image_with_content_background": "",
+        "block_button_text": "",
+        "block_button_link": ""
+      }
+    },
+    "a033fb92-3efc-468c-943f-129174af4b8c": {
+      "type": "fifteen-essentials-faq",
+      "blocks": {
+        "7ece7c97-f846-4da3-b410-bc2f14ab8102": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Vitamin A",
+            "small_heading_box": "<strong>Found in:<\/strong> Kale, carrots, squash",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Beta-Carotene &amp; Retinol Palmitate<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 360 mcg <br><\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Vitamin A has been shown to provide immunity support and healthy eyes and cells.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> We use two types of Vitamin A because there are two important forms. So we give you both.<\/span><\/p>"
+          }
+        },
+        "d62f60ce-3aab-4d20-9ffe-f0c8a211edf1": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Vitamin C",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Oranges, peppers, strawberries<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Calcium ascorbate &amp; acerola fruit<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 40 mg<br><\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Vitamin C has been shown to support the immune system.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Kids can’t produce vitamin C on their own, so they depend on outside sources. While many vitamins include ascorbic acid, we don’t. Instead we now include a combination of two distinct forms – both known to support a variety of health benefits.*<\/span><\/p>"
+          }
+        },
+        "7648b62e-917b-44f2-8d87-b8d8a65bb9fb": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Vitamin D",
+            "small_heading_box": "<strong>Found in: <\/strong><span>Mushrooms, egg yolks, fish<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Vegan Cholecalciferol<br><\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 25 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong> <\/span>Vitamin D has been shown to support the immune system and bone development.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> According to recent studies, more than 40% of kids are deficient in Vitamin D. Those most at risk include picky eaters, kids living with obesity, or kids in cold climates.*<\/span><\/p>\n<p><span><span><strong>Why this amount:<\/strong><\/span> We include more than the recommended daily dosage since vitamin D deficiency is the most common deficiency among kids, especially among picky eaters.*<\/span><\/p>"
+          }
+        },
+        "0cbbe854-8a96-458b-8064-c070e42b7e91": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Vitamin E",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Avocado, spinach, almonds<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> D-Alpha Tocopherol<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 3.5 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong> <\/span>Vitamin E has been shown to support eyesight, the heart, and the immune system.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Most foods don’t list Vitamin E, so it’s tough to know if you’re getting enough, which is why a multivitamin may be helpful to fill in the gaps.<\/span><\/p>"
+          }
+        },
+        "5376e463-877b-4848-a94a-9c34e010c6f5": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Thiamin (B1)",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Seaweed, grains, legumes<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Thiamin mononitrate &amp; organic quinoa sprouts<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 0.5 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong> <\/span>Vitamin B1 has been shown to support concentration, sleep, and general mood.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> If your child's diet is high in processed foods like pizza and cereals (aren't they all...), then Thiamin may be especially important.<\/span><\/p>"
+          }
+        },
+        "56a70be8-5238-41ab-953d-3f5d09f27acb": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Riboflavin",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Spinach, banana, asparagus<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Natural &amp; organic quinoa sprouts<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 0.6 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Riboflavin has been shown to support eyesight, energy, and cell growth.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Since riboflavin is water soluble, kids bodies will simply remove any excess they don't use.<\/span><\/p>"
+          }
+        },
+        "b0dd932e-6704-499a-8f86-21a6aef9685e": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Folate (B9)",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Broccoli, brussel sprouts, avocado<br><br><\/span>",
+            "content_box": "<p><span><span><strong><span style=\"font-weight: bold;\">Form<\/span>:<\/strong><\/span> 5-methyltetrahydrofolic (5-MTHF) &amp; organic quinoa sprouts <\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 200 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Vitamin B9 has been shown to support energy and cellular growth.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Unmetabolized folic acid (not what we use!) can remain in your body for a long time which is one of many reasons we avoid It.*<\/span><\/p>\n<p><span><span><strong>Why this form:<\/strong><\/span> We use the natural form of folate instead of the synthetic folic acid, which is most typically found in breakfast cereals and unfortunately many prominent children's vitamins (bleh!).<\/span><\/p>"
+          }
+        },
+        "7c01a337-4000-4d06-a0b8-5e1c1c8028b6": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Vitamin B12",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Eggs, milk (note: we’re vegan and dairy free)<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Methylcobalamin &amp; organic quinoa sprouts <\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 2 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Vitamin B12 has been shown to support sleep.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong> <\/span>B12 deficiency is thought to present itself with many non-specific symptoms,* yet many children’s vitamins mistakenly leave out b12 -- though not us!<\/span><\/p>\n<p><span><span><strong>Why this form:<\/strong><\/span> While cyanocobalamin is more common, that form is also synthetic and contains a cyanide molecule, which might be risky for kids. That's why we made the switch to methylcobalamin -- the naturally-occurring form that easiest on kids and good for parents looking for peace of mind.<\/span><\/p>"
+          }
+        },
+        "34f9d9ff-bbd3-4fc5-8f16-f63439ab6c96": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Biotin (B7)",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Cauliflower, mushrooms, avocado<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Natural &amp; organic quinoa sprouts<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 25 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Vitamin B7 has been shown to supports cellular growth and healthy skin.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> B7 is water-soluble, meaning kid's bodies will simply eliminate any excess.*<\/span><\/p>"
+          }
+        },
+        "3c060f69-5f0f-4281-9808-f9476030aecf": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Pantothenic Acid (B5)",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Plants<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Natural &amp; organic quinoa sprouts<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 2.5 mg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Vitamin B5 has been shown to support energy, sleep, and focus.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Of the b vitamins we include, b5 is often overlooked -- yet it's what helps kids sleep and supports their mood*...and let's be honest --none of us want cranky kids who wake up in the middle of the night...<\/span><\/p>"
+          }
+        },
+        "7b461fd4-2536-4d85-bd47-bc9774d81883": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Calcium",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Broccoli, collard greens, kale<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Calcium carbonate<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong> <\/span>20 mcg (just a touch)<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Calcium has been shown to support bones and development.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Kids don't naturally produce calcium, and most kids do not get the calcium they need from foods alone, often causing their bodies to start “borrowing” calcium from their bones...eeeek.<\/span><\/p>"
+          }
+        },
+        "fd3265ff-0ce7-43d2-abb2-e17b26d27d22": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Iodine",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Kelp, eggs<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Potassium Iodide<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 50 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Iodine has been shown to support thyroid function.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Iodine is often overlooked among many children's vitamins despite iodine being an essential mineral.<\/span><\/p>"
+          }
+        },
+        "bcebd726-cc1b-4ae9-aac6-b1486983983c": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Zinc",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Beans, meat, poultry<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Zincas Citrate<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 3 mg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Zinc has been shown to support the immune system and help with infections, nicks, and cuts.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Zinc is a super mineral which becomes extra important when you see what some kids are willing to eat and touch. :)<\/span><\/p>"
+          }
+        },
+        "2a5ea780-c66d-4ad2-8f7e-4ff1d726dc46": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Selenium",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Tuna, mushrooms<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Selenomethionine<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 15 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Selenium has been shown to support sleep, mood, and inflammation.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Selenium is an essential mineral that little bodies can't make on their own, yet most vitamins leave it out...not us...<\/span><\/p>"
+          }
+        },
+        "d5f263da-eecf-46d2-95cc-f6f946c90d17": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Manganese",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Tofu, potatoes, chickpeas<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Manganese citrate<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 1.5 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Manganese has been shown to provide support for inflammation and metabolism.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Manganese (not to be confused with magnesium) is often overlooked in kids yet shouldn't be.<\/span><\/p>"
+          }
+        },
+        "d06a13f0-1fb0-4754-ad67-d7b98a7640fc": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Vitamin K",
+            "small_heading_box": "<strong>Found in:<\/strong><span> Broccoli, kale, and cabbage<\/span>",
+            "content_box": "<p><span><span><strong>Form:<\/strong><\/span> Menaquinone-7<\/span><\/p>\n<p><span><span><strong>Amount:<\/strong><\/span> 8 mcg<\/span><\/p>\n<p><span><span><strong>Benefits:<\/strong><\/span> Vitamin K is known to support blood clotting and bone health.*<\/span><\/p>\n<p><span><span><strong>Our pediatricians say:<\/strong><\/span> Vitamin D is one of the most common deficiencies among kids, yet studies now show the important relationship between Vitamin K and Vitamin D, which is why we include Vitamin K when many vitamins don’t. <\/span><\/p>"
+          }
+        },
+        "e07a774e-0915-449e-9a46-2b74b893761e": {
+          "type": "box",
+          "settings": {
+            "heading_box": "Additional",
+            "small_heading_box": "<strong>Found in:<\/strong> <span>Fruit &amp; veggie blend and more<\/span>",
+            "content_box": "<p><span>Our multivitamin includes a blend of organic fruits and veggies, including: organic apple, organic beet, organic broccoli, organic carrot, organic green cabbage, organic kale, organic parsley, organic spinach, organic blueberry, organic raspberry, organic strawberry, and organic tomato.<\/span><\/p>\n<p><span><span>Our additional ingredients include: sweetener blend (mannitol, monk fruit extract), plant cellulose blend (hydroxypropyl, microcrystalline), coconut oil powder, vegetable magnesium stearate and stearic acid, natural flavors and color (beet root, turmeric, spirulina), malic acid, and organic rice extracts.<\/span><\/span><\/p>\n<p><span>The purpose of these ingredients and why we include them alongside our fruit and veggie blend is to sweeten our vitamins without any added sugar, to help bind our vitamins naturally, and to add color.<\/span><\/p>\n<p><span>Or to put it another way, we have no citric acid. No pork-based gelatin. No gluten. No animal products. No yeast. No added sugar. No soy. No dairy. No artificial sweeteners. No waxes. No gummy junk. 🙂<\/span><\/p>\n<p><span>And as nutrition evolves, we will continue improving to make sure you always have the healthiest children’s products we can possibly make. Thanks for trusting us with your children’s health.<\/span><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7ece7c97-f846-4da3-b410-bc2f14ab8102",
+        "d62f60ce-3aab-4d20-9ffe-f0c8a211edf1",
+        "7648b62e-917b-44f2-8d87-b8d8a65bb9fb",
+        "0cbbe854-8a96-458b-8064-c070e42b7e91",
+        "5376e463-877b-4848-a94a-9c34e010c6f5",
+        "56a70be8-5238-41ab-953d-3f5d09f27acb",
+        "b0dd932e-6704-499a-8f86-21a6aef9685e",
+        "7c01a337-4000-4d06-a0b8-5e1c1c8028b6",
+        "34f9d9ff-bbd3-4fc5-8f16-f63439ab6c96",
+        "3c060f69-5f0f-4281-9808-f9476030aecf",
+        "7b461fd4-2536-4d85-bd47-bc9774d81883",
+        "fd3265ff-0ce7-43d2-abb2-e17b26d27d22",
+        "bcebd726-cc1b-4ae9-aac6-b1486983983c",
+        "2a5ea780-c66d-4ad2-8f7e-4ff1d726dc46",
+        "d5f263da-eecf-46d2-95cc-f6f946c90d17",
+        "d06a13f0-1fb0-4754-ad67-d7b98a7640fc",
+        "e07a774e-0915-449e-9a46-2b74b893761e"
+      ],
+      "settings": {
+        "heading": "15 essentials",
+        "content": "See what we’ve included and why:",
+        "button_text": "View nutrition label",
+        "button_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0255\/3249\/8001\/files\/1Ci86-g.jpg?v=1677764053"
+      }
+    },
+    "85b940c7-0c0a-4c6f-81c2-978ac9ab6222": {
+      "type": "get-started-sec",
+      "settings": {
+        "heading": "Get started with Hiya today",
+        "content": "Get full-body nourishment delivered to your door for $1\/day",
+        "main_image": "shopify:\/\/shop_images\/hiya-bottle-icon_80d0f415-9484-4c0b-a296-ad2e1dc3ebb5.svg",
+        "button_text": "Get Hiya",
+        "button_url": "\/products\/kids-daily-essential"
+      }
+    },
+    "499a3f4c-a8a4-4456-9246-3a42c26c026d": {
+      "type": "join-the-hiya-life-sec",
+      "settings": {
+        "heading": "Join the Hiya Life",
+        "content": "<span>#hiyalife<\/span> <span>@hiyahealth<\/span>",
+        "main_image": "shopify:\/\/shop_images\/Hiya-Instagram_b371ad4f-860f-43a0-975c-20330225349e.svg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "113da88e-cd1a-41ca-9e82-ae1388a510dd",
+    "288a2300-aecb-4b15-bb25-b28e020eb05c",
+    "a033fb92-3efc-468c-943f-129174af4b8c",
+    "85b940c7-0c0a-4c6f-81c2-978ac9ab6222",
+    "499a3f4c-a8a4-4456-9246-3a42c26c026d"
+  ]
+}

@@ -1,0 +1,252 @@
+.our-vitamin-sec {
+    padding-top: 60px;
+}
+
+.our-vitamin-sec .inner {
+    padding-inline: 15px;
+}
+
+.our-vitamin-sec .container {
+    max-width: 1180px;
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+.our-vitamin-sec h2 {
+    margin-top: 28px;
+    margin-bottom: 0;
+}
+
+.our-vitamin-sec p {
+    margin-bottom: 40px;
+    max-width: 635px;
+    margin-inline: auto !important;
+    text-align: center;
+    font-size: 15px !important;
+}
+
+.our-vitamin-sec h5 {
+    color: #00b098;
+    letter-spacing: 0px;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 10px;
+    font-family: FilsonProBold !important;
+    font-size: 18px;
+}
+
+.our-vitamin-sec p {
+    max-width: 635px;
+    margin-inline: auto !important;
+    text-align: center;
+}
+
+.our-vitamin-sec .table-image {
+    margin-top: 30px;
+}
+
+.our-vitamin-sec .table-image img {
+    max-width: 360px;
+    width: 100%;
+    display: table;
+    margin: auto;
+}
+
+.our-vitamin-sec .image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.our-vitamin-sec .image-wrapper img {
+    max-width: 321px;
+    min-height: 266px;
+    display: table;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.our-vitamin-sec h2 {
+    letter-spacing: 0 !important;
+    color: #3a5caf;
+    margin-top: 0;
+}
+
+.our-vitamin-sec p {
+    margin-inline: auto !important;
+    max-width: 494px;
+    margin-inline: auto !important;
+    text-align: center;
+    margin-top: 15px !important;
+    letter-spacing: 0;
+    font-size: 20px !important;
+}
+
+.our-vitamin-sec .table-image img {
+    max-width: 420px;
+}
+
+.our-vitamin-sec {
+    padding-top: 70px;
+}
+
+.affiliate .our-vitamin-sec {
+  padding-bottom: 50px;
+}
+
+.product-multivitamin .our-vitamin-sec h2 {
+    font-size: 42px !important;
+}
+
+.product-multivitamin .our-vitamin-sec p {
+    margin-top: 10px !important;
+    font-size: 18px !important;
+}
+
+.product-multivitamin .our-vitamin-sec .table-image img {
+    max-width: 460px;
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .our-vitamin-sec h5 {
+        font-size: 18px;
+    }
+
+    .our-vitamin-sec p {
+        max-width: 645px;
+        color: #3f7ab9;
+        font-size: 20px !important;
+        letter-spacing: 0;
+    }
+
+    .our-vitamin-sec .table-image img {
+        max-width: 320px;
+    }
+
+    .our-vitamin-sec .image-wrapper {
+        margin-top: 25px;
+    }
+
+    .our-vitamin-sec .image-wrapper img {
+        max-width: 192px;
+        min-height: 138px;
+    }
+  
+    .our-vitamin-sec p {
+        max-width: 485px;
+        color: #3f7ab9;
+        font-size: 18px !important;
+        letter-spacing: 0;
+        margin-top: 29px !important;
+        margin-bottom: 40px !important;
+    }
+  
+    .product-multivitamin .our-vitamin-sec .table-image img {
+        max-width: 320px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .affiliate .our-vitamin-sec .inner {
+        padding-inline: 25px;
+    }
+  
+    .our-vitamin-sec h2 {
+        font-size: 31px;
+        margin-bottom: 30px;
+        margin-top: 28px;
+    }
+
+    .pages-our-vitamins .our-vitamin-sec h5 {
+        position: relative;
+        top: 4px;
+    }
+  
+    .our-vitamin-sec h2 {
+        font-size: 42px !important;
+        margin-top: 0 !important;
+        padding-bottom: 30px;
+    }
+
+    .our-vitamin-sec p {
+        max-width: 100%;
+        margin-top: 0px !important;
+        font-size: 18px !important;
+        margin-bottom: 50px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .our-vitamin-sec h2 {
+        margin-top: 15px;
+    }
+
+    .our-vitamin-sec .image-wrapper,
+    .goodbye-suger-sec .inner {
+        flex-wrap: wrap;
+    }
+
+    .our-vitamin-sec .image-wrapper img {
+        max-width: 210px;
+        min-height: 150px;
+    }
+  
+    .pages-our-vitamins .our-vitamin-sec h5 {
+        top: 0px;
+    }
+
+    .pages-our-vitamins .our-vitamin-sec h2 {
+        margin-top: 18px;
+        font-size: 31px !important;
+        margin-bottom: 20px;
+    }
+
+    .pages-our-vitamins .our-vitamin-sec p {
+        margin-bottom: 45px;
+        font-size: 20px !important;
+    }
+
+    .our-vitamin-sec .table-image img {
+        max-width: calc(100% - 10px) !important;
+    }
+
+    .our-vitamin-sec .image-wrapper img {
+        max-width: 234px !important;
+        min-height: auto !important;
+    }
+  
+    .our-vitamin-sec p {
+        font-size: 18px !important;
+        letter-spacing: 0;
+    }
+
+    .our-vitamin-sec h2 {
+        margin-bottom: 28px;
+    }
+
+    .our-vitamin-sec h2 {
+        margin-top: 17px !important;
+        font-size: 35px !important;
+        display: block;
+        margin-bottom: 19px !important;
+    }
+
+    .our-vitamin-sec p {
+        margin-top: 10px !important;
+    }
+
+    .our-vitamin-sec .table-image img {
+        max-width: calc(100% - 40px) !important;
+    }
+  
+    .product-multivitamin .our-vitamin-sec h2 {
+        font-size: 26px !important;
+    }
+  
+    .product-multivitamin .our-vitamin-sec p {
+        margin-bottom: 45px !important;
+    }
+}

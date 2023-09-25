@@ -1,0 +1,92 @@
+{{ 'register.css' | asset_url | stylesheet_tag }}
+
+{% capture required %}
+  {{ 'customer.general.required_fields' | t }}{% endcapture %}
+<div id="tt-pageContent">
+  <div class="container-indent">
+    <div class="container">
+      <!--     <h1 class="tt-title-subpages noborder">{{ 'customer.register.title_main' | t }}</h1> -->
+      <div class="tt-login-form">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-xs-12">
+            <div class="tt-item">
+              <div class="form-heading">
+                <h2 class="tt-title">Create an account</h2>
+              </div>
+              <div class="form-default">
+                {% form 'create_customer' %}
+
+                  <div class="tt-base-color">
+                    {{ form.errors | default_errors }}
+                  </div>
+
+                  <div class="form-group">
+                    <label for="loginInputName">{{ 'customer.register.first_name' | t }}
+                      {% if required != "" %}{% endif %}
+                    </label>
+                    <!--                   {% if required != "" %}<div class="tt-required">{{ required }}</div>{% endif %} -->
+                    <input
+                      type="text"
+                      name="customer[first_name]"
+                      class="form-control"
+                      id="loginInputName"
+                      placeholder=""
+                      required="required">
+                  </div>
+                  <div class="form-group">
+                    <label for="loginLastName">{{ 'customer.register.last_name' | t }}
+                      {% if required != "" %}{% endif %}
+                    </label>
+                    <input
+                      type="text"
+                      name="customer[last_name]"
+                      class="form-control"
+                      id="loginLastName"
+                      placeholder=""
+                      required="required">
+                  </div>
+                  <div class="form-group">
+                    <label for="loginInputEmail">{{ 'customer.register.email' | t }}
+                      {% if required != "" %}{% endif %}
+                    </label>
+                    <input
+                      type="email"
+                      name="customer[email]"
+                      class="form-control"
+                      id="loginInputEmail"
+                      placeholder=""
+                      required="required">
+                  </div>
+                  <div class="form-group">
+                    <label for="loginInputPassword">{{ 'customer.register.password' | t }}
+                      {% if required != "" %}{% endif %}
+                    </label>
+                    <input
+                      type="password"
+                      name="customer[password]"
+                      class="form-control"
+                      id="loginInputPassword"
+                      placeholder=""
+                      required="required">
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="form-group mt-3">
+                        <button class="btn w-100" type="submit">Create account</button>
+                      </div>
+                    </div>
+                    <div class="form-description text-center mt-2">
+                      <a href="{{ shop.url }}" class="underline text-red">
+                        or Return to Store</a>
+                    </div>
+                  </div>
+
+                {% endform %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

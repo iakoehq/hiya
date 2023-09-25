@@ -1,0 +1,61 @@
+<section class="kids-vitamins-sec">
+        <div class="container">
+          {% if section.settings.heading != blank %}
+            <h1>{{ section.settings.heading }}</h1>
+          {% endif %}
+          {% if section.settings.content != blank %}
+            <p>{{ section.settings.content }}</p>
+          {% endif %}
+
+          {% if section.settings.mo_image != blank %}
+            <img class="mob-img" src="{{ section.settings.mo_image | img_url : 'master' }}">
+          {% endif %}
+          
+        </div>
+</section>
+<style>
+  .pages-our-vitamins .kids-vitamins-sec {
+    background: url({{ section.settings.image | img_url : 'master' }}) no-repeat;
+}
+</style>
+{% schema %}
+{
+  "name": "Content & Image Section",
+  "tag": "section",
+  "class": "content-image-main",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "textarea",
+      "label": "Content",
+      "id": "content"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "mo_image"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Content & Image Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

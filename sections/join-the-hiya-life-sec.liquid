@@ -1,0 +1,70 @@
+<section class="join-the-hiya-life-sec">
+    <div class="container">
+        <div class="inner">
+            <div class="img-heading">
+              {% if section.settings.main_image != blank %}
+                <img class="insta-img"
+                    src="{{ section.settings.main_image | img_url: 'master' }}"
+                    alt="img">
+              {% endif %}
+              {% if section.settings.heading != blank %}
+                <h1>{{ section.settings.heading }}</h1>
+              {% endif %}
+            </div>
+            <div class="hash-tags">
+               {% if section.settings.content != blank %}
+                {{ section.settings.content }}
+                {% endif %} 
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+@media (max-width: 767px) {
+    .join-the-hiya-life-sec {
+        padding: 40px 0 40px;
+    }
+  
+    .join-the-hiya-life-sec .inner .hash-tags {
+        margin: 0 auto;
+    }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Join The Hiya Section",
+  "tag": "section",
+  "class": "join-the-hiya-main",
+  "settings": [
+                  {
+                    "type": "text",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "textarea",
+                    "label": "Hash Tags",
+                    "id": "content"
+                  },
+                  {
+                    "type": "image_picker",
+                    "label": "Image",
+                    "id": "main_image"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Join The Hiya Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

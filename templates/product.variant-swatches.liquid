@@ -1,0 +1,213 @@
+{% include 'product-content.zipifypages', contentprt: 'header' %}{% if product.tags contains 'multivitamin' %}
+  {{ 'product.css' | asset_url | stylesheet_tag }}
+  {% section 'product-banner-sec' %}
+  <div style="margin-top:-6px"><svg class="bottom-curve" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 97.9" style="enable-background:new 0 0 1920 97.9;" xml:space="preserve">
+    <style type="text/css">
+        .st59{fill:#fff8e6;}
+    </style>
+    <path id="Path_2" class="st59" d="M1920,17.3c0,0-256,80.6-960,80.6S0,17.3,0,17.3V0h1920L1920,17.3z"></path>
+  </svg></div>
+  <!-- 6817141588049: product that uses the probiotic view, the other affiliate pages all use the multivitamin view -->
+  {% if product.id == 6817141588049 %}{% section 'video-frame-sec' %}{% endif %}
+  {% if product.id != 6817141588049 %}{% section 'our-vitamin-sec-affiliate' %}{% endif %}
+  {% if product.id != 6817141588049 %}{% section 'video-frame-sec' %}{% endif %}
+  {% section 'review-boxes-sec' %}
+  {% if product.id == 6817141588049 %}{% section 'makes_hiya_different' %}{% endif %}
+  {% if product.id == 6817141588049 %}{% section 'our-vitamin-sec-affiliate' %}{% endif %}
+  {% if product.id == 6817141588049 %}{% section 'doctor-testimonial' %}{% endif %}
+  {% if product.id != 6817141588049 %}{% section 'makes_hiya_different' %}{% endif %}
+  {% section 'image_with_content_sec_affiliate' %}
+  {% section 'faq' %}
+{% endif %}
+
+{% if product.tags contains 'probiotic' %}
+  {% section 'new_products' %}
+  {% section 'product-banner-sec-probiotic' %}
+  {% section 'how-we-stack-sec' %}
+  {% section 'makes_hiya_different_probiotic' %}
+  {% section 'image_with_content_sec_probiotic' %}
+  {% section 'probiotic-faq' %}
+{% endif %}
+
+<div class="reviews_stamped">
+  <div class="container-indent">
+    <div class="container container-fluid-custom-mobile-padding">
+  {% include 'okendo-reviews-widget-affiliate' %}
+    </div>
+  </div>
+</div>
+<div class="yellow-btn pb20btn">
+  <a href="#MainContent" class="ybtn">Get Hiya</a>
+</div>
+<style>
+{% if product.tags contains 'probiotic' %}
+.rc-container-wrapper ~ input#buy_now_new_button {
+  opacity: 1;
+}
+input#buy_now_new_button {
+  opacity: .5;
+}
+{% endif %}
+{% if product.tags contains 'multivitamin' %}
+body:not(.products-kids-daily-multivitamin-3):not(.products-kids-daily-multivitamin-5) #shopify-section-makes_hiya_different > div > div > div.hiya-diff-testi {
+  display:none;
+}
+  
+#MainContent section.ingredients-pros-main:nth-child(7) section.ingredients-pros-sec {
+    padding: 80px 0 80px;
+}
+#MainContent section.ingredients-pros-main:nth-child(7) section.ingredients-pros-sec .content h2 {
+  margin-top: 15px;
+}
+.makes_hiya_diff_section .diff_tabs_content {
+  padding-bottom: 70px;
+}
+body:not(.products-kids-daily-multivitamin-3):not(.products-kids-daily-multivitamin-5) #shopify-section-our-vitamin-sec {
+  background-color: #E6F5FE;
+}
+{% endif %}
+</style>
+<!-- begin sticky bar code -->
+<style>
+.sticky_bar { display:none; }
+.sticky_bar_hide { display:none !important; }
+.sticky_bar_wp {
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 86px;
+    padding-top: 17px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 30px;
+}
+.sticky_bar .form-default {
+    width: 571px;
+}
+.sticky_bar select{
+    border: 2px solid #5979AE !important;
+    border-radius: 10px !important;
+    font-weight: normal;
+    font-size: 16px !important;
+    line-height: 25px;
+}
+.sticky_bar .btn{
+    border-radius: 15px;
+    width: 222px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.42px;
+    color: #3771B0;
+    padding: 10px 0;
+    height: 50px;
+}
+@media only screen and (max-width: 767px) {
+    .sticky_bar { display:block; }
+    .sticky_bar .form-default {
+        width: 220px;
+    }
+    .sticky_bar select{
+        font-size: 12px !important;
+        line-height: 26px;
+        padding-left: 7px !important;
+        padding-right: 3px !important;
+        padding-bottom: 10px !important;
+    }
+    .sticky_bar .btn{
+        width: 128px;
+    }
+    .sticky_bar_wp{
+        padding: 17px 12px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .sticky_bar .btn {
+        width: 122px;
+    }
+    .sticky_bar select{
+        font-size: 11px !important;
+    }
+}
+@media only screen and (max-width: 370px) {
+    .sticky_bar .btn {
+        width: 96px;
+    }
+    .sticky_bar .btn span {
+        font-size: 13px !important;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .sticky_bar .form-default{
+        width: 195px;
+    }
+    .sticky_bar select {
+        font-size: 10px !important;
+    }
+    .sticky_bar .btn{
+        font-size: 17px;
+    }
+}
+</style>
+
+{{ 'unicode-converter.js' | asset_url | script_tag }}
+
+<script>
+if (document.querySelector(".product-banner-main")) {
+  document.querySelector('body').insertAdjacentHTML('beforeend', `
+    <div class="sticky_bar sticky_bar_hide">
+      <div class="sticky_bar_wp">
+        <div class="form-default">
+          <div class="form-group">
+            <select class="n_select form-control" style="height:50px;">
+            {% if product.id == 6817141588049 %}
+              <option value="39796223246417">1 Kid - $19.50/bottle (Reg: $̶3̶0̶)</option>
+              <option value="39796223279185">2 Kids - $18.20/bottle (Reg: $̶2̶8̶)</option>
+              <option value="39796223311953">3 Kids - $16.25/bottle (Reg: $̶2̶5̶)</option>
+              <option value="39796223344721">4 Kids - $15.60/bottle (Reg: $̶2̶4̶)</option>
+            {% elsif product.id == 6817426505809 %}
+              <option value="39796614529105">1 Kid - $19.50/bottle (Reg: $̶3̶0̶)</option>
+              <option value="39796614561873">2 Kids - $18.20/bottle (Reg: $̶2̶8̶)</option>
+              <option value="39796614594641">3 Kids - $16.25/bottle (Reg: $̶2̶5̶)</option>
+              <option value="39796614627409">4 Kids - $15.60/bottle (Reg: $̶2̶4̶)</option>
+            {% elsif product.id == 7086847033425 %}
+              <option value="40353066713169">1 Kid - $19.50/bottle (Reg: $̶3̶0̶)</option>
+              <option value="40353066745937">2 Kids - $18.20/bottle (Reg: $̶2̶8̶)</option>
+              <option value="40353066778705">3 Kids - $16.25/bottle (Reg: $̶2̶5̶)</option>
+              <option value="40353066811473">4 Kids - $15.60/bottle (Reg: $̶2̶4̶)</option>
+            {% elsif product.id == 6821667864657 %}
+              <option value="39803304706129">1 Kid - $15/bottle (Reg: $̶3̶0̶)</option>
+              <option value="39803304738897">2 Kids - $14/bottle (Reg: $̶2̶8̶)</option>
+              <option value="39803304771665">3 Kids - $12.50/bottle (Reg: $̶2̶5̶)</option>
+              <option value="39803304804433">4 Kids - $12/bottle (Reg: $$̶2̶4̶)</option>
+            {% endif %}
+            </select>
+          </div>
+        </div>
+        <button class="btn">Buy Now</button>
+      </div>
+    </div>
+  `);
+  document.querySelector('.sticky_bar .n_select.form-control').addEventListener('change',function(){
+    document.querySelector('#product-banner-buybox input[name="id"]').value = this.value;
+    document.querySelector('.optionList select').selectedIndex = document.querySelector('.sticky_bar .n_select.form-control').selectedIndex;
+  });
+  document.querySelector('.sticky_bar .btn').addEventListener('click',function(){
+    this.innerHTML = '<span style="font-size:16px;">Processing...</span>';
+    let addToCartForm = document.getElementById('buy_now_new_button');
+    document.querySelector('#product-banner-buybox').submit();
+  });
+  const watch = document.querySelector('.usp_bar');
+  function obCallback(payload) {
+    if(payload[0].isIntersecting === false) document.querySelector('.sticky_bar').classList.remove('sticky_bar_hide');
+    else document.querySelector('.sticky_bar').classList.add('sticky_bar_hide');
+  }
+  const ob = new IntersectionObserver(obCallback);
+  ob.observe(watch);
+}
+</script>
+<!-- end sticky bar code -->{% include 'product-content.zipifypages', contentprt: 'footer' %}

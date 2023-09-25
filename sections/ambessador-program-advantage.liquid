@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="image-box">
+    {% if section.settings.main_image != blank %}
+    <img src="{{ section.settings.main_image | img_url : 'master' }}" alt="image">
+    {% endif %}
+  </div>
+  {% if section.settings.heading != blank %}
+  <h2 class="section-title">{{ section.settings.heading }}</h2>
+ {% endif %}
+  <ul class="advantage">
+    {% if section.settings.content != blank %}
+      {{ section.settings.content }}
+      {% endif %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "ambessador advantage",
+  "tag": "section",
+  "class": "ambessador-program-advantage",
+  "settings": [
+                  {
+                    "type": "text",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "html",
+                    "label": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "type": "image_picker",
+                    "label": "Image",
+                    "id": "main_image"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "ambessador advantage"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

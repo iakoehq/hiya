@@ -1,0 +1,269 @@
+/*! CSS Used from: https://cdn.shopify.com/s/files/1/0255/3249/8001/t/151/assets/theme.css?v=7112453938754602241683122073 ; media=all */
+@media all {
+    *,*::before,*::after {
+        box-sizing: border-box;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    h1 {
+        font-weight: 500;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+    }
+
+    a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    img {
+        vertical-align: middle;
+        border-style: none;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width: 576px) {
+        .container {
+            max-width:546px;
+        }
+    }
+
+    @media (min-width: 791px) {
+        .container {
+            max-width:770px;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .container {
+            max-width:990px;
+        }
+    }
+
+    @media (min-width: 1230px) {
+        .container {
+            max-width:1200px;
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .col-12,.col-md-6 {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    @media (min-width: 791px) {
+        .col-md-6 {
+            flex:0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media print {
+        *,*::before,*::after {
+            text-shadow: none!important;
+            box-shadow: none!important;
+        }
+
+        a:not(.btn) {
+            text-decoration: underline;
+        }
+
+        img {
+            page-break-inside: avoid;
+        }
+
+        .container {
+            min-width: 1025px!important;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        outline: none;
+        color: #3f7ab9;
+    }
+
+    a:hover {
+        outline: none;
+        text-decoration: none;
+        outline: none;
+    }
+
+    a:active,a:visited,a:focus {
+        text-decoration: none;
+        outline: none;
+    }
+
+    h1 {
+        display: block;
+        position: relative;
+        font-family: 'Filson Pro', sans-serif;
+        color: #3f7ab9;
+        margin-bottom: 0px;
+    }
+
+    @media (max-width: 575px) {
+        #tt-pageContent .container-fluid-custom-mobile-padding {
+            padding-right:20px;
+            padding-left: 20px;
+        }
+    }
+
+    h1 {
+        font-family: "Filson Pro"!important;
+        font-weight: 800!important;
+    }
+
+    @media (max-width: 789px) {
+        h1 {
+            line-height:1.1em!important;
+            margin: 0px!important;
+            padding: 0px!important;
+        }
+
+        h1 {
+            font-size: 34px!important;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        h1 {
+            font-size:56px!important;
+            line-height: 1.1em!important;
+            margin: 0px!important;
+            padding: 0px!important;
+        }
+    }
+
+    .custom-blog-meta {
+        justify-content: flex-start!important;
+        font-family: 'Filson Pro';
+        font-weight: 700;
+        text-align: left;
+        color: #2275b4;
+    }
+
+    .custom-blog-meta .tt-autor {
+        padding-left: 0!important;
+        color: #2275b4!important;
+        font-family: 'Filson Pro';
+    }
+
+    .blue-bg-single-post {
+        background: #eff9fe;
+    }
+
+    .blue-bg-blog {
+        padding-bottom: 50px;
+    }
+
+    .blue-bg-blog .tt-post-img img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .blue-bg-blog .row {
+        align-items: center;
+    }
+
+    .blue-bg-blog .single-post-title h1 {
+        font-size: 40px!important;
+        text-align: center;
+    }
+
+    .blue-bg-blog .custom-blog-meta {
+        justify-content: center!important;
+        text-align: center!important;
+        margin-bottom: 20px;
+    }
+
+    .single-post-side-content {
+        padding: 0px 60px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .single-post-side-content {
+            margin-top:30px;
+            padding: 0px;
+        }
+
+        .blue-bg-blog .single-post-title h1 {
+            font-size: 32px!important;
+            line-height: 40px!important;
+        }
+
+        .pagearticle #tt-pageContent .container-fluid-custom-mobile-padding {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+}
+
+/*! CSS Used from: https://cdn.shopify.com/s/files/1/0255/3249/8001/t/151/assets/bundle.theme.css?v=53368361213710981751683122105 ; media=all */
+@media all {
+    *,:before,:after {
+        border-style: solid;
+        border-width: 0;
+        box-sizing: border-box;
+    }
+
+    * {
+        font-size: inherit;
+        line-height: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        border: 0;
+    }
+
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    a {
+        background-color: transparent;
+    }
+
+    a:active,a:hover {
+        outline: 0;
+    }
+
+    @media (max-width: 39.99rem) {
+        #tt-pageContent img {
+            vertical-align:baseline;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "47151686-dfe1-4436-bdf0-32c86b7e9f41": {
+      "type": "our-story-hero-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Hiya-FoudersKick_71ccfbbf-484c-43ed-bec0-dc97460a22a6.svg",
+        "heading": "As new dads, we were shocked  when we learned more <span>about children’s vitamins.<\/span>",
+        "content": "<p>Many children’s vitamins are basically candy in disguise — often filled with a teaspoon of added sugar, artificial ingredients, and other gummy additives that can contribute to cavities.<\/p>\n<p>The ironic result is at an age when kids need nourishment more than ever, we’ve been training their bodies and brains to be addicted to sugar and other junk. Make no mistake that sugar addiction is set to become a generational problem.<\/p>"
+      }
+    },
+    "186a1948-e014-4028-a429-8e7a4df83fdc": {
+      "type": "vitamin-info-sec",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/download_6.webp",
+        "content": "So unable to find a vitamin that fit our needs, we got to work. We spent three years curating top pediatricians, nutritionists, scientists, and parents to formulate a super-powered chewable made with 15 essential vitamins and minerals while also including a blend of 12 fruits and veggies. The result is Hiya — a daily children’s vitamin that’s supercharged to help fill in the gaps — and always with zero added sugar and zero gummy junk — so you can be confident your kids are getting the full-body nourishment they need to grow into healthy adults."
+      }
+    },
+    "65217211-81de-46dd-adeb-9e06cfa75a52": {
+      "type": "being-a-parent-sec",
+      "blocks": {
+        "0f9c42ae-559b-46d2-aa16-0b0a00a0b05e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_7.webp"
+          }
+        },
+        "372a5e4a-dd5e-4c4f-9e96-1f55ac496ee6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_8.webp"
+          }
+        },
+        "8b3617f4-a3c1-4212-a806-dedb7142b608": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_9.webp"
+          }
+        }
+      },
+      "block_order": [
+        "0f9c42ae-559b-46d2-aa16-0b0a00a0b05e",
+        "372a5e4a-dd5e-4c4f-9e96-1f55ac496ee6",
+        "8b3617f4-a3c1-4212-a806-dedb7142b608"
+      ],
+      "settings": {
+        "heading": "Being a parent can be hard enough. <span>We hope Hiya helps us all make better choices for our children.<\/span>"
+      }
+    },
+    "bd92e0d2-8962-4a4d-ad21-726fdddc866c": {
+      "type": "get-started-sec",
+      "settings": {
+        "heading": "Get started with Hiya today",
+        "content": "Get full-body nourishment delivered to your door for $1\/day",
+        "main_image": "shopify:\/\/shop_images\/hiya-bottle-icon_80d0f415-9484-4c0b-a296-ad2e1dc3ebb5.svg",
+        "button_text": "Get Hiya",
+        "button_url": "\/products\/kids-daily-essential"
+      }
+    },
+    "7eeb8f7c-e756-4871-b451-f50982e9e674": {
+      "type": "join-the-hiya-life-sec",
+      "settings": {
+        "heading": "Join the Hiya Life",
+        "content": "<span>#hiyalife<\/span> <span>@hiyahealth<\/span>",
+        "main_image": "shopify:\/\/shop_images\/Hiya-Instagram_b371ad4f-860f-43a0-975c-20330225349e.svg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "47151686-dfe1-4436-bdf0-32c86b7e9f41",
+    "186a1948-e014-4028-a429-8e7a4df83fdc",
+    "65217211-81de-46dd-adeb-9e06cfa75a52",
+    "bd92e0d2-8962-4a4d-ad21-726fdddc866c",
+    "7eeb8f7c-e756-4871-b451-f50982e9e674"
+  ]
+}

@@ -1,0 +1,140 @@
+<div class="why_nightly_wrapper">
+  <div class="container">
+    <div class="why_nightly_heading">
+      <h2>{{ section.settings.why_nightly_heading }}</h2>
+      <p>{{ section.settings.why_nightly_subheading }}</p>
+    </div>
+    <ul class="why_nightly_list_content">
+      {%- for block in section.blocks -%}
+          <li>
+            <div class="why_nightly_list">
+              <img src="{{ block.settings.why_nightly_img | img_url: 'master' }}" />
+              <p>{{ block.settings.why_nightly_text }}</p>
+            </div>
+         </li>
+        {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .why_nightly_wrapper{
+    padding:100px 0;
+  }
+  .why_nightly_list_content{
+    max-width:1100px;
+    margin:0 auto;
+    display:flex;
+        justify-content: space-between;
+
+  }
+  .why_nightly_wrapper h2 {
+      color: #2376B4;
+      margin-bottom: 25px;
+  }
+  .why_nightly_wrapper p{
+      color: #2376B4;
+      text-align: center;
+      font-family: Filson Pro;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+  }
+  .why_nightly_wrapper .why_nightly_list p {
+    color: #2376B4;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    max-width: 145px;
+    margin: 0 auto !important;
+}
+  
+  .why_nightly_heading {
+      max-width: 600px;
+      margin: 0 auto 50px;    
+  }
+  .why_nightly_list_content{
+    list-style:none;
+  }
+  .why_nightly_list img {
+    height: 100px;
+    object-fit: scale-down;
+    margin-bottom: 20px;
+}
+  .why_nightly_list {
+    text-align: center;
+    padding:0 15px;
+}
+  @media (max-width:767px){
+     ul.why_nightly_list_content {
+        flex-wrap: wrap;
+    }    
+    ul.why_nightly_list_content li:first-child, ul.why_nightly_list_content li:nth-child(2) {
+    margin-top: 0;
+}
+    ul.why_nightly_list_content li {
+        margin-top: 40px;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .why_nightly_wrapper p {
+        font-size: 18px;
+        letter-spacing: 0;
+    }
+    .shopify-section.how-we-stack-main.bedtime-we-stack-main .how-we-stack-sec p {
+        font-size: 18px;
+        margin-bottom: 30px !important;
+    }
+    
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Why Nightly Sec",
+  "tag": "section",
+"class": "why_nightly_sec",
+  "settings": [    
+    {
+      "type": "text",
+      "label": "Why Nightly Heading",
+      "id": "why_nightly_heading"
+    },
+    {
+      "type": "text",
+      "label": "Why Nightly Sub Heading",
+      "id": "why_nightly_subheading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "chart",
+      "name": "Chart",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Why Nightly Image",
+          "id": "why_nightly_img"
+        },
+        {
+          "type": "text",
+          "label": "Why Nightly Text",
+          "id": "why_nightly_text"
+        }
+      ]
+  }
+  ],
+  "presets": [
+    {
+      "name": "Why Nightly Sec"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

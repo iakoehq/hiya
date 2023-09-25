@@ -1,0 +1,56 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "SUBSCRIBE TO OUR EMAILS",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "email-form": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email-form"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 56
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "footer_coopyright": "<span>© Hiya 2023. All Rights Reserved<\/span>\n<div>Hiya Health Products LLC | support@hiyahealth.com<\/div><div>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.<\/div>\n<div>**Each new subscription includes a refillable glass bottle (not plastic) followed by refill pouches sent every 30 days to minimize waste. Any discount applies to the first month only of any applicable subscription.<\/div>",
+        "footer_coopyright_variant_swatches": "© Hiya 2020. All Rights Reserved",
+        "newsletter-title": "Subscribe to our newsletter",
+        "account-title": "Account",
+        "insta-link": "https:\/\/www.instagram.com\/hiyahealth\/",
+        "fb-link": "https:\/\/www.facebook.com\/hiyahealth\/"
+      }
+    }
+  },
+  "order": [
+    "newsletter",
+    "footer"
+  ]
+}

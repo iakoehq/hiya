@@ -1,0 +1,56 @@
+{% comment %}  Banner Section  {% endcomment %}
+    <section class="hero-banner">
+        <div class="container">
+            <div class="banner-small-image">
+              {% if section.settings.image != blank %}
+                <img src="{{ section.settings.image | img_url: 'master' }}"
+                    alt="img">
+              {% endif %}
+            </div>
+          {% if section.settings.heading != blank %}
+            <h1>{{ section.settings.heading }}</span>
+              {% endif %}
+            </h1>
+          {% if section.settings.content != blank %}
+            {{ section.settings.content }}
+            {% endif %}
+        </div>
+    </section>
+
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "tag": "section",
+  "class": "story-banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "html",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

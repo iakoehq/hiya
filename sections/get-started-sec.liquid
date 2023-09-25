@@ -1,0 +1,66 @@
+<section class="get-started-sec">
+        <div class="container">
+            <div class="small-img">
+               {% if section.settings.main_image != blank %}
+                <img src="{{ section.settings.main_image | img_url: 'master' }}"
+                    alt="img">
+               {% endif %}
+            </div>
+          {% if section.settings.heading != blank %}
+            <h2>{{ section.settings.heading }}</h2>
+          {% endif %}
+          {% if section.settings.content != blank %}
+            <p>{{ section.settings.content }}</p>
+          {% endif %}
+          {% if section.settings.button_text != blank %}
+            <a href="{{ section.settings.button_url }}" class="primary-btn">{{ section.settings.button_text }}</a>
+          {% endif %}
+        </div>
+  </section>
+
+{% schema %}
+{
+  "name": "Get started Section",
+  "tag": "section",
+  "class": "get-started-main",
+  "settings": [
+                {
+                    "type": "text",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "textarea",
+                    "label": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "type": "image_picker",
+                    "label": "Image",
+                    "id": "main_image"
+                  },
+                  {
+                    "type": "text",
+                    "label": "Button Text",
+                    "id": "button_text"
+                  },
+                  {
+                    "type": "url",
+                    "label": "Button Url",
+                    "id": "button_url"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Get started Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

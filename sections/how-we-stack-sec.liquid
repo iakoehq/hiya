@@ -1,0 +1,81 @@
+<div class="how-we-stack-sec">
+  <div class="container">
+    <h2>How do we stack up?</h2>
+    <p>Beginning at a young age, a child’s gut can impact overall health. That’s why our probiotic is specifically designed for growing bodies with an evolving blend of clinically-researched strains each selected for a reason!</p>
+    <div class="table-main">
+      <table>
+        <thead>
+          <th></th>
+          <th><img src="{{ section.settings.hiya_logo | img_url: 'master' }}" /></th>
+          <th>{{ section.settings.row_title }}</th>
+        </thead>
+        <tbody>
+          {%- for block in section.blocks -%}
+            <tr>
+            <td>{{ block.settings.name }}</td>
+            <td><img src="{{ block.settings.hiya_chart_heart | img_url: 'master' }}" /></td>
+            <td><img src="{{ block.settings.mark_icon | img_url: 'master' }}" /></td>
+           </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{{ 'how-we-stack.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "How We Stack Sec",
+  "tag": "section",
+"class": "how-we-stack-main",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "hiya Logo",
+      "id": "hiya_logo"
+    },
+    {
+      "type": "text",
+      "label": "Row Title",
+      "id": "row_title",
+      "default": "MANY PROBIOTICS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "chart",
+      "name": "Chart",
+      "settings": [
+        {
+          "type": "text",
+          "label": "name",
+          "id": "name"
+        },
+        {
+          "type": "image_picker",
+          "label": "hiya chart heart",
+          "id": "hiya_chart_heart"
+        },
+        {
+          "type": "image_picker",
+          "label": "Mark Icon",
+          "id": "mark_icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How We Stack Sec"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,37 @@
+body.pages-privacy-policy , body.pages-shipping-returns , body.pages-terms-of-service{
+  background: #e6f5ff;
+}
+.pages-privacy-policy .container  , body.pages-shipping-returns .container , body.pages-terms-of-service .container{
+    max-width: 1200px;
+  width:100%;
+  padding:0 10px;
+  margin:0 auto;
+}
+.pages-privacy-policy .tt-title-subpages  , .pages-shipping-returns .tt-title-subpages  , .pages-terms-of-service .tt-title-subpages{
+  border-bottom: 1px solid #e9e7e7;
+  letter-spacing: 0.003em;
+  font-weight: 800!important;
+  text-align: left;
+      font-family: FilsonProBold !important;
+}
+body.pages-privacy-policy .container-indent p , body.pages-shipping-returns .container-indent p , body.pages-terms-of-service .container-indent p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #3f7ab9;
+}
+body.pages-privacy-policy .container-indent , body.pages-shipping-returns .container-indent , body.pages-terms-of-service .container-indent{
+  padding:60px 0;
+}
+body.pages-privacy-policy h4:not([class^="tt-title"]):not([class^="tt-collapse"]):not([class^="tt-aside"]) , 
+body.pages-shipping-returns h4:not([class^="tt-title"]):not([class^="tt-collapse"]):not([class^="tt-aside"]) , 
+body.pages-terms-of-service h4:not([class^="tt-title"]):not([class^="tt-collapse"]):not([class^="tt-aside"]){
+    padding-bottom: 24px;
+}
+@media (max-width: 1024px){
+ body.pages-privacy-policy .container-indent p , body.pages-shipping-returns .container-indent p , body.pages-terms-of-service .container-indent p{
+    font-size: 15px !important;
+    line-height: 26px !important;
+   text-align:left !important;
+} 
+}

@@ -1,0 +1,1787 @@
+{
+  "current": {
+    "logo": "shopify:\/\/shop_images\/logo_b9aab6d8-6245-48ef-866d-9b280f2eef6c.png",
+    "logo_width": 80,
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "colors_solid_button_labels": "#1f1f21",
+    "colors_accent_1": "#ed765f",
+    "gradient_accent_1": "",
+    "colors_accent_2": "#ffffff",
+    "gradient_accent_2": "",
+    "colors_text": "#2376b4",
+    "colors_outline_button_labels": "#ed765f",
+    "colors_background_1": "#fff",
+    "gradient_background_1": "",
+    "colors_background_2": "#ffde27",
+    "gradient_background_2": "",
+    "type_header_font": "sans-serif",
+    "heading_scale": 140,
+    "type_body_font": "sans-serif",
+    "body_scale": 100,
+    "page_width": 1600,
+    "spacing_sections": 52,
+    "spacing_grid_horizontal": 40,
+    "spacing_grid_vertical": 40,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 0,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 5,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "card",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "background-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "collection_card_style": "card",
+    "collection_card_image_padding": 0,
+    "collection_card_text_alignment": "left",
+    "collection_card_color_scheme": "background-2",
+    "collection_card_border_thickness": 0,
+    "collection_card_border_opacity": 10,
+    "collection_card_corner_radius": 0,
+    "collection_card_shadow_opacity": 0,
+    "collection_card_shadow_horizontal_offset": 0,
+    "collection_card_shadow_vertical_offset": 4,
+    "collection_card_shadow_blur": 5,
+    "blog_card_style": "card",
+    "blog_card_image_padding": 0,
+    "blog_card_text_alignment": "left",
+    "blog_card_color_scheme": "background-2",
+    "blog_card_border_thickness": 0,
+    "blog_card_border_opacity": 10,
+    "blog_card_corner_radius": 0,
+    "blog_card_shadow_opacity": 0,
+    "blog_card_shadow_horizontal_offset": 0,
+    "blog_card_shadow_vertical_offset": 4,
+    "blog_card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 0,
+    "media_border_opacity": 10,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 4,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 0,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "background-1",
+    "accent_icons": "text",
+    "brand_headline": "",
+    "brand_description": "<p><\/p>",
+    "brand_image_width": 100,
+    "social_facebook_link": "",
+    "social_instagram_link": "",
+    "social_youtube_link": "",
+    "social_tiktok_link": "",
+    "social_twitter_link": "",
+    "social_snapchat_link": "",
+    "social_pinterest_link": "",
+    "social_tumblr_link": "",
+    "social_vimeo_link": "",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "currency_code_enabled": true,
+    "cart_type": "notification",
+    "show_vendor": false,
+    "show_cart_note": false,
+    "cart_drawer_collection": "",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_accent_color": "#375cb1",
+    "checkout_button_color": "#00d25c",
+    "sections": {
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "influencers-banner": {
+        "type": "influencers-banner",
+        "settings": {
+          "heading": "Hiya Health\n    <br>\n     AMBASSADOR APPLICATION",
+          "content": "<span>Our ambassador program is a \n          <b> performance-based program.<\/b>\n    Simply, the more you<\/span><br> <span>share with your audience, <b>the more revenue you will earn.<\/b><\/span>",
+          "main_image": "shopify:\/\/shop_images\/hiya-main.webp",
+          "button_text": "Read More",
+          "button_url": "#influencerteam"
+        }
+      },
+      "influencer-image-with-text-first": {
+        "type": "influencer-image-with-text-first",
+        "settings": {
+          "content": "<p>At <strong>Hiya,<\/strong> we’re dedicated to spreading better health to families everywhere.  We created the Hiya ambassador program to help you share our message and get rewarded in the process.<\/p>\n      <p>Hiya’s ambassador program is a performance-based program --the more you share Hiya  with your audience, the more revenue you earn. Our unique program offers the opportunity to work within a revenue share or CPA for earning. \n        We provide you with assets for your success—tracking links, swipe copy and customizable banners. \n        <\/p>\n      <p>And the best part is you’ll be making money while helping kids get the nutrition they need without all the sugar and additional junk. Together can spread the message of what’s hiding in other vitamins and providing a safer option.<\/p>\n      <p>We are excited to have you onboard! <\/p>",
+          "main_image": "shopify:\/\/shop_images\/hiya-founders.webp",
+          "author": "Darren and Adam,",
+          "text": "Founders of Hiya"
+        }
+      },
+      "what-is-hiya": {
+        "type": "what-is-hiya",
+        "settings": {
+          "heading": "WHAT IS HIYA?",
+          "content": "Hiya is a children’s wellness company dedicated to reimagining children’s health. Our first product is a daily multivitamin for kids. We Spent three years curating top pediatricians, nutritionists, scientists, and parents to formulate a super-powered chewable made with organic fruits and vegetables. The result a daily children’s vitamin that’s stronger, cleaner, and tastier — and always with zero added sugar and zero gummy junk — so you can be confident your kids are getting the full-body nourishment they need to grow into healthy adults.",
+          "heading2": "HIYA VITAMINS ARE",
+          "content2": "Loaded with 12 organic fruits and veggies, then supercharged with 15 essential vitamins and minerals individually sourced in optimal forms, then blended into one super-powered chewable. And of course, they’re sweetened naturally with zero added sugar.",
+          "main_image": "shopify:\/\/shop_images\/image.webp"
+        }
+      },
+      "testimonials-image-with-text": {
+        "type": "testimonials-image-with-text",
+        "settings": {
+          "content": "“So many vitamins are loaded with excess sugar and junk. Hiya is really clean.”",
+          "main_image": "shopify:\/\/shop_images\/drhyman.webp",
+          "author": "Dr. Mark Hyman",
+          "text": "New York Times Best Selling Author"
+        }
+      },
+      "ambessador-program-advantage": {
+        "type": "ambessador-program-advantage",
+        "settings": {
+          "heading": "OUR AMBASSADOR PROGRAM ADVANTAGES",
+          "content": "<li>\n      <p><strong>$30 CPA<\/strong><\/p>\n    <\/li>\n    <li>\n<p><strong>OUR TOP AMBASSADORS get products delivered to their door monthly.<\/strong><\/p>\n    <\/li>\n    <li>\n      <p><strong>Revenue Share opportunities available. <\/strong><\/p>\n    <\/li>\n    <li>\n      <p><strong>ALL APPROVED AMBASSADORS get Hiya vitamins to try, love and share with their audiences.<\/strong><\/p>\n    <\/li>",
+          "main_image": "shopify:\/\/shop_images\/hiya-vitamins-group-icon_a99e5449-17e0-4ca9-8388-3fef095512a0.svg"
+        }
+      },
+      "testimonials-image-with-text2": {
+        "type": "testimonials-image-with-text2",
+        "settings": {
+          "content": "“Hiya is the multivitamin I give to my son and recommend for my clients because it uses proper forms of each nutrient in functional levels without the sugar of most gummy alternatives*”",
+          "main_image": "shopify:\/\/shop_images\/kelly.webp",
+          "author": "Kelly LeVeque",
+          "text": "California, United States"
+        }
+      },
+      "ambessedor-program-policies": {
+        "type": "ambessedor-program-policies",
+        "blocks": {
+          "4088609d-35b7-43bf-8996-d9891454278f": {
+            "type": "text",
+            "settings": {
+              "questions": "WHO CAN APPLY?",
+              "answer": "<p>Anyone aligned with our mission and with health, wellness, or content-related websites and audiences is welcome to apply.<\/p>\n<p>You must have a Tax ID or Social Security number in order to submit an application and you’re\nrequired to submit a <strong><a href=\"https:\/\/www.irs.gov\/pub\/irs-pdf\/fw9.pdf\" target=\"_blank\">W9 form<\/a><\/strong> (a <strong><a href=\"https:\/\/www.irs.gov\/pub\/irs-pdf\/fw8ben.pdf\" target=\"_blank\">W-8BEN<\/a><\/strong> form for international) once your application is approved to <a href=\"mailto:accounting@hiyahealth.com\">accounting@hiyahealth.com<\/a>.<\/p>"
+            }
+          },
+          "373ffc58-aa08-43fc-aee7-6ed4358b9521": {
+            "type": "text",
+            "settings": {
+              "questions": "APPROVAL PROCESS",
+              "answer": "<p>Applications are typically reviewed within <strong>3-5 business days.<\/strong><\/p>\n  <p>Once your application has been approved, you’ll receive a welcome email with your account details and assets, including an active link, copy, and images to get started. <\/p>\n  <p>To maintain your approved status, you will need to schedule and execute your first promotion within the first 90 days of account activation. <\/p>"
+            }
+          },
+          "5709a09e-97d0-4a69-8665-f615b05f6948": {
+            "type": "text",
+            "settings": {
+              "questions": "MARKETING",
+              "answer": "<p>Ambassadors may not advertise on networks as our brand. Also you must add the necessary affiliate disclosure before your promotion. Here is an example, but please change it to fit your voice and website: <\/p>\n  <p>In compliance with the FTC guidelines, please assume the following about all links, posts, photos, and other material on this website: Any\/all of the links on this website are affiliate links of which “your name” receives a small commission from sales of certain items, but the price is the same for you.<\/p>\n  <p>We hold the right to suspend your account and nullify any unpaid affiliate commissions if the above guidelines are not compliant.<\/p>"
+            }
+          },
+          "9d5dba8b-cb04-4c20-8693-27759a171443": {
+            "type": "text",
+            "settings": {
+              "questions": "READY!",
+              "answer": "<p>Wonderful, let’s get started! The application is below.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "4088609d-35b7-43bf-8996-d9891454278f",
+          "373ffc58-aa08-43fc-aee7-6ed4358b9521",
+          "5709a09e-97d0-4a69-8665-f615b05f6948",
+          "9d5dba8b-cb04-4c20-8693-27759a171443"
+        ],
+        "settings": {
+          "heading": "AMBASSADOR PROGRAM STRUCTURES &amp; POLICIES"
+        }
+      },
+      "become-ambassador": {
+        "type": "become-ambassador",
+        "settings": {
+          "heading": "BECOME A HIYA AMBASSADOR",
+          "content": "Are you ready to join the Hiya Ambassador Team? If so, apply below!"
+        }
+      },
+      "new_products": {
+        "type": "new_products",
+        "settings": {
+          "page_design": "product_page_1_design",
+          "full_width_description": "default",
+          "history": true,
+          "show_badge_new": true,
+          "show_badge_featured": true,
+          "show_review": true,
+          "show_share_buttons": true,
+          "use_select_button": false,
+          "gallery_no_zoom": false,
+          "gallery_scroll": true,
+          "stickygallery": true,
+          "gallery_type": "horizontal",
+          "show_thumbnails": true,
+          "show_thumbnails_zoom": true,
+          "show_product_main_info": true,
+          "show_sku": true,
+          "show_qiantity": true,
+          "show_trust_badge": true,
+          "image_max_width": "541",
+          "image_max_width_m": "541",
+          "designoption1": "getButtonHtml",
+          "designoption2": "getButtonHtml",
+          "designoption3": "getButtonHtml",
+          "show_product_info": true,
+          "show_product_vendor": true,
+          "show_product_type": true,
+          "show_product_barcode": true,
+          "show_product_tags": true,
+          "product_tab_tags": "",
+          "product_item_show_wishlist": true,
+          "product_item_show_compare": true,
+          "show_sizechart": true,
+          "btnname": "Size Guide",
+          "popupcontent": "<h6 class=\"tt-title\">SIZE GUIDE<\/h6>\nThis is an approximate conversion table to help you find your size.\n<div class=\"tt-table-responsive-md\">\n\t<table class=\"tt-table-modal-info\">\n\t\t<thead>\n\t\t\t<tr>\n\t\t\t\t<th>Italian<\/th>\n\t\t\t\t<th>Spanish<\/th>\n\t\t\t\t<th>German<\/th>\n\t\t\t\t<th>UK<\/th>\n\t\t\t\t<th>US<\/th>\n\t\t\t\t<th>Japanese<\/th>\n\t\t\t\t<th>Chinese<\/th>\n\t\t\t\t<th>Russian<\/th>\n\t\t\t\t<th>Korean<\/th>\n\t\t\t<\/tr>\n\t\t<\/thead>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td>34<\/td>\n\t\t\t\t<td>30<\/td>\n\t\t\t\t<td>28<\/td>\n\t\t\t\t<td>4<\/td>\n\t\t\t\t<td>00<\/td>\n\t\t\t\t<td>3<\/td>\n\t\t\t\t<td>155\/75A<\/td>\n\t\t\t\t<td>36<\/td>\n\t\t\t\t<td>44<\/td>\n\t\t\t<\/tr>\n\t\t\t<tr>\n\t\t\t\t<td>36<\/td>\n\t\t\t\t<td>32<\/td>\n\t\t\t\t<td>30<\/td>\n\t\t\t\t<td>6<\/td>\n\t\t\t\t<td>0<\/td>\n\t\t\t\t<td>5<\/td>\n\t\t\t\t<td>155\/80A<\/td>\n\t\t\t\t<td>38<\/td>\n\t\t\t\t<td>44<\/td>\n\t\t\t<\/tr>\n\t\t\t<tr>\n\t\t\t\t<td>38<\/td>\n\t\t\t\t<td>34<\/td>\n\t\t\t\t<td>32<\/td>\n\t\t\t\t<td>8<\/td>\n\t\t\t\t<td>2<\/td>\n\t\t\t\t<td>7<\/td>\n\t\t\t\t<td>160\/84A<\/td>\n\t\t\t\t<td>40<\/td>\n\t\t\t\t<td>55<\/td>\n\t\t\t<\/tr>\n\t\t\t<tr>\n\t\t\t\t<td>40<\/td>\n\t\t\t\t<td>36<\/td>\n\t\t\t\t<td>34<\/td>\n\t\t\t\t<td>10<\/td>\n\t\t\t\t<td>4<\/td>\n\t\t\t\t<td>9<\/td>\n\t\t\t\t<td>165\/88A<\/td>\n\t\t\t\t<td>42<\/td>\n\t\t\t\t<td>55<\/td>\n\t\t\t<\/tr>\n\t\t\t<tr>\n\t\t\t\t<td>42<\/td>\n\t\t\t\t<td>38<\/td>\n\t\t\t\t<td>36<\/td>\n\t\t\t\t<td>12<\/td>\n\t\t\t\t<td>6<\/td>\n\t\t\t\t<td>11<\/td>\n\t\t\t\t<td>170\/92A<\/td>\n\t\t\t\t<td>44<\/td>\n\t\t\t\t<td>66<\/td>\n\t\t\t<\/tr>\n\t\t\t<tr>\n\t\t\t\t<td>44<\/td>\n\t\t\t\t<td>40<\/td>\n\t\t\t\t<td>38<\/td>\n\t\t\t\t<td>14<\/td>\n\t\t\t\t<td>8<\/td>\n\t\t\t\t<td>13<\/td>\n\t\t\t\t<td>175\/96A<\/td>\n\t\t\t\t<td>46<\/td>\n\t\t\t\t<td>66<\/td>\n\t\t\t<\/tr>\n\t\t\t<tr>\n\t\t\t\t<td>46<\/td>\n\t\t\t\t<td>42<\/td>\n\t\t\t\t<td>40<\/td>\n\t\t\t\t<td>16<\/td>\n\t\t\t\t<td>10<\/td>\n\t\t\t\t<td>15<\/td>\n\t\t\t\t<td>170\/98A<\/td>\n\t\t\t\t<td>48<\/td>\n\t\t\t\t<td>77<\/td>\n\t\t\t<\/tr>\n\t\t\t<tr>\n\t\t\t\t<td>48<\/td>\n\t\t\t\t<td>44<\/td>\n\t\t\t\t<td>42<\/td>\n\t\t\t\t<td>18<\/td>\n\t\t\t\t<td>12<\/td>\n\t\t\t\t<td>17<\/td>\n\t\t\t\t<td>170\/100B<\/td>\n\t\t\t\t<td>50<\/td>\n\t\t\t\t<td>77<\/td>\n\t\t\t<\/tr>\n\t\t\t<tr>\n\t\t\t\t<td>50<\/td>\n\t\t\t\t<td>46<\/td>\n\t\t\t\t<td>44<\/td>\n\t\t\t\t<td>20<\/td>\n\t\t\t\t<td>14<\/td>\n\t\t\t\t<td>19<\/td>\n\t\t\t\t<td>175\/100B<\/td>\n\t\t\t\t<td>52<\/td>\n\t\t\t\t<td>88<\/td>\n\t\t\t<\/tr>\n\t\t\t<tr>\n\t\t\t\t<td>52<\/td>\n\t\t\t\t<td>48<\/td>\n\t\t\t\t<td>46<\/td>\n\t\t\t\t<td>22<\/td>\n\t\t\t\t<td>16<\/td>\n\t\t\t\t<td>21<\/td>\n\t\t\t\t<td>180\/104B<\/td>\n\t\t\t\t<td>54<\/td>\n\t\t\t\t<td>88<\/td>\n\t\t\t<\/tr>\n\t\t<\/tbody>\n\t<\/table>\n<\/div>",
+          "show_shipping": true,
+          "btnname2": "Shipping",
+          "popupcontentshipping": "<h6 class=\"tt-title\">SHIPPING<\/h6>\n<ul>\n\t<li>Complimentary ground shipping within 1 to 7 business days<\/li>\n\t<li>In-store collection available within 1 to 7 business days<\/li>\n\t<li>Next-day and Express delivery options also available<\/li>\n\t<li>Purchases are delivered in an orange box tied with a Bolduc ribbon, with the exception of certain items<\/li>\n\t<li>See the delivery FAQs for details on shipping methods, costs and delivery times<\/li>\n<\/ul>\n<h6 class=\"tt-title\">RETURNS AND EXCHANGES<\/h6>\n<ul>\n\t<li>Easy and complimentary, within 14 days<\/li>\n\t<li>See conditions and procedure in our return FAQs<\/li>\n<\/ul>",
+          "show_message": true,
+          "btnname3": "Ask about this product",
+          "prpage_tree_col_html": "<div class=\"tt-services-aside\">\n\t<a href=\"#\" class=\"tt-services-block\">\n\t\t<div class=\"tt-col-icon\">\n\t\t\t<i class=\"icon-f-48\"><\/i>\n\t\t<\/div>\n\t\t<div class=\"tt-col-description\">\n\t\t\t<h4 class=\"tt-title\">FREE SHIPPING<\/h4>\n\t\t\t<p>Free shipping on all US order or order above $99<\/p>\n\t\t<\/div>\n\t<\/a>\n\t<a href=\"#\" class=\"tt-services-block\">\n\t\t<div class=\"tt-col-icon\">\n\t\t\t<i class=\"icon-f-35\"><\/i>\n\t\t<\/div>\n\t\t<div class=\"tt-col-description\">\n\t\t\t<h4 class=\"tt-title\">SUPPORT 24\/7<\/h4>\n\t\t\t<p>Contact us 24 hours a day, 7 days a week<\/p>\n\t\t<\/div>\n\t<\/a>\n\t<a href=\"#\" class=\"tt-services-block\">\n\t\t<div class=\"tt-col-icon\">\n\t\t\t<i class=\"icon-e-09\"><\/i>\n\t\t<\/div>\n\t\t<div class=\"tt-col-description\">\n\t\t\t<h4 class=\"tt-title\">30 DAYS RETURN<\/h4>\n\t\t\t<p>Simply return it within 30 days for an exchange.<\/p>\n\t\t<\/div>\n\t<\/a>\n<\/div>",
+          "show_custom_related": true,
+          "custom_related_title": "CUSTOM PRODUCTS"
+        }
+      },
+      "pairs-great-with-sec": {
+        "type": "pairs-great-with-sec",
+        "settings": {
+          "title": "Pairs Great With:",
+          "product": "kids-daily-probiotic"
+        }
+      },
+      "our-vitamin-sec": {
+        "type": "our-vitamin-sec",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/download_1_7e30f254-2271-47e4-9c2b-2c9ef0b51033.webp",
+          "sub_heading": "",
+          "heading": "How do we stack up?",
+          "content": "Typical kids vitamins are sugar-coated gummies stored\nin plastic bottles. Hiya is different. See how we compare."
+        }
+      },
+      "video-frame-sec": {
+        "type": "video-frame-sec",
+        "settings": {
+          "title": "Kids love Hiya!",
+          "video_link": "https:\/\/www.youtube.com\/embed\/1aRiaXyzvdc"
+        }
+      },
+      "image_with_content_sec": {
+        "type": "image_with_content_sec",
+        "blocks": {
+          "a2018125-d9bb-4a7e-a60f-97603f2286cc": {
+            "type": "image",
+            "settings": {
+              "content_position": false,
+              "heading": "Made with Honest Ingredients",
+              "content": "<p>We take 15 essential vitamins and minerals and a blend of 12 fruits and veggies and turn them into into one daily chewable to help fill in common nutritional gaps.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/download_2_38e63aaa-5ad0-4327-8e03-8d19980c5189.webp",
+              "small_image": "shopify:\/\/shop_images\/hiya-for-kids-icon-01_1a7729e5-1902-41b4-bebd-477d53532453.svg",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "9856a843-77e2-4255-a2ae-8fbe6e634c79": {
+            "type": "image",
+            "settings": {
+              "content_position": true,
+              "heading": "No Added Sugar",
+              "content": "<p>Instead of added sugar, our sweetener blend includes monk fruit extract, a tropical melon 100 times sweeter than sugar, and mannitol, a sweetener also found in strawberries and pumpkins. Children’s vitamins no longer need added sugar to taste great.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/download_3_5895d3c9-2c91-405d-b299-659c3d376469.webp",
+              "small_image": "shopify:\/\/shop_images\/hiya-sweetened-icon_3d860f49-0ed1-434a-ba1b-d57cad2a6f08.svg",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "1c362635-b561-4b07-912d-9d0bc3c2002e": {
+            "type": "image",
+            "settings": {
+              "content_position": false,
+              "heading": "Optimized for Freshness",
+              "content": "<p>Unlike many vitamins that may sit on a store shelf for months, each month we send a pouch of fresh vitamins to pour into your refillable, child-resistant glass bottle designed for nutrient protection. Easy-to-start, easy-to cancel -- with free shipping and total flexibility -- delivered monthly on a pediatrician-recommended 30-day schedule based on modern nutritional guidelines.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/Optimized-for-Freshness.png",
+              "small_image": "shopify:\/\/shop_images\/hiya-freshness-icon-3_7480497d-1aeb-4eaf-9634-3a3afcf8fe28.svg",
+              "button_text": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "a2018125-d9bb-4a7e-a60f-97603f2286cc",
+          "9856a843-77e2-4255-a2ae-8fbe6e634c79",
+          "1c362635-b561-4b07-912d-9d0bc3c2002e"
+        ],
+        "settings": {
+          "image_with_content_background": "#dcfdf2",
+          "block_button_text": "Get Hiya",
+          "block_button_link": "#shopify-section-product-banner-sec"
+        }
+      },
+      "faq": {
+        "type": "faq",
+        "blocks": {
+          "8ce9a330-e511-4944-932d-ee7eb351b369": {
+            "type": "faq",
+            "settings": {
+              "questions": "If there’s no added sugar, how does your vitamin taste so sweet?",
+              "answer": "Instead of including added sugar, our vitamins are sweetened with monk fruit extract — a super-fruit that is sweeter and tastier than sugar for a taste kids love. Each vitamin also includes a touch of mannitol — a sweetener found in strawberries and pumpkins and often recommended by dentists."
+            }
+          },
+          "f563eddb-b8f5-440c-9db7-188dcea4386f": {
+            "type": "faq",
+            "settings": {
+              "questions": "Wait — how much added sugar is in a typical children’s vitamin?",
+              "answer": "Up to five grams of added sugar, which at five grams is as much sugar as in an Oreo cookie — typically given by parents to kids every day as a way to be “healthy.”"
+            }
+          },
+          "0f1cc924-0edb-411b-9537-c3ccfbbdaab0": {
+            "type": "faq",
+            "settings": {
+              "questions": "Why is your vitamin a chewable, not a gummy?",
+              "answer": "Gummy vitamins are often filled with pork-based additives and hard-to-pronounce ingredients, they can get stuck in your children’s teeth contributing to cavities, they can teach bad health habits by connecting health with candy, and they are often susceptible to heat and melting, which can result in fewer nutrients than expected. For parents concerned about keeping their kids strong and healthy, chewables is the preferred delivery method among many leading experts."
+            }
+          },
+          "0e68687a-f9ce-40e4-b5ec-3fb77d474f4a": {
+            "type": "faq",
+            "settings": {
+              "questions": "How bad is the sugar epidemic?",
+              "answer": "According to the numbers, 98% of kids eat too much added sugar, which can lead to lifelong problems with childhood development, mental health, obesity, and more. We are only now beginning to understand the negative effects of daily sugar intake, which is why our vitamins will never contain added sugar."
+            }
+          },
+          "7186e910-0117-42bf-952d-00e0693f048a": {
+            "type": "faq",
+            "settings": {
+              "questions": "How healthy is your vitamin?",
+              "answer": "Our vitamin is made with 15 essential vitamins and minerals and includes a blend of 12 fruits and vegetables — and is sweetened with zero added sugar and zero gummy junk. It’s dynamically formulated by a team of pediatricians and nutritionists to fill in common gaps based on modern nutritional guidelines. It’s also gluten-free, vegan, GMO-free, nut-free, and pretty much everything good you can think of."
+            }
+          },
+          "0ef31367-5563-42fe-84ba-0d7a571391c2": {
+            "type": "faq",
+            "settings": {
+              "questions": "Does my child really need a daily vitamin?",
+              "answer": "The short answer is probably yes. According to the numbers, more than 90% of children don’t reach their recommended levels of fruits and vegetables. Hiya helps fill in common nutritional gaps without being a sugar-coated gummy vitamin, which unfortunately has become the default way for kids to be healthy. As always, when making any decisions about vitamins, we suggest consulting with your pediatrician or dentist for a recommendation and further information about any risks associated with added sugar and gummy additives."
+            }
+          },
+          "5b3fea19-c51a-4c7e-8de5-538aa54017b6": {
+            "type": "faq",
+            "settings": {
+              "questions": "What are your vitamins made with?",
+              "answer": "They’re made by taking 15 essential vitamins and minerals and a blend of 12 fruits and veggies, then combining them into one super-charged daily vitamin."
+            }
+          },
+          "8155b939-d96f-49de-a0dc-3a0b2adee5d1": {
+            "type": "faq",
+            "settings": {
+              "questions": "So my child only needs to eat one vitamin per day?",
+              "answer": "Yes. While many gummy brands require up to four gummies per day, hiya is designed for full-body nourishment in just one chewable. Which means less stress for those in charge. For any questions about dosage, please consult your pediatrician."
+            }
+          },
+          "d6f6a38d-d942-420a-a391-97dafe6d83ec": {
+            "type": "faq",
+            "settings": {
+              "questions": "What happens if I have unused vitamins?",
+              "answer": "When you get a new delivery of fresh vitamins, for optimal potency, we suggest replacing your old vitamins with your fresh ones.  That way you can be sure your child is always putting the freshest nutrients in their growing bodies."
+            }
+          },
+          "af598e1b-5a8f-42cc-a86b-48a45fb6e742": {
+            "type": "faq",
+            "settings": {
+              "questions": "What ages should take your multivitamin?",
+              "answer": "Our vitamin is designed for boys and girls starting at age 2. Please always consult your pediatrician to make sure a vitamin is right for your child."
+            }
+          },
+          "f2c7083c-3a6d-4093-89ca-cf2a126bd4f4": {
+            "type": "faq",
+            "settings": {
+              "questions": "Is your multi-vitamin appropriate for both boys and girls?",
+              "answer": "Yes — experts suggest that boys and girls have similar nutritional needs throughout childhood and until their mid-teens. As always please consult your pediatrician where appropriate."
+            }
+          },
+          "426bf225-e39c-4acf-8bbf-6dbfc1013408": {
+            "type": "faq",
+            "settings": {
+              "questions": "When should I give my child their vitamin?",
+              "answer": "We suggest your child takes one vitamin per day with a meal — either breakfast or dinner — though you may take our vitamin with or without food."
+            }
+          },
+          "446db494-3df3-45f6-881b-40d74ace8a97": {
+            "type": "faq",
+            "settings": {
+              "questions": "Can your multivitamin and probiotic be taken together?",
+              "answer": "Definitely — our daily multivitamin and our daily probiotic are designed to co-exist with interconnected functions that support each other. So if you’re looking for maximum wellness, we typically suggest a child take both our multivitamin and probiotic."
+            }
+          },
+          "4252e775-12e4-40fa-801a-d964e0cdde08": {
+            "type": "faq",
+            "settings": {
+              "questions": "Where are your vitamins manufactured?",
+              "answer": "Our vitamins are manufactured in the USA with best-in-class globally sourced ingredients individually selected for optimal absorption.  Our manufacturing facility is cGMP-compliant and certified for the highest standards to ensure quality, processing, handling, and labeling."
+            }
+          },
+          "953b4c53-7604-47bd-bc9c-57013c498ed3": {
+            "type": "faq",
+            "settings": {
+              "questions": "Are your vitamins 3rd-party tested for accuracy and health?",
+              "answer": "Yes, our vitamins are manufactured in a best-in-class cGMP compliant facility, then we ensure the quality and safety of our vitamins using a 3rd party lab that tests for trace amounts of heavy metals, allergens, and pathogens. Unfortunately, since third party testing is not an express requirement, many other vitamins can be misleading and might not accurately reflect what’s listed on their label."
+            }
+          },
+          "653820b9-aada-4292-a161-828a090244a4": {
+            "type": "faq",
+            "settings": {
+              "questions": "How does your subscription work?",
+              "answer": "As parents ourselves, we know parents have enough to worry about — let alone worrying about their vitamin order. That's why we designed all orders to be easy-to-start, easy-to-cancel as part of our monthly subscription, which includes a free and easy cancellation and ability to control your delivery date. Your first month you receive a 30-day supply of fresh vitamins and a reusable glass bottle meant to be personalized with stickers. Then each month thereafter you receive a recyclable refill pouch to fill up your bottle with fresh vitamins. The monthly experience is based on a pediatrician-recommended delivery schedule and is designed to teach your children healthy habits and care for the environment."
+            }
+          },
+          "7c4e70eb-d45b-4ad1-81b0-f7f7d33b6f1c": {
+            "type": "faq",
+            "settings": {
+              "questions": "How do I adjust my order?",
+              "answer": "If you want to adjust anything or cancel your order, you may email us directly at <a href=\"mailto:support@hiyahealth.com\">support@hiyahealth.com with your request. Alternatively you<\/a> may do so directly in your account by clicking 'Manage Subscription' from the initial email you should have received upon your first order."
+            }
+          }
+        },
+        "block_order": [
+          "8ce9a330-e511-4944-932d-ee7eb351b369",
+          "f563eddb-b8f5-440c-9db7-188dcea4386f",
+          "0f1cc924-0edb-411b-9537-c3ccfbbdaab0",
+          "0e68687a-f9ce-40e4-b5ec-3fb77d474f4a",
+          "7186e910-0117-42bf-952d-00e0693f048a",
+          "0ef31367-5563-42fe-84ba-0d7a571391c2",
+          "5b3fea19-c51a-4c7e-8de5-538aa54017b6",
+          "8155b939-d96f-49de-a0dc-3a0b2adee5d1",
+          "d6f6a38d-d942-420a-a391-97dafe6d83ec",
+          "af598e1b-5a8f-42cc-a86b-48a45fb6e742",
+          "f2c7083c-3a6d-4093-89ca-cf2a126bd4f4",
+          "426bf225-e39c-4acf-8bbf-6dbfc1013408",
+          "446db494-3df3-45f6-881b-40d74ace8a97",
+          "4252e775-12e4-40fa-801a-d964e0cdde08",
+          "953b4c53-7604-47bd-bc9c-57013c498ed3",
+          "653820b9-aada-4292-a161-828a090244a4",
+          "7c4e70eb-d45b-4ad1-81b0-f7f7d33b6f1c"
+        ],
+        "settings": {
+          "heading": "We Want You to Ask Questions!",
+          "content": "Seriously. Our team of vitamin experts and scientists has answers.",
+          "block_button_text": "",
+          "block_button_link": "#shopify-section-product-template"
+        }
+      },
+      "product-banner-sec": {
+        "type": "product-banner-sec",
+        "blocks": {
+          "a5fb0829-faf9-4386-ac49-b2991bfb64ed": {
+            "type": "title",
+            "settings": {
+            }
+          },
+          "5395ad8e-7932-40a6-ab38-a6b3b64c05b3": {
+            "type": "Review",
+            "settings": {
+            }
+          },
+          "00293b78-0a61-44df-952a-5d0a90d13f12": {
+            "type": "metafield",
+            "disabled": true,
+            "settings": {
+            }
+          },
+          "641a5ac1-6756-4eb7-9149-06343afad576": {
+            "type": "price",
+            "settings": {
+            }
+          },
+          "10fae45b-2a21-4fac-80ae-66ba0d3dbf96": {
+            "type": "short_discription",
+            "settings": {
+            }
+          },
+          "a58f285d-35e6-4fb0-9a8a-a0c85ddcf0c5": {
+            "type": "usp_bar",
+            "settings": {
+              "bar_text": "30-Day Supply",
+              "bar_image": "shopify:\/\/shop_images\/upsell_check_icon_e71fa376-599e-4ea9-84af-c5b2bd17323b.png"
+            }
+          },
+          "94a93846-2159-4ae0-a014-74bb46cc0711": {
+            "type": "usp_bar",
+            "settings": {
+              "bar_text": "Refillable Glass Bottle",
+              "bar_image": "shopify:\/\/shop_images\/upsell_check_icon_e71fa376-599e-4ea9-84af-c5b2bd17323b.png"
+            }
+          },
+          "75c22553-da0a-447d-9d23-a3592c41b525": {
+            "type": "usp_bar",
+            "settings": {
+              "bar_text": "Sticker Pack to Decorate",
+              "bar_image": "shopify:\/\/shop_images\/upsell_check_icon_e71fa376-599e-4ea9-84af-c5b2bd17323b.png"
+            }
+          },
+          "5f0f3a2b-a83b-4173-9ed1-74d49e4fbc25": {
+            "type": "supplement_image_sec",
+            "settings": {
+              "supplement_image": "shopify:\/\/shop_images\/hiya_multi-full-facts_2023.jpg"
+            }
+          },
+          "82735c61-39e2-4ed9-b050-973f0ba4ae5b": {
+            "type": "option_dropdown",
+            "settings": {
+            }
+          },
+          "f1246f02-8241-4c9d-ba97-42f7e1d07075": {
+            "type": "variant_picker",
+            "settings": {
+            }
+          },
+          "91fb10db-b0f8-418f-ae25-163273a1a0d2": {
+            "type": "bundle_selector",
+            "settings": {
+            }
+          },
+          "55fa0c6d-5d18-4032-b8a9-678c7736099b": {
+            "type": "atc_buttons",
+            "settings": {
+            }
+          },
+          "b2685b6f-c569-4235-b06c-6067bb16f0a2": {
+            "type": "delivered_image_text",
+            "settings": {
+              "deliverd_image": "shopify:\/\/shop_images\/B8eTqspg.png",
+              "deliverd_text": "Delivered Fresh Monthly | Cancel Anytime"
+            }
+          },
+          "14724ca6-3e46-43a1-9f0c-3d36bb9c60f4": {
+            "type": "Benefits",
+            "settings": {
+            }
+          },
+          "195d4ae2-12e3-47f5-8dc3-9f946c62b630": {
+            "type": "Ingredients",
+            "settings": {
+            }
+          },
+          "515fa36a-df1b-464b-944e-d6fff23c0438": {
+            "type": "Subscription_Details",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "a5fb0829-faf9-4386-ac49-b2991bfb64ed",
+          "5395ad8e-7932-40a6-ab38-a6b3b64c05b3",
+          "00293b78-0a61-44df-952a-5d0a90d13f12",
+          "641a5ac1-6756-4eb7-9149-06343afad576",
+          "10fae45b-2a21-4fac-80ae-66ba0d3dbf96",
+          "a58f285d-35e6-4fb0-9a8a-a0c85ddcf0c5",
+          "94a93846-2159-4ae0-a014-74bb46cc0711",
+          "75c22553-da0a-447d-9d23-a3592c41b525",
+          "5f0f3a2b-a83b-4173-9ed1-74d49e4fbc25",
+          "82735c61-39e2-4ed9-b050-973f0ba4ae5b",
+          "f1246f02-8241-4c9d-ba97-42f7e1d07075",
+          "91fb10db-b0f8-418f-ae25-163273a1a0d2",
+          "55fa0c6d-5d18-4032-b8a9-678c7736099b",
+          "b2685b6f-c569-4235-b06c-6067bb16f0a2",
+          "14724ca6-3e46-43a1-9f0c-3d36bb9c60f4",
+          "195d4ae2-12e3-47f5-8dc3-9f946c62b630",
+          "515fa36a-df1b-464b-944e-d6fff23c0438"
+        ],
+        "settings": {
+        }
+      },
+      "makes_hiya_different": {
+        "type": "makes_hiya_different",
+        "blocks": {
+          "5d264bc2-64d3-4a9a-ab94-136aca052e63": {
+            "type": "tab_data",
+            "settings": {
+              "tab_text": "Gummies",
+              "image": "shopify:\/\/shop_images\/other_vitamins_jarx.png",
+              "tab_content": "<ul>\n            <li>\n              <p>CAN<br>CONTRIBUTE<br> TO<\/p>\n              <h2>CAVITIES<\/h2>\n            <\/li>\n            <li>\n              <p>CAN INCLUDE<\/p>\n              <h2>PORK-BASED<\/h2>\n              <p>GELATIN<\/p>\n            <\/li>\n            <li>              \n              <h2>UP TO 4-5<\/h2>\n              <p>PER DAY<\/p>\n            <\/li>\n            <li>              \n              <h2>Up To 5g<\/h2>\n              <p>ADDED SUGAR<\/p>\n            <\/li>\n            <li>\n              <p>NOTORIOUSLY<\/p>\n              <h2>UNSTABLE<\/h2>\n            <\/li>\n            <li>\n              <p>CAN FOSTER<\/p>\n              <h2>BAD HEALTH<\/h2>\n              <p>HABITS<\/p>\n            <\/li>\n          <\/ul>"
+            }
+          },
+          "45f8612b-8fc9-49c8-a987-56a9a3ca165f": {
+            "type": "tab_data",
+            "settings": {
+              "tab_text": "Hiya",
+              "image": "shopify:\/\/shop_images\/Hiya_jar.png",
+              "tab_content": "<ul>\n            <li>\n              <h2>15<\/h2>\n              <p>ESSENTIAL VITAMINS<br>& MINERALS<\/p>\n            <\/li>\n            <li>              \n              <h2>1 DAILY<\/h2>\n              <p>VITAMIN<\/p>\n            <\/li>\n            <li>\n              <p>MADE<br>SPECIFICALLY<\/p>\n              <h2>FOR KIDS<\/h2>\n            <\/li>\n            <li>\n              <h2>0g<\/h2>\n              <p>ADDED SUGAR<\/p>\n            <\/li>\n            <li>              \n              <h2>TASTE<\/h2>\n              <p>GREAT<\/p>\n            <\/li>\n            <li>              \n              <h2>FRUIT<br>& VEGGIE<\/h2>\n              <p>BLEND<\/p>\n            <\/li>\n          <\/ul>"
+            }
+          }
+        },
+        "block_order": [
+          "5d264bc2-64d3-4a9a-ab94-136aca052e63",
+          "45f8612b-8fc9-49c8-a987-56a9a3ca165f"
+        ],
+        "settings": {
+          "title": "What makes Hiya different?",
+          "sub_text": "Here’s why we formulated Hiya as a great-tasting daily chewable, not a sugar-filled gummy.",
+          "dr_review_title": "“So many vitamins are loaded with excess sugar and gummy junk. Hiya is really clean.”",
+          "dr_name": "Dr. Mark Hyman",
+          "location": "New York Times Best Selling Author",
+          "dr_image": "shopify:\/\/shop_images\/download_9_9e02f948-34bd-422b-96d7-e95fb93cd9d3.webp"
+        }
+      },
+      "review-boxes-sec": {
+        "type": "review-boxes-sec",
+        "blocks": {
+          "9c2009e2-b2c1-4bb1-8058-69376c63ee3b": {
+            "type": "reviews",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/download_4_1ed91197-14a7-4eb3-b8f8-5e573ccf2f8b.webp",
+              "review_image": "shopify:\/\/shop_images\/download_8_1ae69a3a-ae1c-4761-983f-6954c9c67145.webp",
+              "review_title": "Finally found our vitamin",
+              "review_content": "“My son LOVES Hiya. As soon as he started decorating his own bottle, he was hooked, making my life just a bit easier. Thank you for all you're doing!\""
+            }
+          },
+          "a4ca8e8f-bd7a-4715-a27f-f6ecfec73b13": {
+            "type": "reviews",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/download_5_78aed468-be7d-4f43-b66f-cf25bd5ef3d3.webp",
+              "review_image": "shopify:\/\/shop_images\/download_8_1ae69a3a-ae1c-4761-983f-6954c9c67145.webp",
+              "review_title": "My daughter loves Hiya",
+              "review_content": "\"Hiya is the first kid's vitamin my daughter asks for every morning by name. She's a picky eater so as a parent I feel great she's getting what she needs.\""
+            }
+          },
+          "815abed9-88bd-472a-84d5-cd8e83c4992c": {
+            "type": "reviews",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/download_6_f4846446-84af-4d94-b888-5a3111515700.webp",
+              "review_image": "shopify:\/\/shop_images\/download_8_1ae69a3a-ae1c-4761-983f-6954c9c67145.webp",
+              "review_title": "My kids no longer fuss",
+              "review_content": "\"From the adorable bottle to the great taste to their customer service, Hiya understands what it means to be a parent today.\""
+            }
+          },
+          "499eaf95-53a5-4bb5-a1c1-aab00dc6ccd3": {
+            "type": "reviews",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/download_7_6ee8b4e8-f20e-4209-b209-a0b500d58d73.webp",
+              "review_image": "shopify:\/\/shop_images\/download_8_1ae69a3a-ae1c-4761-983f-6954c9c67145.webp",
+              "review_title": "Tastes amazing",
+              "review_content": "\"Zero sugar. Zero gummy junk. Zero cavities. Thank you Hiya for creating a healthy vitamin our kids love.\""
+            }
+          }
+        },
+        "block_order": [
+          "9c2009e2-b2c1-4bb1-8058-69376c63ee3b",
+          "a4ca8e8f-bd7a-4715-a27f-f6ecfec73b13",
+          "815abed9-88bd-472a-84d5-cd8e83c4992c",
+          "499eaf95-53a5-4bb5-a1c1-aab00dc6ccd3"
+        ],
+        "settings": {
+        }
+      },
+      "how-we-stack-sec": {
+        "type": "how-we-stack-sec",
+        "blocks": {
+          "f36d5d8f-d075-42a4-a826-f7f42880456e": {
+            "type": "chart",
+            "settings": {
+              "name": "Optimized for Kids",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "c81bc22d-e837-4aaf-8b10-95ee59a157b3": {
+            "type": "chart",
+            "settings": {
+              "name": "10 Billion CFUs",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "520a049e-7779-4df0-96ec-964baf40c48a": {
+            "type": "chart",
+            "settings": {
+              "name": "Prebiotic Fiber",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "b0861c49-4c10-462d-8987-91458e64fba2": {
+            "type": "chart",
+            "settings": {
+              "name": "Seasonal Adjustments",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "7d1e54d8-ad14-4c7a-887a-a972e5095613": {
+            "type": "chart",
+            "settings": {
+              "name": "Zero Added Sugar",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "632fa200-0e9c-45a9-ae36-cbcbaf3021b3": {
+            "type": "chart",
+            "settings": {
+              "name": "No Gummy Junk",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "9e5e3d1a-28da-4e8d-b0e6-aafa7081f1b3": {
+            "type": "chart",
+            "settings": {
+              "name": "Reusable bottle",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "adb4d8e0-65a2-424b-b10c-a6f945df1be3": {
+            "type": "chart",
+            "settings": {
+              "name": "One A Day",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "81a31b4b-b86e-4ff8-8d1e-c281195b6add": {
+            "type": "chart",
+            "settings": {
+              "name": "No Refrigeration",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          }
+        },
+        "block_order": [
+          "f36d5d8f-d075-42a4-a826-f7f42880456e",
+          "c81bc22d-e837-4aaf-8b10-95ee59a157b3",
+          "520a049e-7779-4df0-96ec-964baf40c48a",
+          "b0861c49-4c10-462d-8987-91458e64fba2",
+          "7d1e54d8-ad14-4c7a-887a-a972e5095613",
+          "632fa200-0e9c-45a9-ae36-cbcbaf3021b3",
+          "9e5e3d1a-28da-4e8d-b0e6-aafa7081f1b3",
+          "adb4d8e0-65a2-424b-b10c-a6f945df1be3",
+          "81a31b4b-b86e-4ff8-8d1e-c281195b6add"
+        ],
+        "settings": {
+          "hiya_logo": "shopify:\/\/shop_images\/logo_b9aab6d8-6245-48ef-866d-9b280f2eef6c.webp",
+          "row_title": "MANY PROBIOTICS"
+        }
+      },
+      "product-banner-sec-probiotic": {
+        "type": "product-banner-sec-probiotic",
+        "blocks": {
+          "9d62fc1f-d660-480f-b7b1-2a64526b4fbb": {
+            "type": "title",
+            "settings": {
+            }
+          },
+          "22950490-60a3-4c3c-8422-b98e6d32cc0f": {
+            "type": "Review",
+            "settings": {
+            }
+          },
+          "6de691c4-0c65-4afa-8539-ef258ae5d703": {
+            "type": "metafield",
+            "settings": {
+            }
+          },
+          "c9496e83-b3f6-4fa0-8005-eff428de55d0": {
+            "type": "price",
+            "settings": {
+            }
+          },
+          "6b1ebc30-a3e3-4c75-b887-17b869f75bc4": {
+            "type": "short_discription",
+            "settings": {
+            }
+          },
+          "4ab89499-549f-4ff0-982e-8b81d56677dc": {
+            "type": "usp_bar",
+            "settings": {
+              "bar_text": ""
+            }
+          },
+          "6cb4bc84-7dfb-4aa2-a7d0-ab0b8e912f0a": {
+            "type": "supplement_image_sec",
+            "settings": {
+              "supplement_image": "shopify:\/\/shop_images\/hiya_probiotic-full-facts_2023_1.jpg"
+            }
+          },
+          "d55f90a6-d4d4-4948-816f-9b160e783498": {
+            "type": "option_dropdown",
+            "settings": {
+            }
+          },
+          "ac468fcc-b744-4efb-b87d-7c3dd1d78840": {
+            "type": "variant_picker",
+            "settings": {
+            }
+          },
+          "04fb1020-7477-4684-a179-6968462e971c": {
+            "type": "atc_buttons",
+            "settings": {
+            }
+          },
+          "d9c0d35f-df4e-48b2-b632-cfff5a0200f9": {
+            "type": "delivered_image_text",
+            "settings": {
+              "deliverd_image": "shopify:\/\/shop_images\/B8eTqspg.png",
+              "deliverd_text": "Delivered Fresh Monthly | Cancel Anytime"
+            }
+          },
+          "241a5985-51e3-4943-868e-bd99f8ae8cd4": {
+            "type": "accordion",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "9d62fc1f-d660-480f-b7b1-2a64526b4fbb",
+          "22950490-60a3-4c3c-8422-b98e6d32cc0f",
+          "6de691c4-0c65-4afa-8539-ef258ae5d703",
+          "c9496e83-b3f6-4fa0-8005-eff428de55d0",
+          "6b1ebc30-a3e3-4c75-b887-17b869f75bc4",
+          "4ab89499-549f-4ff0-982e-8b81d56677dc",
+          "6cb4bc84-7dfb-4aa2-a7d0-ab0b8e912f0a",
+          "d55f90a6-d4d4-4948-816f-9b160e783498",
+          "ac468fcc-b744-4efb-b87d-7c3dd1d78840",
+          "04fb1020-7477-4684-a179-6968462e971c",
+          "d9c0d35f-df4e-48b2-b632-cfff5a0200f9",
+          "241a5985-51e3-4943-868e-bd99f8ae8cd4"
+        ],
+        "settings": {
+        }
+      },
+      "image_with_content_sec_probiotic": {
+        "type": "image_with_content_sec_probiotic",
+        "blocks": {
+          "bb5bb5e5-7ae2-4631-a660-6ac03a77c750": {
+            "type": "image",
+            "settings": {
+              "content_position": false,
+              "heading": "Designed for Kids,<br>Not Grownups",
+              "content": "<p>While many probiotics are formulated for adults, kids are known to have unique needs, which is why our daily probiotic includes zero added sugar and a blend of 10 billion live cultures, including from three of the most clinically-researched probiotic strains for children — all known to help support childhood immunity, digestion, and gut health among kids.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/probiotic1.jpg",
+              "small_image": "shopify:\/\/shop_images\/probiotic_icon1.svg",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "e6bf97ce-cc91-43ab-85e4-40d758d2cc02": {
+            "type": "image",
+            "settings": {
+              "content_position": true,
+              "heading": "Made for<br>Picky Eaters",
+              "content": "<p>We now know the strong connection between digestive bacteria and childhood health, which becomes even more problematic with picky eaters, allergy sufferers, or kids with colds. Our once-a-day daily blend of prebiotic fiber and probiotic strains is expertly optimized to help restore the natural balance of good bacteria — all with a taste kids love.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/probiotic2.jpg",
+              "small_image": "shopify:\/\/shop_images\/probiotic_icon2.svg",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "7b91cd3d-da8d-4b7c-b8ad-ef2c26a31a0c": {
+            "type": "image",
+            "settings": {
+              "content_position": false,
+              "heading": "No Fillers,<br>No Sugar",
+              "content": "<p>Our daily probiotic includes zero added sugar, no unnecessary extras, and no gummy additives — all with zero refrigeration and your own refillable bottle to make sure your kids are getting active strains.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/probiotic3.jpg",
+              "small_image": "shopify:\/\/shop_images\/probiotic_icon3.svg",
+              "button_text": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "bb5bb5e5-7ae2-4631-a660-6ac03a77c750",
+          "e6bf97ce-cc91-43ab-85e4-40d758d2cc02",
+          "7b91cd3d-da8d-4b7c-b8ad-ef2c26a31a0c"
+        ],
+        "settings": {
+          "image_with_content_background": "#eff9fe",
+          "block_button_text": "Get Hiya",
+          "block_button_link": "#shopify-section-product-banner-sec-probiotic"
+        }
+      },
+      "probiotic-faq": {
+        "type": "probiotic-faq",
+        "blocks": {
+          "50b4e634-22f4-4d91-bac7-19dc7d4832f5": {
+            "type": "faq",
+            "settings": {
+              "questions": "Do kids really need probiotics?",
+              "answer": "The short answer is probably yes. We’ve all seen what happens when our kid’s stomachs are acting up, yet what we don’t see is how much the gut is the control center for little kid’s bodies. Since toddlers are born with a sterile GI system (that unfortunately gets further impacted by processed foods, added sugar, and antibiotics), a good probiotic is now seen as an essential way to support a healthy immune system, yet so many probiotics are dead on arrival."
+            }
+          },
+          "cc4f3e87-bf4c-4d1e-a0ea-6ccf2f50c2a2": {
+            "type": "faq",
+            "settings": {
+              "questions": "Wait — what's wrong with many probiotics?",
+              "answer": "Unfortunately, many probiotics are generalized strains filled with added sugar, gummy additives, and other ingredients that may not be ideal for live cultures. Hiya is designed for optimal absorption, individually selected for childhood needs, and sent straight to you with an evolving formula so your probiotic actives remain strong and your kids get a variety of benefits."
+            }
+          },
+          "c5fc952e-9146-4434-841f-fde7c4d01611": {
+            "type": "faq",
+            "settings": {
+              "questions": "Why should kids take a separate probiotic rather than include probiotics in a multivitamin?",
+              "answer": "Probiotics are live cultures that are easily destroyed, especially by other actives such as vitamins and minerals. That’s why we isolate the probiotic strains in a unique formula apart from our multi so they arrive in your child’s gut as you’d expect."
+            }
+          },
+          "021c09bb-d6f1-4174-b2a5-6d08a474cad2": {
+            "type": "faq",
+            "settings": {
+              "questions": "Do probiotics help with tummy issues like constipation?",
+              "answer": "Yes many of the strains we use are clinically proven to support digestion, limit constipation and other tummy issues common among kids — which we all know is important."
+            }
+          },
+          "d2cc58b4-6969-45ff-b9e3-ac4ce959fc45": {
+            "type": "faq",
+            "settings": {
+              "questions": "If there’s no added sugar, how does your probiotic taste so good?",
+              "answer": "As with our multi, our probiotic is sweetened with zero added sugar. Rather our probiotic includes monk fruit extract — a superfruit that is sweeter than sugar for a taste kids love. Each vitamin also includes a touch of xylitol — a sweetener often recommended by dentists in their fight against tooth decay."
+            }
+          },
+          "952836db-e894-4cd7-9444-fd7b38fc9356": {
+            "type": "faq",
+            "settings": {
+              "questions": "What strains of probiotics do you include?",
+              "answer": "Our probiotic is an evolving set of strains based on seasonality to make sure your kids are always getting what makes the most sense based on the latest science."
+            }
+          },
+          "eb608415-9f77-4b78-912a-558502f200fe": {
+            "type": "faq",
+            "settings": {
+              "questions": "So my child only needs one probiotic per day?",
+              "answer": "Yes. While some probiotics include extra fillers so your child is supposed to eat several, ours is designed for full-body nourishment in just one chewable. Which means less stress for those in charge. For any questions about dosage, please consult your pediatrician."
+            }
+          },
+          "1bd94282-f2ca-4f70-aefe-03edf59acb36": {
+            "type": "faq",
+            "settings": {
+              "questions": "What happens if I have unused probiotics?",
+              "answer": "When you get a new delivery of fresh probiotics, for optimal potency, we suggest replacing your old probiotics with your fresh ones. That way you can be sure your child is always putting the freshest nutrients in their growing bodies, which is particularly important with probiotics since they’re live cultures known to lose potency when exposed to air and heat."
+            }
+          },
+          "72efa0c0-b4fd-475f-bbc3-4e482ae3081a": {
+            "type": "faq",
+            "settings": {
+              "questions": "What ages should take your probiotic?",
+              "answer": "Our probiotic is designed for boys and girls starting at age 2. Please always consult your pediatrician to make sure a probiotic is right for your child."
+            }
+          },
+          "ba1a54c8-d5e6-4ced-ac34-7178c619ee5e": {
+            "type": "faq",
+            "settings": {
+              "questions": "Can your multivitamin and probiotic be taken together?",
+              "answer": "Definitely — our daily multivitamin and our daily probiotic are designed to co-exist with interconnected functions that support each other. So if you’re looking for maximum wellness, we typically suggest a child take both our multivitamin and probiotic."
+            }
+          },
+          "70791a67-1903-409d-8b7e-0eed4b66b178": {
+            "type": "faq",
+            "settings": {
+              "questions": "When should I give your probiotic?",
+              "answer": "We suggest your child takes one probiotic per day with a meal — either breakfast or dinner — though you may take our probiotic with or without food."
+            }
+          },
+          "afb1553e-6e42-4990-b818-183a43408e65": {
+            "type": "faq",
+            "settings": {
+              "questions": "How does your subscription work?",
+              "answer": "As parents ourselves, we know parents have enough to worry about — let alone worrying about vitamins and probiotics. Our monthly subscription is easy to start, easy to cancel and includes the ability to control your delivery date. Your first month you receive a 30-day supply of fresh probiotics and a reusable glass bottle meant to be personalized with stickers. Then each month thereafter you receive a recyclable refill pouch to fill up your bottle with fresh probiotics. The monthly experience is based on a pediatrician-recommended delivery schedule and is designed to teach your children healthy habits and care for the environment. If you’ve also ordered our multivitamin, we’ll do our best to coordinate so you get both vitamins and probiotics shipped together."
+            }
+          },
+          "edfd8ec2-970f-4da4-82a0-21b0481d3079": {
+            "type": "faq",
+            "settings": {
+              "questions": "How do I adjust my order?",
+              "answer": "If you want to adjust anything or cancel your order, you may email us directly at support@hiyahealth.com with your request. Alternatively you may do so directly in your account by clicking 'Manage Subscription' from the initial email you should have received upon your first order."
+            }
+          }
+        },
+        "block_order": [
+          "50b4e634-22f4-4d91-bac7-19dc7d4832f5",
+          "cc4f3e87-bf4c-4d1e-a0ea-6ccf2f50c2a2",
+          "c5fc952e-9146-4434-841f-fde7c4d01611",
+          "021c09bb-d6f1-4174-b2a5-6d08a474cad2",
+          "d2cc58b4-6969-45ff-b9e3-ac4ce959fc45",
+          "952836db-e894-4cd7-9444-fd7b38fc9356",
+          "eb608415-9f77-4b78-912a-558502f200fe",
+          "1bd94282-f2ca-4f70-aefe-03edf59acb36",
+          "72efa0c0-b4fd-475f-bbc3-4e482ae3081a",
+          "ba1a54c8-d5e6-4ced-ac34-7178c619ee5e",
+          "70791a67-1903-409d-8b7e-0eed4b66b178",
+          "afb1553e-6e42-4990-b818-183a43408e65",
+          "edfd8ec2-970f-4da4-82a0-21b0481d3079"
+        ],
+        "settings": {
+          "heading": "We Want You to Ask Questions!",
+          "content": "Seriously. Our team of vitamin experts and scientists has answers.",
+          "block_button_text": "",
+          "block_button_link": ""
+        }
+      },
+      "makes_hiya_different_probiotic": {
+        "type": "makes_hiya_different_probiotic",
+        "blocks": {
+          "9ce15d66-1b35-4561-a87a-2104667e5ad7": {
+            "type": "tab_data",
+            "settings": {
+              "tab_text": "Gummies",
+              "image": "shopify:\/\/shop_images\/other_vitamins_jarx.png",
+              "tab_content": "<ul>\n            <li>\n              <p>CAN CONTRIBUTE TO<\/p>\n              <h2>CAVITIES<\/h2>\n            <\/li>\n            <li>\n              <p>CAN INCLUDE<\/p>\n              <h2>PORK-BASED<\/h2>\n              <p>GELATIN<\/p>\n            <\/li>\n            <li>              \n              <h2>UP TO 4-5<\/h2>\n              <p>PER DAY<\/p>\n            <\/li>\n            <li>              \n              <h2>Up To 5g<\/h2>\n              <p>ADDED SUGAR<\/p>\n            <\/li>\n            <li>\n              <p>NOTORIOUSLY<\/p>\n              <h2>UNSTABLE<\/h2>\n            <\/li>\n            <li>\n              <p>CAN FOSTER<\/p>\n              <h2>BAD HEALTH<\/h2>\n              <p>HABITS<\/p>\n            <\/li>\n          <\/ul>"
+            }
+          },
+          "ef287356-c26b-4366-b91d-010b58b0330b": {
+            "type": "tab_data",
+            "settings": {
+              "tab_text": "Hiya",
+              "image": "shopify:\/\/shop_images\/Hiya_jar.png",
+              "tab_content": "<ul>\n            <li>\n              <h2>15<\/h2>\n              <p>ESSENTIAL VITAMINS<br>& MINERALS<\/p>\n            <\/li>\n            <li>              \n              <h2>1 DAILY<\/h2>\n              <p>VITAMIN<\/p>\n            <\/li>\n            <li>\n              <p>MADE<br>SPECIFICALLY<\/p>\n              <h2>FOR KIDS<\/h2>\n            <\/li>\n            <li>\n              <h2>0g<\/h2>\n              <p>ADDED<br>SUGAR<\/p>\n            <\/li>\n            <li>              \n              <h2>TASTE<\/h2>\n              <p>GREAT<\/p>\n            <\/li>\n            <li>              \n              <h2>FRUIT<br>& VEGGIE<\/h2>\n              <p>BLEND<\/p>\n            <\/li>\n          <\/ul>"
+            }
+          }
+        },
+        "block_order": [
+          "9ce15d66-1b35-4561-a87a-2104667e5ad7",
+          "ef287356-c26b-4366-b91d-010b58b0330b"
+        ],
+        "settings": {
+          "title": "What makes Hiya different?",
+          "sub_text": "Here’s why we formulated Hiya as a great-tasting daily chewable, not a sugar-filled gummy.",
+          "dr_review_title": "“Hiya gives my patients the nutrients they need without the sugary junk.”",
+          "dr_name": "Dr. Monica Madan",
+          "location": "Beverly Hills Pediatric Specialist",
+          "dr_image": "shopify:\/\/shop_images\/monica-madan.webp"
+        }
+      },
+      "our-vitamin-sec-alt": {
+        "type": "our-vitamin-sec-alt",
+        "blocks": {
+          "d6ac5807-dc42-491b-8428-bdfd4b99c932": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Hiya_Mobile-Chart-01.svg"
+            }
+          }
+        },
+        "block_order": [
+          "d6ac5807-dc42-491b-8428-bdfd4b99c932"
+        ],
+        "settings": {
+          "sub_heading": "",
+          "heading": "How do we stack up?",
+          "content": "While most kids vitamins are mislabeled and unregulated,\n\nHiya is transparent about what’s included."
+        }
+      },
+      "image_with_content_sec_affiliate": {
+        "type": "image_with_content_sec_affiliate",
+        "blocks": {
+          "a3c43f55-cec6-49ad-ab82-740475a0a5bd": {
+            "type": "image",
+            "settings": {
+              "content_position": false,
+              "heading": "Made with fruits and veggies",
+              "content": "<p>We take 12 organic fruits and vegetablesfresh from farms and blend them into onesuper-powered chewable to fill in common nutritional gaps based on modern guidelines, not dated junk.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/download_2_38e63aaa-5ad0-4327-8e03-8d19980c5189.webp",
+              "small_image": "shopify:\/\/shop_images\/hiya-for-kids-icon-01_1a7729e5-1902-41b4-bebd-477d53532453.svg",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "73125d9e-3405-4549-8247-3a0696d156f8": {
+            "type": "image",
+            "settings": {
+              "content_position": true,
+              "heading": "Naturally<br>sweetened",
+              "content": "<p>Hiya is naturally sweetened with monk fruit, a tropical melon 100 times sweeter than sugar, and also includes a touch of mannitol, an all-natural sweetener found in strawberries and pumpkins. Children's vitamins no longer need added sugar to taste great.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/download_3_5895d3c9-2c91-405d-b299-659c3d376469.webp",
+              "small_image": "shopify:\/\/shop_images\/hiya-sweetened-icon_3d860f49-0ed1-434a-ba1b-d57cad2a6f08.svg",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "bf30566b-bfbc-4d97-bcfb-eb711d043ecb": {
+            "type": "image",
+            "settings": {
+              "content_position": false,
+              "heading": "Optimized for freshness",
+              "content": "<p>Unlike many vitamins that may sit on a store shelf for months and result in dead vitamins with lost nutrients by the time you take them, each month we send a pouch of fresh vitamins you can pour into your refillable child-proof glass bottle, which your kids can decorate with stickers we send.<br\/><br\/>Easy-to-start, easy-to cancel -- with free shipping and total flexibility -- delivered monthly on a pediatrician-recommended 30-day schedule based on modern nutritional guidelines, not dated junk.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/Optimized-for-Freshness.png",
+              "small_image": "shopify:\/\/shop_images\/hiya-freshness-icon_23abef3e-1d1b-423b-a47b-825baad8178c.svg",
+              "button_text": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "a3c43f55-cec6-49ad-ab82-740475a0a5bd",
+          "73125d9e-3405-4549-8247-3a0696d156f8",
+          "bf30566b-bfbc-4d97-bcfb-eb711d043ecb"
+        ],
+        "settings": {
+          "image_with_content_background": "#dcfdf2",
+          "block_button_text": "Get Hiya",
+          "block_button_link": "#MainContent"
+        }
+      },
+      "our-vitamin-sec-affiliate": {
+        "type": "our-vitamin-sec-affiliate",
+        "settings": {
+          "image_with_content_background": "#e6f5fe",
+          "image": "shopify:\/\/shop_images\/download_1_ed98f677-e69c-42f7-86bb-baf45b634f5e.webp",
+          "sub_heading": "",
+          "heading": "How do we stack up?",
+          "content": "While most kids vitamins are mislabeled and unregulated, Hiya is transparent about what’s included."
+        }
+      },
+      "doctor-testimonial": {
+        "type": "doctor-testimonial",
+        "settings": {
+          "dr_review_title": "“So many vitamins are loaded with excess sugar and gummy junk. Hiya is really clean.”",
+          "dr_name": "Dr. Mark Hyman",
+          "location": "New York Times Best Selling Author",
+          "dr_image": "shopify:\/\/shop_images\/download_9_9e02f948-34bd-422b-96d7-e95fb93cd9d3.webp"
+        }
+      },
+      "why_nightly_sec": {
+        "type": "why_nightly_sec",
+        "blocks": {
+          "2d6700be-eb57-45b7-b3da-f9e7941ee784": {
+            "type": "chart",
+            "settings": {
+              "why_nightly_img": "shopify:\/\/shop_images\/brain-health.svg",
+              "why_nightly_text": "Brain <br>Health*"
+            }
+          },
+          "e45f6148-6aa8-4434-a817-a046d1cc05e1": {
+            "type": "chart",
+            "settings": {
+              "why_nightly_img": "shopify:\/\/shop_images\/sleep-support.svg",
+              "why_nightly_text": "Drug-Free Sleep Support*"
+            }
+          },
+          "9003a24e-c4e1-4c04-8418-4846a0df6103": {
+            "type": "chart",
+            "settings": {
+              "why_nightly_img": "shopify:\/\/shop_images\/relax-stress.svg",
+              "why_nightly_text": "Nighttime <br>Calm*"
+            }
+          },
+          "fef4b28f-dc55-4353-8ade-63a0e12a1c8b": {
+            "type": "chart",
+            "settings": {
+              "why_nightly_img": "shopify:\/\/shop_images\/focus-calm.svg",
+              "why_nightly_text": "Relax & <br>Focus*"
+            }
+          }
+        },
+        "block_order": [
+          "2d6700be-eb57-45b7-b3da-f9e7941ee784",
+          "e45f6148-6aa8-4434-a817-a046d1cc05e1",
+          "9003a24e-c4e1-4c04-8418-4846a0df6103",
+          "fef4b28f-dc55-4353-8ade-63a0e12a1c8b"
+        ],
+        "settings": {
+          "why_nightly_heading": "Why Bedtime Essentials",
+          "why_nightly_subheading": "Kids today are often overstimulated. Our bedtime essentials can help support:"
+        }
+      },
+      "bedtime-we-stack-sec": {
+        "type": "bedtime-we-stack-sec",
+        "blocks": {
+          "4457ee39-7f9a-4eac-bed6-90e44e8872b9": {
+            "type": "chart",
+            "settings": {
+              "name": "Melatonin-Free",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "3c01743a-a25a-462d-9d47-c4d36e00f0dd": {
+            "type": "chart",
+            "settings": {
+              "name": "Good Night's Rest*",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "4ba501f2-4bc4-4732-8e9e-397383f8f6b1": {
+            "type": "chart",
+            "settings": {
+              "name": "Refreshed Mornings*",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "d985c5b0-c1f4-45b9-8748-4ae521c40172": {
+            "type": "chart",
+            "settings": {
+              "name": "Non-Habit Forming",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "1f69e565-ee74-43a6-9b37-391afbaf5f1f": {
+            "type": "chart",
+            "settings": {
+              "name": "Kids Only",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "6fc2f347-e06c-4cc7-8f56-f89b3d0d8a1b": {
+            "type": "chart",
+            "settings": {
+              "name": "Zero Added Sugar",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "316213d8-26ba-4a69-bf15-392395be8094": {
+            "type": "chart",
+            "settings": {
+              "name": "No Gummy Junk",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "cee86ed4-7fbb-4f8d-a524-a28388d22952": {
+            "type": "chart",
+            "settings": {
+              "name": "Reusable Bottle",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          },
+          "6873c3a3-65db-4324-b2bc-0826911ea2bc": {
+            "type": "chart",
+            "settings": {
+              "name": "One A Day",
+              "hiya_chart_heart": "shopify:\/\/shop_images\/hiya-chart-heart.svg",
+              "mark_icon": "shopify:\/\/shop_images\/hiya-chart-X.svg"
+            }
+          }
+        },
+        "block_order": [
+          "4457ee39-7f9a-4eac-bed6-90e44e8872b9",
+          "3c01743a-a25a-462d-9d47-c4d36e00f0dd",
+          "4ba501f2-4bc4-4732-8e9e-397383f8f6b1",
+          "d985c5b0-c1f4-45b9-8748-4ae521c40172",
+          "1f69e565-ee74-43a6-9b37-391afbaf5f1f",
+          "6fc2f347-e06c-4cc7-8f56-f89b3d0d8a1b",
+          "316213d8-26ba-4a69-bf15-392395be8094",
+          "cee86ed4-7fbb-4f8d-a524-a28388d22952",
+          "6873c3a3-65db-4324-b2bc-0826911ea2bc"
+        ],
+        "settings": {
+          "hiya_logo": "shopify:\/\/shop_images\/white-Logo.png",
+          "row_title": "Other Brands"
+        }
+      },
+      "bedtime-testimonial": {
+        "type": "bedtime-testimonial",
+        "custom_css": [
+          "@media (min-width: 767px) {.content-info br {display: none; }}"
+        ],
+        "settings": {
+          "dr_review_title": "“I recommend Hiya over sugar-filled gummies to all the patients in my office.”",
+          "dr_name": "Dr. Jonathan Snow",
+          "location": "Pediatric Dentist <br>& Hiya Ambassador",
+          "dr_image": "shopify:\/\/shop_images\/Jonathan-Snow.png"
+        }
+      },
+      "image_with_content_sec_nightly": {
+        "type": "image_with_content_sec_nightly",
+        "blocks": {
+          "7e337fec-afcb-4576-9700-3a11f945f5bb": {
+            "type": "image",
+            "settings": {
+              "content_position": false,
+              "heading": "Zero Melatonin",
+              "content": "<p>Added sugar can impact sleep, gummy additives can contribute to nighttime cavities, and there are increasing questions and concerns around potential health issues associated with melatonin and kids. Instead we focus on seven core essentials each individually for unique nighttime benefits.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/Zero-Melatonin.png",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "4f63c150-861d-4ce3-9429-a9273459ff17": {
+            "type": "image",
+            "settings": {
+              "content_position": true,
+              "heading": "No Junk before Bed",
+              "content": "<p>We’re only now beginning to understand the important connection between the seven essential nutrients we choose and how they can help kids relax their bodies and restore their minds at night, which is when so much childhood development occurs.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/No-Junk-before-Bed.png",
+              "button_text": "",
+              "button_link": ""
+            }
+          },
+          "52ac36a3-5c2b-4b5a-81e1-353a75dd15b9": {
+            "type": "image",
+            "settings": {
+              "content_position": false,
+              "heading": "Safe & Effective for Kids",
+              "content": "<p>Nighttime is when children’s bodies regroup, their brains restore, and their minds rejuvenate. Our Bedtime Essentials includes restorative essentials specifically chosen to support a healthy wind down period and provide key benefits during the night — and always with a taste kids love.<\/p>",
+              "main_image": "shopify:\/\/shop_images\/Safe-Effective-for-Kids.png",
+              "button_text": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "7e337fec-afcb-4576-9700-3a11f945f5bb",
+          "4f63c150-861d-4ce3-9429-a9273459ff17",
+          "52ac36a3-5c2b-4b5a-81e1-353a75dd15b9"
+        ],
+        "custom_css": [
+          "@media (max-width: 767px) {.ingredients-pros-sec {padding-bottom: 50px !important; } .ingredients-pros-sec .inner .box-wrapper:first-child, .ingredients-pros-sec .box-wrapper:nth-child(2), .ingredients-pros-sec .box-wrapper {flex-direction: column-reverse; justify-content: space-around; gap: 0px; } .ingredients-pros-sec .inner .box-wrapper .content > h2 {order: 2 !important; } .ingredients-pros-sec .inner .box-wrapper .content > .image {order: 1 !important; }}"
+        ],
+        "settings": {
+          "image_with_content_background": "#e4f5f9",
+          "block_button_text": "Get Hiya",
+          "block_button_link": "#shopify-section-product-banner-sec-nightly"
+        }
+      },
+      "nightly-faq": {
+        "type": "nightly-faq",
+        "blocks": {
+          "e636fa40-3d08-44df-89c2-5d55e6f2b5a9": {
+            "type": "faq",
+            "settings": {
+              "questions": "Why can so many kids benefit from your Bedtime Essentials?",
+              "answer": "Kids today are often overstimulated – whether due to excess screen time, processed food, social media, lack of outside play, and more. The result is unfortunately many kids have a difficult time winding down both their body and their mind, which can translate to general unease, restless sleep, and sub-optimal development. While the nutrients we select are not the only way to relax and restore, they can be a key component for all types of kids."
+            }
+          },
+          "baf53ee4-4fb8-487d-8401-2a4f7a9186a4": {
+            "type": "faq",
+            "settings": {
+              "questions": "What ingredients do you include in your Bedtime Essentials?",
+              "answer": "Our Bedtime Essentials include a blend of vitamins and minerals known to support a variety of nighttime functions. For example, L-theanine is an amino acid known to support calm and relaxation while b6 is a key vitamin known to support brain restoration in kids. As with our other products, as experts learn more about what exactly takes place during relaxation and wind down, our formulations will always take the latest science into account."
+            }
+          },
+          "18b0bfc2-2497-49ac-a73a-25eed80fb942": {
+            "type": "faq",
+            "settings": {
+              "questions": "How is your Bedtime Essentials different from your Daily Multivitamin?",
+              "answer": "Our daily multivitamin includes 15 essential ingredients known to support immunity, development, and more.  On the other hand, our daily essentials include unique vitamins expressly selected to support brain health, gentle sleep, calm and focus. You can think of our Bedtime Essentials as the ideal option for restoration and rejuvenation during the important period from winddown to wakeup."
+            }
+          },
+          "ba0de825-03c6-45ab-8935-b0cbde2573d9": {
+            "type": "faq",
+            "settings": {
+              "questions": "Can my child take your Bedtime Essentials alongside your multivitamin and probiotic?",
+              "answer": "Yes – each product serves a different purpose and includes a unique set of vitamins and minerals without overlap.  All our products exist to complement each other depending on what you’re looking for."
+            }
+          },
+          "b899b598-02e0-4440-a9dc-e3561201aa8f": {
+            "type": "faq",
+            "settings": {
+              "questions": "What's wrong with many bedtime products for kids?",
+              "answer": "Unfortunately, many bedtime products for kids include ingredients we don’t believe kids should take regularly at night. Added sugar is especially bad before bed, gummy additives can get stuck in teeth and contribute to cavities at night, and melatonin might not be necessary for the vast majority of kids and may instead contribute to unwanted issues."
+            }
+          },
+          "b6289093-5c2d-40f3-94ae-3bf22b57acb4": {
+            "type": "faq",
+            "settings": {
+              "questions": "Wait — what are potential issues with melatonin and kids?",
+              "answer": "Over the last decade, the number of pediatric ingestions of melatonin reported to poison control centers increased by more than 530 percent. While many of these situations were innocuous, about ten percent led to treatment at healthcare facilities. Additionally, many experts are asking increasing questions about melatonin and puberty. Our view is unless melatonin is prescribed by a pediatrician, melatonin among kids should be far less common than it is."
+            }
+          },
+          "53f5a532-4220-45bd-920e-35ac6acd4687": {
+            "type": "faq",
+            "disabled": true,
+            "settings": {
+              "questions": "What does your Nightly Essentials include that’s different from your Daily probiotic?",
+              "answer": "Probiotics are live cultures that are easily destroyed, especially by other actives such as vitamins and minerals. That’s why we isolate the probiotic strains in a unique formula apart from our multi so they arrive in your child’s gut as you’d expect."
+            }
+          },
+          "b37eec33-6c48-45fe-b3df-142f43918429": {
+            "type": "faq",
+            "settings": {
+              "questions": "If there’s no added sugar, how does your Bedtime Essentials taste so good?",
+              "answer": "As with our other products, our nightly essentials is sweetened without sugar. Rather our tablet includes a blend of monk fruit extract — a superfruit that is sweeter than sugar for a taste kids love, and mannitol — a sweetener also found in pumpkins and strawberries."
+            }
+          },
+          "28a96df5-4507-46a1-8b35-820ffe0a90c8": {
+            "type": "faq",
+            "settings": {
+              "questions": "When should my child take this?",
+              "answer": "While every family has their own nighttime routine, we suggest parents give this to kids before bed. That could be just after bathtime or during the witching hour – if you have one."
+            }
+          },
+          "98498157-c0cc-428e-8199-11f018781c5e": {
+            "type": "faq",
+            "settings": {
+              "questions": "So my child only needs one Bedtime Essentials per night?",
+              "answer": "Yes – we suggest just one per night based on your kid’s needs. You can take your Bedtime Essentials as needed or more regularly – it’s up to you. For any questions about dosage, please consult your pediatrician."
+            }
+          },
+          "8c4f46e4-b7c1-4d20-8aa7-f19fe83340ce": {
+            "type": "faq",
+            "settings": {
+              "questions": "What happens if I have unused vitamins?",
+              "answer": "When you get a new delivery, for optimal potency, we suggest replacing your old vitamins with your fresh ones. That way you can be sure your child is always putting the freshest nutrients in their growing bodies."
+            }
+          },
+          "b405a287-b8f3-4639-b017-b0d3553d576e": {
+            "type": "faq",
+            "settings": {
+              "questions": "What ages should take this product?",
+              "answer": "Our Bedtime Essentials is designed for boys and girls starting at age 2. Since every child is different and some ingredients may have different studies associated with persistent use, please always consult your pediatrician to make sure this product is right for your child."
+            }
+          },
+          "dc8ec5e2-c0e3-4fd0-8c12-3861e075d019": {
+            "type": "faq",
+            "settings": {
+              "questions": "How does your subscription work?",
+              "answer": "As parents ourselves, we know parents have enough to worry about — let alone worrying about their vitamin order. That's why we designed all orders to be easy-to-start, easy-to-cancel as part of our monthly subscription, which includes a free and easy cancellation and ability to control your delivery date. Your first month you receive a 30-day supply of fresh vitamins and a reusable glass bottle meant to be personalized with stickers. Then each month thereafter you receive a recyclable refill pouch to fill up your bottle with fresh vitamins. The monthly experience is based on a pediatrician-recommended delivery schedule and is designed to teach your children healthy habits and care for the environment."
+            }
+          },
+          "0d4404c2-44a2-4c19-8d2c-5ba2061e881f": {
+            "type": "faq",
+            "settings": {
+              "questions": "How do I adjust my order?",
+              "answer": "If you want to adjust anything or cancel your order, you may email us directly at  <a href=\"mailto:support@hiyahealth.com\">support@hiyahealth.com<\/a> with your request. Alternatively you may adjust any order directly in your account by clicking 'Manage Subscription' from the initial email you should have received upon your first order."
+            }
+          }
+        },
+        "block_order": [
+          "e636fa40-3d08-44df-89c2-5d55e6f2b5a9",
+          "baf53ee4-4fb8-487d-8401-2a4f7a9186a4",
+          "18b0bfc2-2497-49ac-a73a-25eed80fb942",
+          "ba0de825-03c6-45ab-8935-b0cbde2573d9",
+          "b899b598-02e0-4440-a9dc-e3561201aa8f",
+          "b6289093-5c2d-40f3-94ae-3bf22b57acb4",
+          "53f5a532-4220-45bd-920e-35ac6acd4687",
+          "b37eec33-6c48-45fe-b3df-142f43918429",
+          "28a96df5-4507-46a1-8b35-820ffe0a90c8",
+          "98498157-c0cc-428e-8199-11f018781c5e",
+          "8c4f46e4-b7c1-4d20-8aa7-f19fe83340ce",
+          "b405a287-b8f3-4639-b017-b0d3553d576e",
+          "dc8ec5e2-c0e3-4fd0-8c12-3861e075d019",
+          "0d4404c2-44a2-4c19-8d2c-5ba2061e881f"
+        ],
+        "settings": {
+          "heading": "We Want You to Ask Questions!",
+          "content": "Seriously. Our team of vitamin experts and scientists has answers.",
+          "block_button_text": "",
+          "block_button_link": ""
+        }
+      },
+      "product-banner-sec-nightly": {
+        "type": "product-banner-sec-nightly",
+        "blocks": {
+          "f58ad088-5d4a-4e65-8490-674109defa85": {
+            "type": "title",
+            "settings": {
+            }
+          },
+          "e3077964-3356-4aed-89e1-04dc50663fe4": {
+            "type": "Review",
+            "settings": {
+            }
+          },
+          "b0f0e49a-386c-4cf4-9b37-7755993dfaec": {
+            "type": "price",
+            "settings": {
+            }
+          },
+          "f4b696e6-058b-400a-9beb-4c11b0ca1754": {
+            "type": "short_discription",
+            "settings": {
+            }
+          },
+          "848214b7-b28d-45af-95c3-eaa0bef22ae6": {
+            "type": "usp_bar",
+            "settings": {
+              "bar_text": "30-Day Supply",
+              "bar_image": "shopify:\/\/shop_images\/upsell_check_icon_e71fa376-599e-4ea9-84af-c5b2bd17323b.png"
+            }
+          },
+          "b0b4482d-e283-4902-a7ad-4398702067b3": {
+            "type": "usp_bar",
+            "settings": {
+              "bar_text": "Refillable Glass Bottle",
+              "bar_image": "shopify:\/\/shop_images\/upsell_check_icon_e71fa376-599e-4ea9-84af-c5b2bd17323b.png"
+            }
+          },
+          "3cedab8f-000d-44b5-8977-25237e78231a": {
+            "type": "usp_bar",
+            "settings": {
+              "bar_text": "Sticker Pack to Decorate",
+              "bar_image": "shopify:\/\/shop_images\/upsell_check_icon_e71fa376-599e-4ea9-84af-c5b2bd17323b.png"
+            }
+          },
+          "62f90436-76f3-4fef-9152-358e5d8525b4": {
+            "type": "supplement_image_sec",
+            "settings": {
+              "supplement_image": "shopify:\/\/shop_images\/hiya_multi-full-facts_2023.jpg"
+            }
+          },
+          "4602af70-7cac-4299-b000-4362ee709309": {
+            "type": "option_dropdown",
+            "settings": {
+            }
+          },
+          "480fbe05-8a7c-4a20-849e-aeca73ebf87b": {
+            "type": "variant_picker",
+            "settings": {
+            }
+          },
+          "409e9dbe-dc14-4073-a2cf-e7a4bc6ea2dd": {
+            "type": "atc_buttons",
+            "settings": {
+            }
+          },
+          "57b9ef33-6c46-4436-97eb-a2ef31fdccbf": {
+            "type": "delivered_image_text",
+            "settings": {
+              "deliverd_image": "shopify:\/\/shop_images\/B8eTqspg.png",
+              "deliverd_text": "Delivered Fresh Monthly | Cancel Anytime"
+            }
+          },
+          "f3230f6e-6a15-4bf7-a28a-ca53b548398f": {
+            "type": "Benefits",
+            "settings": {
+            }
+          },
+          "71127425-6631-42a0-9ac5-c2ae28e58972": {
+            "type": "Ingredients",
+            "settings": {
+            }
+          },
+          "6c7b2071-c987-431c-8357-23e8b4a03010": {
+            "type": "Subscription_Details",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "f58ad088-5d4a-4e65-8490-674109defa85",
+          "e3077964-3356-4aed-89e1-04dc50663fe4",
+          "b0f0e49a-386c-4cf4-9b37-7755993dfaec",
+          "f4b696e6-058b-400a-9beb-4c11b0ca1754",
+          "848214b7-b28d-45af-95c3-eaa0bef22ae6",
+          "b0b4482d-e283-4902-a7ad-4398702067b3",
+          "3cedab8f-000d-44b5-8977-25237e78231a",
+          "62f90436-76f3-4fef-9152-358e5d8525b4",
+          "4602af70-7cac-4299-b000-4362ee709309",
+          "480fbe05-8a7c-4a20-849e-aeca73ebf87b",
+          "409e9dbe-dc14-4073-a2cf-e7a4bc6ea2dd",
+          "57b9ef33-6c46-4436-97eb-a2ef31fdccbf",
+          "f3230f6e-6a15-4bf7-a28a-ca53b548398f",
+          "71127425-6631-42a0-9ac5-c2ae28e58972",
+          "6c7b2071-c987-431c-8357-23e8b4a03010"
+        ],
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": true
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "logo_width": 80,
+      "colors_solid_button_labels": "#1f1f21",
+      "colors_accent_1": "#e3fc02",
+      "gradient_accent_1": "",
+      "colors_accent_2": "#ffffff",
+      "gradient_accent_2": "",
+      "colors_text": "#ffffff",
+      "colors_outline_button_labels": "#e3fc02",
+      "colors_background_1": "#1f1f21",
+      "gradient_background_1": "",
+      "colors_background_2": "#1f1f21",
+      "gradient_background_2": "",
+      "type_header_font": "oswald_n5",
+      "heading_scale": 140,
+      "type_body_font": "avenir_next_n5",
+      "body_scale": 100,
+      "page_width": 1600,
+      "spacing_sections": 52,
+      "spacing_grid_horizontal": 40,
+      "spacing_grid_vertical": 40,
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 0,
+      "buttons_shadow_opacity": 0,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 5,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 55,
+      "variant_pills_radius": 40,
+      "variant_pills_shadow_opacity": 0,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 4,
+      "variant_pills_shadow_blur": 5,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 55,
+      "inputs_radius": 0,
+      "inputs_shadow_opacity": 0,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 4,
+      "inputs_shadow_blur": 5,
+      "card_style": "card",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "background-2",
+      "card_border_thickness": 0,
+      "card_border_opacity": 10,
+      "card_corner_radius": 0,
+      "card_shadow_opacity": 0,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 5,
+      "collection_card_style": "card",
+      "collection_card_image_padding": 0,
+      "collection_card_text_alignment": "left",
+      "collection_card_color_scheme": "background-2",
+      "collection_card_border_thickness": 0,
+      "collection_card_border_opacity": 10,
+      "collection_card_corner_radius": 0,
+      "collection_card_shadow_opacity": 0,
+      "collection_card_shadow_horizontal_offset": 0,
+      "collection_card_shadow_vertical_offset": 4,
+      "collection_card_shadow_blur": 5,
+      "blog_card_style": "card",
+      "blog_card_image_padding": 0,
+      "blog_card_text_alignment": "left",
+      "blog_card_color_scheme": "background-2",
+      "blog_card_border_thickness": 0,
+      "blog_card_border_opacity": 10,
+      "blog_card_corner_radius": 0,
+      "blog_card_shadow_opacity": 0,
+      "blog_card_shadow_horizontal_offset": 0,
+      "blog_card_shadow_vertical_offset": 4,
+      "blog_card_shadow_blur": 5,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 10,
+      "text_boxes_radius": 0,
+      "text_boxes_shadow_opacity": 0,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 4,
+      "text_boxes_shadow_blur": 5,
+      "media_border_thickness": 0,
+      "media_border_opacity": 10,
+      "media_radius": 0,
+      "media_shadow_opacity": 0,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 5,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 10,
+      "popup_corner_radius": 0,
+      "popup_shadow_opacity": 0,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 4,
+      "popup_shadow_blur": 5,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 0,
+      "drawer_shadow_horizontal_offset": 0,
+      "drawer_shadow_vertical_offset": 4,
+      "drawer_shadow_blur": 5,
+      "badge_position": "bottom left",
+      "badge_corner_radius": 40,
+      "sale_badge_color_scheme": "accent-2",
+      "sold_out_badge_color_scheme": "background-1",
+      "accent_icons": "text",
+      "brand_headline": "",
+      "brand_description": "<p><\/p>",
+      "brand_image_width": 100,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": false,
+      "currency_code_enabled": true,
+      "cart_type": "notification",
+      "show_vendor": false,
+      "show_cart_note": false,
+      "cart_drawer_collection": "",
+      "sections": {
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        }
+      }
+    }
+  }
+}

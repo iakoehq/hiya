@@ -1,0 +1,178 @@
+
+{% assign pro_product = all_products['kids-daily-probiotic'] %}
+
+
+<style>
+
+div.accordion-wrapper {
+  margin-top: 1rem;
+}
+
+.accordion-header {
+  background-color : inherit;
+  cursor : pointer;
+  padding : 5px;
+  width : 100%;
+  text-align : left;
+  border-bottom : 1px solid rgb(63, 122, 185);
+  outline : none;
+  transition-duration : 0.4s;
+  transition-timing-function : ease;
+  transition-delay : 0s;
+  transition-property : all;
+}
+
+.accordion-header::after {
+  content : "+";
+  float : right;
+}
+
+.accordion-header.active::after {
+  content : "−";
+}
+
+div.accordion-wrapper>div {
+  padding : 5px;
+  display : none;
+  overflow-x : hidden;
+  overflow-y : hidden;
+}
+
+div.accordion-wrapper>div.active {
+  padding : unset;
+  display : list-item;
+  overflow-x : hidden;
+  overflow-y : hidden;
+  margin : 5px !important;
+}
+
+#shopify-section-product-template>div.container-indent>div.container.container-fluid-mobile>div>div:nth-child(2)>div>div.shogun-root>div.shg-c.kidsp-box-content {
+  display : none;
+}
+
+.accordion-panel-content.active ul {
+  line-height : 1rem !important;
+  list-style-type : circle !important;
+  margin-left : 3px !important;
+}
+
+.usp_bar {
+  display : flex;
+  margin-top : 25px;
+  max-height : 25px;
+  align-items : center;
+}
+
+.usp_bar span {
+  margin-left : 10px;
+  margin-right : 8px;
+  line-height : 1rem;
+}
+
+.accordion-panel.active ul {
+  padding : 20px;
+}
+
+.accordion-panel.active a {
+  text-decoration-line : underline;
+  text-decoration-thickness : initial;
+  text-decoration-style : initial;
+  text-decoration-color : initial;
+}
+
+.price_area>span:last-child {
+  background : rgb(242, 128, 114) !important;
+  font-style : normal !important;
+  text-transform : uppercase !important;
+  color : rgb(255, 255, 3) !important;
+}
+
+.price_area p:nth-child(1) {
+  font-weight : bold !important;
+  text-decoration-line : none !important;
+  text-decoration-thickness : initial !important;
+  text-decoration-style : initial !important;
+  text-decoration-color : initial !important;
+  color : rgb(69, 113, 171) !important;
+}
+
+.price_area p:nth-child(2) {
+  text-decoration-line : line-through !important;
+  text-decoration-thickness : initial !important;
+  text-decoration-style : initial !important;
+  text-decoration-color : initial !important;
+  color : rgba(69, 113, 171, 0.3) !important;
+}
+
+.span.per_txt {
+  display : none;
+}
+
+.chewables {
+  max-width : 800px;
+  line-height : 1.5rem;
+}
+
+.k_text {
+  margin-top : 15px !important;
+}
+
+.per_txt {
+  display : none;
+}
+
+.guarantee_text {
+  color : rgb(63, 122, 185) !important;
+}
+
+#shopify-section-product-template>div.container-indent>div.container.container-fluid-mobile>div>div:nth-child(2)>div>div:nth-child(5)>section>div.price_area {
+  display : flex !important;
+}
+
+.chewables hr {
+  margin-top : 20px;
+  margin-bottom : 20px;
+}
+
+.guarantee_text {
+  font-weight : bold !important;
+}
+
+.price_area>span:last-child {
+  font-size : 16px !important;
+  font-weight : bold !important;
+}
+
+.price_area {
+  margin-bottom : 15px;
+}
+@media only screen and (max-width: 402px) {
+  .usp_bar span {
+    font-size : 14px;
+    margin-right : unset !important;
+    margin-left : 5px !important;
+  }
+}
+
+</style>
+
+<div class="accordion-wrapper">
+  {% if pro_product.metafields.custom.benefits_accordion_tab != blank %}
+   <button class="accordion-header">Benefits</button>
+   <div class="accordion-panel active" style="">
+   {{ pro_product.metafields.custom.benefits_accordion_tab }}
+   </div>
+  {% endif %}
+  {% if product.metafields.custom.ingredients_accordion_tab != blank %}
+   <button class="accordion-header">Key Nutrients</button>
+   <div class="accordion-panel active">
+  {{ product.metafields.custom.ingredients_accordion_tab }}
+   </div>
+   {% endif %}
+  {% if pro_product.metafields.custom.subscription_accordion_tab != blank %}
+   <button class="accordion-header">Subscription Details</button>
+   <div class="accordion-panel active">
+     {{ pro_product.metafields.custom.subscription_accordion_tab }}
+   </div>
+     {% endif %}
+</div>

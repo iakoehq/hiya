@@ -1,0 +1,436 @@
+<style>
+  
+.modal_box.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 4px;
+    opacity: 1;
+    height: 100vh;
+    bottom: auto;
+    overflow: auto;
+    transition: none !important;
+    z-index: 99;
+    padding: 50px;
+}
+
+#icon-with-text .page-width .content-row .content-column .content .text-box p {
+  padding-right: 20px; 
+}
+
+  .modal_box.modal::before{
+    display: none;
+  }
+
+  .modal_box.modal .modal-box{
+    display: table;
+    margin: 0 auto;
+    float: none;
+    top: 0;
+    position: relative;
+    padding: 50px;
+    max-width: 700px;
+  }
+
+    .modal_box.modal::after{
+        position: relative;
+        display: block;
+        padding-top: 80%;
+    }
+
+    .modal-close-btn {
+        position: absolute;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        z-index: 11;
+        border-radius: 50%;
+        top: 30px;
+        right: 10px;
+        color: #fff;
+        background-color: #000;
+        line-height: 0;
+    }
+
+    .modal_box.modal img{
+        float: left;
+        width: 100%;
+        display: table;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        /* object-fit: contain; */
+        object-position: center center;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+    }
+
+    .overlay1 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        z-index: 9;
+    }
+    #icon-with-text{
+        background: rgba(0, 0, 0, 0);
+        width: 100%;
+        display: table;
+        padding: 40px 0 60px;
+    }
+
+    #icon-with-text .page-width{
+        width: 100%;
+        max-width: 1210px;
+        box-sizing: border-box;
+        margin: auto;
+        padding: 0 10px; 
+    }
+
+  .hide-it {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+      .hide-it {
+    display: none;
+  }
+  }
+
+    #icon-with-text .page-width .title-box{
+        width: 100%;
+        display: table;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    #icon-with-text .page-width .title-box h2.section-title{
+        font-family: "FilsonProBold";
+        font-style: normal;
+        font-weight: 800 !important;
+        font-size: 24px !important;
+        line-height: 31px !important;
+        text-align: center;
+        color: #3F7AB9;
+        padding-bottom: 0px;
+        margin-bottom: 20px !important;
+    }
+
+    #icon-with-text .page-width .content-row{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 15px;
+    }
+
+    #icon-with-text .page-width .content-row .content-column{
+        width: calc(33.333333% - 10px);
+        display: flex;
+        justify-content: center;
+    }
+
+    #icon-with-text .page-width .content-row .content-column .content{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #icon-with-text .page-width .content-row .content-column .content .image-box{
+        width: 100%;
+        max-width: 75px;
+        position: relative;
+        margin-right: 5px;
+    }
+
+    #icon-with-text .page-width .content-row .content-column .content .image-box::after{
+        content: "";
+        position: relative;
+        display: block;
+        padding-top: 100%;
+        width: 100%;
+    }
+
+    #icon-with-text .page-width .content-row .content-column .content .image-box img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        margin-right: 15px;
+        width: 67px;
+        height: 67px;  
+    }
+
+    #icon-with-text .page-width .content-row .content-column .content .text-box{
+        width: calc(100% - 90px);
+    }
+
+    #icon-with-text .page-width .content-row .content-column .content .text-box h5{
+        font-family: FilsonProBold!important;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 19px;
+        color: #3F7AB9;
+        margin: 0px;
+        padding-bottom: 0px;
+    }
+
+    #icon-with-text .page-width .content-row .content-column .content .text-box p{
+        font-family: 'Filson Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14.7097px;
+        line-height: 19px !important;
+        color: #3F7AB9;
+        margin: 0px !important;
+    }
+
+    #icon-with-text .popup-btn {
+        display: table;
+        margin: 30px auto 0;
+    }
+
+    #icon-with-text .popup-btn a{
+            background: transparent;
+            padding: 0px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16.44px;
+            line-height: 21px;
+            text-align: center;
+            letter-spacing: -0.03em;
+            text-decoration-line: underline;
+            color: #407AB9;
+            display:table;
+    }
+
+    @media only screen and (max-width: 767px) {
+        #icon-with-text .page-width .content-row{
+            column-gap: 0px;
+            max-width: 420px;
+            margin: auto;
+        }
+
+        #icon-with-text .page-width .content-row .content-column{
+            width: 100%;
+            margin: 20px 0;
+        }
+    }   
+    @media only screen and (min-width: 768px){
+        #icon-with-text .page-width .title-box{
+            max-width: 100%;
+            margin-bottom: 50px;
+        }
+
+        #icon-with-text .page-width .content-row .content-column .content .text-box p{
+            font-size: 16px;
+        }
+
+        #icon-with-text .page-width .title-box h2.section-title{
+            font-size: 32px !important;
+            line-height: 36px !important;
+        }
+
+        #icon-with-text .page-width .content-row .content-column .content{
+            justify-content: center;
+            flex-flow: column;
+            row-gap: 20px;
+        }
+
+        #icon-with-text .page-width .content-row .content-column .content .text-box{
+            width: 100%;
+            height: 143px;
+        }
+
+        #icon-with-text .page-width .content-row .content-column .content .text-box h5{
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 15px;
+            max-width: 230px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 26px;
+        }
+
+        #icon-with-text .page-width .content-row .content-column .content .text-box p{
+            max-width: 250px;
+            margin: 0 auto !important;
+            float: none;
+            display: table;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (min-width: 1024px){
+        #icon-with-text .page-width .title-box h2.section-title{
+            font-size: 42px !important;
+            line-height: 46px !important;
+        }
+
+        #icon-with-text{
+            padding: 80px 0;
+        }
+    }
+
+    .modal-close-btn::after {
+        content: "x";
+        color: #fff;
+        position: relative;
+      top:-2px;
+    }
+   
+    @media only screen and (max-width: 650px){
+        .modal_box.modal img{
+            width: 700px;
+            max-width: fit-content;
+            z-index: 99;
+        }
+      .modal_box.modal{
+            padding:0;
+            overflow: auto;
+            height: auto;
+            top: 50%;
+            transform: translateY(-50%);
+      }
+
+      .modal_box.modal .modal-box{
+        padding: 0px;
+      }
+      .modal-close-btn {
+          position: fixed;
+          font-size: 20px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          top: 40px;
+          right: auto;
+          color: #fff;
+          background-color: #000;
+          line-height: 0;
+          z-index: 999;
+          left: 20px;
+      }
+    }
+</style>
+
+<section id="icon-with-text">
+<div class="page-width">
+  <div class="title-box">
+  {% if section.settings.reimagining_heading != blank %}
+      <h2 class="section-title">{{ section.settings.reimagining_heading }}</h2>
+    {% endif %}
+  </div>
+  <div class="content-row">
+    {%- for block in section.blocks -%}
+      <div class="content-column">
+        <div class="content">
+          {% if block.settings.main_image != blank %}
+         <div class="image-box">
+            <img src="{{ block.settings.main_image  | img_url : 'master' }}" alt="box-image" />
+          </div>
+          {% endif %}          
+<div class="text-box">
+          {% if block.settings.reimagining_list_heading != blank %}
+          <h5 class="title">{{ block.settings.reimagining_list_heading }}</h5>
+          {% endif %}    
+          
+          {% if block.settings.reimagining_list_content != blank %}
+          <p>{{ block.settings.reimagining_list_content }}</p>
+          {% endif %}   
+</div>
+      
+        </div>
+  </div>
+       {% endfor %}
+          {% if block.settings.reimagining_list_link_text != blank and block.settings.reimagining_list_link  %}
+            <a class="learn-more-link" href="{{ block.settings.reimagining_list_link}}">{{ block.settings.reimagining_list_link_text }}</a>
+          {% endif %}          
+        </div>
+      
+    <div class="popup-btn">
+            <a href="{{ section.settings.bottom_link }}" class="">Learn More About Our Multivitamin</a>
+        </div>
+</div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Reimagining Daily Sec",
+  "tag": "section",
+  "class": "Reimagining-daily-main",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Reimagining Ceading",
+      "id": "reimagining_heading"
+    },
+    {
+      "type": "textarea",
+      "label": "Reimagining Content",
+      "id": "reimagining_content"
+    },
+     {
+      "type": "url",
+      "label": "Link at Bottom",
+      "id": "bottom_link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Reimagining the daily",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "main_image"
+        },
+        {
+          "type": "text",
+          "label": "Reimagining List Heading",
+          "id": "reimagining_list_heading"
+        },
+        {
+          "type": "textarea",
+          "label": "Reimagining List Content",
+          "id": "reimagining_list_content"
+        },
+        {
+          "type": "text",
+          "label": "Reimagining List Link Text",
+          "id": "reimagining_list_link_text"
+        },
+        {
+          "type": "url",
+          "label": "Reimagining List Link",
+          "id": "reimagining_list_link"
+        }                  
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reimagining Daily Sec"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

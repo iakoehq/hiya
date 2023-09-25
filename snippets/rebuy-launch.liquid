@@ -1,0 +1,49 @@
+<script>
+
+// grab elements to add named function event listeners to 'stopCartOpen' and popcart functionality in header.liquid;
+// These named events will be removed with Google Optimize to let native Rebuy functionality take over on live site.
+
+// atc_button on PDPs
+
+addEventListener("DOMContentLoaded", (event) => {
+  let buyButton = document.querySelector("#buy_now_new_button");
+  if (buyButton !== null) {
+      buyButton.addEventListener('click', stopCartOpen);
+  }
+
+  let viewCart = document.querySelector("#CartDrawer-CartItems > div > div.cart-btn > div:nth-child(2) > a");
+
+  if (viewCart !== null) {
+    viewCart.addEventListener('click', stopProp);
+  }
+
+  let pairsGreat = document.querySelector('.pairs_great_button');
+
+  if (pairsGreat !== null) {
+    pairsGreat.addEventListener('click', stopCartOpen);
+  }
+
+   // all delete icons in popup cart
+
+    let removeButtons = document.querySelectorAll('cart-remove-button');
+   removeButtons.forEach(button => {
+    if (button !== null) {
+       button.addEventListener('click', stopCartOpen)
+    }
+    });
+});
+
+ 
+// This prevents rebuy cart from opening on click on PDPs. The usual redirect to checkout happens instead.
+
+function stopCartOpen() {
+   window.Rebuy.SmartCart.skip_open = true;
+}
+
+function stopProp(e) {
+  console.log('prop stopped');
+  e.stopImmediatePropagation();
+}
+
+
+</script>

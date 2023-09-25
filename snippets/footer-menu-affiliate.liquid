@@ -1,0 +1,20 @@
+<style>
+.affiliate ul.footer__menu {
+  display:flex;
+  width:40%;
+  margin:0 auto;
+}
+.affiliate .footer__menu li {
+  flex: 1 1 33%;
+  text-align:center;
+}
+</style>
+<div class="col-dt">
+    <div class="footer__menu__title affiliate">
+        <ul class="footer__menu">
+          {% for link in linklists.affiliate.links %}
+          <li class="footer__menu__list"><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+</div>

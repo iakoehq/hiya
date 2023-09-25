@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "collage",
+        "blog_list": "7",
+        "blog_show_tags": true,
+        "blog_tags_uppercase": true,
+        "blog_show_author": true,
+        "blog_show_date": true,
+        "show_comments": true,
+        "blog_show_button": true,
+        "truncate_excerpt": false,
+        "truncate": "15",
+        "truncate_last_symbols": "..."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,226 @@
+{{ 'login.css' | asset_url | stylesheet_tag }}
+
+{% capture required %}
+  {{ 'customer.general.required_fields' | t }}
+{% endcapture %}
+
+<div id="tt-pageContent">
+  <div class="container-indent">
+    <div class="container">
+
+      <div class="tt-login-form">
+        <div class="row justify-content-center">
+
+          <div class="col-xs-12 col-md-8">
+            <div class="tt-item">
+
+              <div id="login">
+                <div class="form-heading">
+                  <h2 class="tt-title">Login</h2>
+                </div>
+
+                <div class="form-default form-top">
+                  {% form 'customer_login' %}
+
+                    <div class="tt-base-color">
+                      {{ form.errors | default_errors }}
+                    </div>
+
+                    <div class="form-group">
+                      <label for="loginInputName">E-mail</label>
+                      <input
+                        class="form-control"
+                        id="loginInputName"
+                        name="customer[email]"
+                        placeholder=""
+                        required="required"
+                        type="email">
+                    </div>
+                    {% if form.password_needed %}
+                      <div class="form-group">
+                        <label for="loginInputEmail">Password</label>
+                        <input
+                          class="form-control"
+                          id="loginInputEmail"
+                          name="customer[password]"
+                          placeholder=""
+                          required="required"
+                          type="password"
+                          value="">
+                      </div>
+                    {% endif %}
+
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <button class="btn w-100" type="submit">Sign in</button>
+                        </div>
+                      </div>
+                      {% if form.password_needed %}
+                        <div class="form-description col-12">
+                          <a class="underline cursor" onclick="showRecoverPasswordFormAndHesh();return false;">
+                            Forgot your password?
+                          </a>
+                        </div>
+                        {% comment %}<div class="form-description text-center mt-4">
+                          <p>Don't have an account?</p>
+                          <a class="underline text-red cursor" href="/account/register">
+                            Sign up here</a>
+                        </div>{% endcomment %}
+
+                      {% endif %}
+                    </div>
+
+                  {% endform %}
+
+                  <div class="form-description form-description--recharge text-center mt-2">Want a easier way to access your subscription?</div>
+                  <div class="btn-wrap">
+                    <a class="btn w-100 mt-4 btn-recharge" href="https://hiya-kids.myshopify.com/tools/recurring/get-subscription-access">Login with a Magic Code</a>
+                  </div>
+
+                  <!-- Begin ReCharge code -->
+                  {% include 'subscription-account-login' %}
+                  <!-- End ReCharge code -->
+
+                  {% comment %}<div class="form-description text-center mt-2">
+                    <p class="small">By creating an account with our store, you will be able to move through the checkout process faster,<br>
+                      store multiple shipping addresses, view and track your orders in your account and more.</p>
+                  </div>{% endcomment %}
+
+                </div>
+              </div>
+
+              <div
+                class="wrap"
+                id="recover-password"
+                style="display:none;">
+                <div class="form-heading">
+                  <h2 class="tt-title mb-3">Recover password</h2>
+                  <!--div class="form-description text-center">
+                    <p>{{ 'customer.login.reset_password_subtext' | t }}</p>
+                </div-->
+                </div>
+                <div class="form-default form-top">
+
+                  {% form 'recover_customer_password', id: 'recover-form-password' %}
+
+                    {% comment %}
+                    Add a hidden span to indicate the form was submitted succesfully.
+                    {% endcomment %}
+
+                    <div class="tt-base-color">
+                      {{ form.errors | default_errors }}
+                    </div>
+
+                    <div class="form-group form-group--success">
+                      {% if form.posted_successfully? %}
+                        <div class="reset-password-success">
+                          <h4>A message has been sent to your mail!</h4>
+                        </div>
+                      {% endif %}
+
+                      <label for="loginInputName">E-mail</label>
+                      <input
+                        type="email"
+                        placeholder=""
+                        value=""
+                        name="email"
+                        id="RecoverEmail"
+                        class="input-full{% if form.errors %} input--error{% endif %} form-control"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        {% if form.errors %}
+                        aria-invalid="true"
+                        aria-describedby="RecoverEmail-email-error"
+                        {%- endif -%}
+                        required="required">
+
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="form-group mt-3">
+                            <button class="btn w-100" type="submit">Submit</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-description text-center">
+                        <a
+                          class="underline text-red cursor"
+                          href="#"
+                          onclick="hideRecoverPasswordForm();return false;">
+                          or Cancel</a>
+                      </div>
+                    </div>
+                  {% endform %}
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  function showRecoverPasswordForm() {
+  document
+        .getElementById("recover-password")
+        .style
+        .display = "block";
+      document
+        .getElementById("login")
+        .style
+        .display = "none";
+    }
+  
+    function showRecoverPasswordFormAndHesh() {
+      showRecoverPasswordForm();
+  
+      document.cookie = "form=recover-password; max-age=60";
+      window.location.hash = "#recover";
+    }
+  
+    function hideRecoverPasswordForm() {
+      document
+        .getElementById("recover-password")
+        .style
+        .display = "none";
+      document
+        .getElementById("login")
+        .style
+        .display = "block";
+      window.location.hash = "#loginForm";
+    }
+  
+    if (window
+        .location
+        .href
+        .indexOf("#recover") > -1) {
+      showRecoverPasswordForm();
+    }
+  
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(";");
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") {
+          c = c.substring(1, c.length);
+        }
+        if (c.indexOf(nameEQ) == 0) {
+          return c.substring(nameEQ.length, c.length);
+        }
+      }
+      return null;
+    }
+  
+    var cookieForm = getCookie("form");
+    if (cookieForm) {
+      showRecoverPasswordFormAndHesh();
+    }</script>

@@ -1,0 +1,64 @@
+<div class="content">
+  {% if section.settings.heading != blank %}
+  <h2>{{ section.settings.heading }}</h2>
+  {% endif %}
+   {% if section.settings.content != blank %}
+  <p>{{ section.settings.content }}</p>
+  {% endif %}
+  <div class="button-box">
+    {% if section.settings.button_text != blank %}
+    <a class="btn" href="{{ section.settings.button_url }}">{{ section.settings.button_text }}</a>
+    {% endif %}
+  </div>
+</div>
+<style>
+  .shopify-section.influencer-banner{
+  background-image: url('{{ section.settings.main_image | img_url : 'master' }}');
+}
+</style>
+{% schema %}
+{
+  "name": "Influencer Banner",
+  "tag": "section",
+  "class": "influencer-banner",
+  "settings": [
+                    {
+                    "type": "html",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "html",
+                    "label": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "type": "image_picker",
+                    "label": "Image",
+                    "id": "main_image"
+                  },
+                  {
+                    "type": "text",
+                    "label": "Button Text",
+                    "id": "button_text"
+                  },
+                  {
+                    "type": "url",
+                    "label": "Button Url",
+                    "id": "button_url"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Influencer Banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

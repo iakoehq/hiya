@@ -1,0 +1,96 @@
+{{ 'our-vitamin-sec.css' | asset_url | stylesheet_tag }}
+
+<section class="our-vitamin-sec {% if section.settings.image_with_content_background != blank %} bgcolor{% endif %}">
+    <div class="inner">
+      {% if section.settings.sub_heading != blank %}
+        <h5>{{ section.settings.sub_heading }}</h5>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2>{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.content != blank %}
+        <p>{{ section.settings.content }}</p>
+      {% endif %}
+        <div class="table-image">
+          {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | img_url: 'master' }}"
+                alt="img">
+          {% endif %}
+        </div>
+        <div class="image-wrapper">
+          {% for block in section.blocks %}
+            <div class="image">
+               {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | img_url : 'master' }}"
+                    alt="img">
+                {% endif %}
+            </div>
+           {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+  .bgcolor {
+    background-color:{{ section.settings.image_with_content_background }};
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Our Vitamin Section Aff",
+  "tag": "section",
+  "class": "our-vitamin-main",
+  "settings": [
+    {
+        "type": "color",
+        "id": "image_with_content_background",
+        "label": "Block Background Color"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "label": "Sub Heading",
+      "id": "sub_heading"
+    },
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading"
+    },
+    {
+      "type": "html",
+      "label": "Content",
+      "id": "content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Vitamin Section Aff"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

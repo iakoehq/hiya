@@ -1,0 +1,259 @@
+<style>
+  
+  .button:before,  
+  .button:after {
+    content: none !important; 
+  }
+
+   .button {
+    letter-spacing: normal !important; 
+    min-height: unset !important; 
+  } 
+
+  #image-with-text-section > div > div.image-with-text-box > div.text-box > div > a.button.read-button {
+    background: none; 
+  }
+  
+    #image-with-text-section{
+        padding: 80px 0;
+        padding-top: 0px; 
+    }
+
+    #image-with-text-section .page-width{
+        width: 100%;
+        max-width: 1210px;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    #image-with-text-section .page-width .title-box{
+        width: 100%;
+        display: table;
+    }
+
+    #image-with-text-section .page-width .title-box h2.section-title , #image-with-text-section .page-width .title-box h1.section-title{
+        font-size: 42px !important;
+        line-height: 46px !important;
+        font-family: "FilsonProBold" !important;
+        font-style: normal;
+        font-weight: 800 !important;
+        text-align: center;
+        color: #3F7AB9;
+        padding-bottom: 0px;
+        margin-bottom: 50px !important;
+    }
+
+    #image-with-text-section .image-with-text-box{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 15px;
+        align-items: center;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    #image-with-text-section .image-with-text-box .image-box{
+        width: calc(50% - 7.5px);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #image-with-text-section .image-with-text-box .text-box{
+        width: calc(50% - 7.5px);
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #image-with-text-section .image-with-text-box .text-box .description{
+    
+        font-family: 'Filson Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: #3F7AB9;
+        margin: 0px !important;
+        line-height: 22px !important; 
+    }
+
+    #image-with-text-section .image-with-text-box .text-box .button-box{
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+
+    #image-with-text-section .image-with-text-box .text-box .button-box .button{
+        height: 60px;
+        padding: 0 18px;
+        border-radius: 7px;
+        border: 3px solid #3F7AB9;
+        font-family: 'FilsonProBold';
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #3F7AB9;
+    }
+
+    #image-with-text-section .image-with-text-box .text-box .button-box .button.explore-button{
+        background: #3F7AB9;
+        color: #fff;
+    }
+    #image-with-text-section .image-with-text-box .image-box img {
+        float: left;
+        width: 100%;
+        display: block;
+    }
+  
+
+
+  @media only screen and (max-width: 650px) {
+     #image-with-text-section .page-width .title-box h2.section-title , #image-with-text-section .page-width .title-box h1.section-title{
+            font-size: 24px !important;
+            line-height: 31px !important;
+            margin-bottom: 20px !important;
+        }
+        #image-with-text-section .image-with-text-box .text-box{
+            margin-top: 20px;
+        }
+        #image-with-text-section .image-with-text-box .text-box .description{
+            text-align: center;
+        }
+
+        #image-with-text-section .image-with-text-box .text-box .button-box{
+            margin-top: 25px;
+            column-gap: 0px;
+            row-gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        #image-with-text-section .image-with-text-box .text-box .button-box .button{
+            width: 100%;
+        }
+  }
+
+   @media only screen and (max-width: 767px) { 
+   #image-with-text-section {
+          padding: 0px 0 0 !important;
+      }
+   }
+
+    @media only screen and (max-width: 950px){
+        #image-with-text-section .image-with-text-box .text-box{
+            width: 100%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        #image-with-text-section .image-with-text-box .image-box{
+            width: 100%;
+        }
+
+        #image-with-text-section .image-with-text-box .image-box img{
+            float: none;
+            display: table;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    } 
+  
+</style>
+
+
+<section id="image-with-text-section">
+    <div class="page-width">
+        <div class="title-box">
+    {% if section.settings.dads_heading != blank %}
+      <h2 class="section-title">{{ section.settings.dads_heading }}
+      </h2>
+    {% endif %}
+        </div>
+        <div class="image-with-text-box">
+            <div class="image-box">
+                <img loading="lazy" src="{{ section.settings.dads_image | img_url : 'master'  }}" alt="image">
+            </div>
+            <div class="text-box">
+                <p class="description">
+                    As new dads, we were shocked when we learned the truth about gummy vitamins. That's why we created a better type of vitamin -- to create a healthier world for our own kids and yours.
+                </p>
+                <div class="button-box">
+                    <a href="https://hiyahealth.com/pages/our-vitamin" class="button explore-button">
+                        Explore the Science
+                    </a>
+                    <a href="https://hiyahealth.com/pages/our-story" class="button read-button">
+                        Read Our Story
+                    </a>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Created by Dads",
+  "tag": "section",
+  "class": "created-by-dads",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Section Headline",
+      "id": "dads_heading"
+    },
+    {
+      "type": "image_picker",
+      "label": "Main Image",
+      "id": "dads_image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Reimagining the daily",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "main_image"
+        },
+        {
+          "type": "text",
+          "label": "Reimagining List Heading",
+          "id": "reimagining_list_heading"
+        },
+        {
+          "type": "textarea",
+          "label": "Reimagining List Content",
+          "id": "reimagining_list_content"
+        },
+        {
+          "type": "text",
+          "label": "Reimagining List Link Text",
+          "id": "reimagining_list_link_text"
+        },
+        {
+          "type": "url",
+          "label": "Reimagining List Link",
+          "id": "reimagining_list_link"
+        }                  
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Created by Dads"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,114 @@
+{{ 'image_with_content_sec.css' | asset_url | stylesheet_tag }}
+<section class="ingredients-pros-sec" style="{%- if section.settings.image_with_content_background -%}background-color:{{ section.settings.image_with_content_background }}{%- endif -%}">
+    <div class="container">
+        <div class="inner">
+          {%- for block in section.blocks -%}
+            <div class="{%- if block.settings.content_position -%}reverse-column box-wrapper{% else %}box-wrapper{%- endif -%}  ">
+                <div class="image">
+                  {% if block.settings.main_image != blank %}
+                    <img src="{{ block.settings.main_image | img_url: 'master' }}" alt="img">
+                {% endif %}
+                </div>
+                <div class="content">
+                  {% if block.settings.small_image != blank %}
+                    <img src="{{ block.settings.small_image | img_url: 'master' }}" alt="small-img" class="small-img">
+                    {% endif %}
+                    {% if block.settings.heading != blank %}
+                    <h2>{{ block.settings.heading }}</h2>
+                    {% endif %}
+                     {% if block.settings.content != blank %}
+                    {{ block.settings.content }}
+                    {% endif %}
+                    {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+                    <a href="{{ block.settings.button_link }}" class="primary-btn shop-btn">{{ block.settings.button_text }}</a>
+                    {% endif %}
+                </div>
+            </div>
+          {% endfor %}
+          {% if section.settings.block_button_text != blank and section.settings.block_button_link != blank %}
+            <a href="{{ section.settings.block_button_link }}" class="primary-btn shop-btn">{{ section.settings.block_button_text }}</a>
+          {% endif %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image With Content ProB",
+  "tag": "section",
+  "class": "ingredients-pros-main",
+  "settings": [
+        {
+            "type": "color",
+            "id": "image_with_content_background",
+            "label": "Block Background Color"
+        },
+        {
+          "type": "text",
+          "label": "Block Button Text",
+          "id": "block_button_text"
+        },
+        {
+          "type": "url",
+          "label": "Button Link",
+          "id": "block_button_link"
+        }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image with Text",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "content_position",
+          "label": "Content Postion On left",
+          "default": false
+        },
+        {
+          "type": "text",
+          "label": "Heading",
+          "id": "heading"
+        },
+        {
+          "type": "richtext",
+          "label": "Content",
+          "id": "content"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "main_image"
+        },
+        {
+          "type": "image_picker",
+          "label": "Small image",
+          "id": "small_image"
+        },
+        {
+          "type": "text",
+          "label": "Button Text",
+          "id": "button_text"
+        },
+        {
+          "type": "url",
+          "label": "Button Link",
+          "id": "button_link"
+        }
+        
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image With Content"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

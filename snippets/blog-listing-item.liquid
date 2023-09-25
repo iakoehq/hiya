@@ -1,0 +1,48 @@
+
+{%- if article.comments.size > 0 -%}{%- assign comment_url = article.url | append: '#comments' -%}{%- else -%}{%- assign comment_url = article.url | append: '#addcomment' -%}{%- endif -%}
+<div class="container container-fluid-custom-mobile-padding">
+
+<div class="featured-post">
+<div class="tt-post">
+ {%- unless article.image == blank -%}
+ <div class="tt-post-img">
+   <a href="{{ article.url }}"><img src="{{ article.image.src | img_url: '1024x1024' }}" alt="{{ article.image.alt }}"></a>
+ </div>
+ {%- endunless -%}  
+ <div class="tt-post-content">
+   {%- if article.tags.size > 0 and item.blog_show_tags -%}
+   <div class="tt-tag{% if item.blog_tags_uppercase %} text-uppercase{% endif %}">
+     {%- for tag in article.tags -%}{{ tag | link_to_tag: tag }}{%- endfor -%}
+   </div>{%- endif -%}
+
+   
+   {%- if item.blog_show_author or item.blog_show_date or article.comments_enabled? and item.show_comments -%}
+   <div class="tt-meta custom-blog-meta">
+     {%- if item.blog_show_author or item.blog_show_date -%}
+     <div class="tt-autor">
+             {{ article.published_at | time_tag: '%b %d, %Y' }} &nbsp; / &nbsp; {%- if item.blog_show_author -%} <span>Dr. John Snow</span> {%- endif -%}
+     </div>
+     {%- endif -%}
+     {%- if article.comments_enabled? and item.show_comments -%}
+     <div class="tt-comments">
+       <a href="{{ comment_url }}"><i class="tt-icon icon-f-88"></i>{{ article.comments.size }}</a>
+     </div>
+     {%- endif -%}
+   </div>
+   {%- endif -%}
+   
+   <h2 class="tt-title"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+
+   <div class="tt-description">
+     {{ article.content | strip_html | truncate: 150 }}
+   </div>
+   
+    <div class="read-more">
+         <a href="{{ article.url }}">Read more</a>
+       </div>
+  
+
+ </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,413 @@
+<div class="product-banner-sec">
+  <div class="container">
+    <div class="inner">
+      <div class="slider-wrapper">
+        <div id="product__slider">
+            <button class="product-image-zoom"><i></i></button>
+            <div class="product__slider-main">
+              {%- for media in product.media -%}
+              <div class="slide"><img src="{{ media | img_url: 'master' }}" alt="{{ media.alt }}" class="img-responsive"></div>
+              {% endfor %}
+             </div>
+            <div class="product__slider-thmb">
+              {%- for media in product.media -%}
+                <div class="slide"><img src="{{ media | img_url: 'master' }}" alt="{{ media.alt }}" class="img-responsive"></div>
+              {% endfor %}
+            </div>
+            <div class="product__slider-controls"></div>
+        </div>
+      </div>
+      <div class="prod-body">
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+          {% render block %}
+         {%- when 'title' -%}
+        <h2>{{ product.title | escape }}</h2>
+        {% when 'Review' %}
+        <div class="rating-star-count">
+         <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
+        </div>
+        {%- when 'price' -%}
+        <div class="price_area">
+            {% assign price = product.price | money_without_currency %}
+            {% assign splitPrice = price | split: '.' %}
+            {% if splitPrice.last == '0' %}{% assign price = price | remove: '.0'  %}{% endif %}
+            {% if splitPrice.last == '00' %}{% assign price = price | remove: '.00'  %}{% endif %}
+            {% if product.metafields.my_fields.discount != blank %}
+              {%- assign discount = 100 | minus: product.metafields.my_fields.discount | divided_by: 100.0 -%}
+              {% assign discPrice = price | times: discount %}
+              {% assign splitPrice = discPrice | split: '.' %}
+              {% if splitPrice.last == '0' %}{% assign discPrice = discPrice | remove: '.0'  %}{% endif %}
+              <p><span class="r_price">${{ discPrice }}</span></p><p><span class="o_price">${{ price }}</span></p><span class="per_txt">per kid</span>{% if product.metafields.my_fields.discount != blank %}<span>{{product.metafields.my_fields.discount}}% Off First Order</span>{% endif %}
+            {% else %}
+              <p><span class="r_price">${{ price }}</span></p><span class="per_txt">per kid</span>
+            {% endif %}
+            {% comment %}
+            <p><span class="r_price">{{ product.selected_or_first_available_variant.price | money }}</span></p><p><span class="o_price">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span></p><span class="per_txt">per kid</span><span>50% Off First Order</span>
+            {% endcomment %}
+          </div>
+        {%- when 'metafield' -%}
+          {{ product.metafields.custom.metafield_text_for_probiotic }}
+
+           {%- when 'short_discription' -%}
+        <div class="chewables">
+          {{ product.metafields.custom.short_product_description }}
+          <div class="usp_bar">
+             <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/upsell_check_icon_e0eef335-2a85-4b2d-ac4c-1658a9a7cee9.png?v=1674629252" alt="checkmark-icon">
+             <span>30-Day Supply</span>
+             <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/upsell_check_icon_e0eef335-2a85-4b2d-ac4c-1658a9a7cee9.png?v=1674629252" alt="checkmark-icon">
+             <span>Refillable Glass Bottle</span>
+             <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/upsell_check_icon_e0eef335-2a85-4b2d-ac4c-1658a9a7cee9.png?v=1674629252" alt="checkmark-icon">
+             <span>Sticker Pack to Decorate</span>
+           </div>
+          <hr>
+        </div>
+        
+        {%- when 'variant_picker' -%}
+        <p class="k_text">How many kids are you purchasing for?</p>
+        <div class="optionList hide">
+             {% for variant in product.variants %}
+               {% assign VariantTitle = variant.title | split: '/' | first  %}
+               {% assign OptionPrice =  VariantTitle | split: ' - ' | last %}
+               {% assign RegPrice = variant.title | split: ' (Reg: ' | last | replace: ')', '' %}
+               
+               <span class="{% if forloop.first %}active{% endif %}" data-item="{{ forloop.index }}" data_variantID="{{ variant.id }}" data-price="{{ OptionPrice }}" data-regulerPrice="{{ RegPrice }}">{{ variant.title | split: ' - ' | first }}</span>
+              {% endfor %}          
+        </div>
+
+         {%- when 'option_dropdown' -%}
+        <div class="tt-title-options">Kids: <span class="current_option_name"></span></div>
+      <div class="form-default">
+        <div class="optionList mvpdp-hide form-group">
+          <select class="form-control">
+          {% for variant in product.variants %}
+            {% assign VariantTitle = variant.title | split: '/' | first  %}
+            {% assign OptionPrice2 =  VariantTitle | split: ' - ' | last %}
+            {% assign RegPrice2 = variant.title | split: ' (Reg: ' | last | replace: ')', '' %}
+          <option class="{% if forloop.first %}active{% endif %}" data-item="{{ forloop.index }}" data_variantID="{{ variant.id }}"
+            data-price="{{ OptionPrice2 }}" value="{{ variant.id }}" data-regulerPrice="{{ RegPrice2 }}">{{ variant.title }}
+          </option>
+          {% endfor %}
+          </select>
+        </div>
+      </div>
+         {%- when 'supplement_image_sec' -%}
+          {% if product.tags contains 'affiliate' %}{% else %}
+         <div role="button" class="supplements-modal" style="display: none">
+            <p>Supplement Facts</p>
+            <div class="supplement-overlay">
+              <img src="{{ block.settings.supplement_image  | img_url: 'master'  }} ">
+            </div>
+        </div>
+            {% endif %}
+        {%- when 'atc_buttons' -%}
+        <form method="post" action="/cart/add" id="product-banner-buybox">
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+           <input type="hidden" name="return_to" value="/checkout/" />
+          <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
+          <input type="submit" value="{% if product.tags contains 'affiliate' %}Try Now{% else %}Buy Now{% endif %}" class="btn btn btn-lg" id="buy_now_new_button" />
+        </form>
+          {% comment %}
+        <a class="btn btn-lg" id="buy_now_new_button">
+            Try Now
+        </a>
+          {% endcomment %}
+        {%- when 'delivered_image_text' -%}
+        <div class="guarantee_text">
+          {{ block.settings.deliverd_text }} 
+        </div> 
+        <div class="tt-promo-brand">
+          <img src="{{ block.settings.deliverd_image | img_url: 'master' }}" alt="{{ block.settings.alt }}">
+        </div>
+            {%- when 'accordion' -%} 
+          {% assign pro_product = all_products['kids-daily-probiotic'] %}
+       {% render 'product-accordion', product: pro_product %}
+        {% endcase %}
+        {% endfor %}
+      </div>
+    </div>   
+  </div>
+</div>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 97.9" style="enable-background:new 0 0 1920 97.9;" xml:space="preserve">
+  <path id="Path_2" class="st59" d="M1920,17.3c0,0-256,80.6-960,80.6S0,17.3,0,17.3V0h1920L1920,17.3z"></path>
+</svg>
+
+<script>
+let mainProductSliderSettings = {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  asNavFor: '.product__slider-thmb',
+  swipe: false,
+  swipeToSlide: false,
+  touchMove: false,
+  draggable: false,
+  responsive: [
+  {
+    breakpoint: 768,
+    settings: {
+      arrows: true,
+    },
+  }]
+};
+let tmbProductSliderSettings = {
+  arrows: false,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  asNavFor: '.product__slider-main',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 4,
+        arrows: true,
+        appendArrows: $('.product__slider-controls')
+      }
+    }
+  ]
+};
+let imageZoomBtn = document.querySelector('button.product-image-zoom');
+imageZoomBtn.addEventListener('click',function(e){
+  if(!document.querySelector('div.product-img-overlay')){
+    let productImgSrc = imageZoomBtn.parentElement.querySelector('div.slick-active > img').getAttribute('src');
+    let body = document.body, html = document.documentElement;
+    let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    let el = document.createElement('div');
+    el.classList.add('product-img-overlay');
+    el.setAttribute('style','height:'+height+'px;');
+    document.body.appendChild(el);
+    el = document.createElement('div');
+    el.classList.add('img');
+    el.innerHTML = '<div><button type="button" class="product-img-close">×</button><div class="product-zoom-slick"></div></div>';
+    document.querySelector('div.product-img-overlay').appendChild(el);
+    el = document.createElement('div');
+    el.classList.add('cover');
+    document.querySelector('div.product-img-overlay').appendChild(el);
+    document.querySelector('button.product-img-close').addEventListener('click',function(){
+      document.querySelector('div.product-img-overlay').remove();
+    });
+    $('.product__slider-main').slick('unslick');
+    let carouselOverlay = document.querySelector('div.product__slider-main').cloneNode(true);
+    document.querySelector('div.product-zoom-slick').appendChild(carouselOverlay);
+    $('#product__slider .product__slider-main').slick(mainProductSliderSettings);
+    $('.product-img-overlay .product__slider-main').slick();
+  }
+});
+  
+if ($('.product__slider-main').length) {
+  var $slider = $('.product__slider-main').slick(mainProductSliderSettings);
+  var $slider2 = $('.product__slider-thmb').slick(tmbProductSliderSettings);
+
+  $('.product__slider-thmb .slick-slide').removeClass('slick-active');
+  $('.product__slider-thmb .slick-slide').eq(0).addClass('slick-active');
+
+  $('.product__slider-main').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    var mySlideNumber = nextSlide;
+    $('.product__slider-thmb .slick-slide').removeClass('slick-active');
+    $('.product__slider-thmb .slick-slide').eq(mySlideNumber).addClass('slick-active');
+  });
+}
+  
+$( document ).ready(function() {
+  $('.optionList span[data-item="1"]').addClass('active');
+  var First_price = $('.optionList span.active').attr('data-price');
+  $('.r_price').text(First_price);
+  var ComprePrice = $('.optionList span.active').attr('data-regulerprice');
+  $('.o_price').text(ComprePrice);
+
+  $(document).on("click",".optionList span",function() {
+     var First_price = $(this).attr('data-price');
+     $('.r_price').text(First_price);
+     var ComprePrice = $(this).attr('data-regulerprice');
+     $('.o_price').text(ComprePrice);
+     var GetVariantID = $(this).attr('data_variantid');
+     $('form input[type="hidden"][name="id"]').val(GetVariantID);
+  });
+
+  let activeOption, r_price, o_price;
+
+  $(document).on("change",".optionList select",function() {
+     var variant_id = this.value;
+     var data_price = this.selectedIndex;
+     var allOptions = this.options;
+     r_price = document.querySelector('.r_price');
+     o_price = document.querySelector('.o_price');
+      
+    for (let index = 0; index < allOptions.length; index++) {
+      const element = allOptions[index];
+  
+      if (index === this.selectedIndex) {
+        element.classList.add('active');
+        activeOption = document.querySelector('.form-control > option.active');
+        activeOptionDataPrice = activeOption.dataset.price;
+        regularPrice = activeOption.dataset.regulerprice;
+        r_price.textContent = activeOptionDataPrice; 
+        o_price.innerText = regularPrice;
+      } else {
+        element.classList.remove('active');
+      }
+    }
+    var GetVariantID = variant_id;
+    $('form input[type="hidden"][name="id"]').val(GetVariantID);
+  });
+});
+</script>
+
+{{ 'product-banner-sec-probiotic.css' | asset_url | stylesheet_tag }}
+
+<script>
+
+
+function waitFor(selector) {
+    return new Promise(function (res, rej) {
+        waitForElementToDisplay(selector, 200);
+        function waitForElementToDisplay(selector, time) {
+            if (document.querySelector(selector) != null) {
+                res(document.querySelector(selector));
+                swapLocation();
+            }
+            else {
+                setTimeout(function () {
+                    waitForElementToDisplay(selector, time);
+                }, time);
+            }
+        }
+    });
+}
+
+waitFor('.supplements-modal');
+
+function swapLocation () {
+  let supplements = document.querySelector('.supplements-modal');
+  let parContainer = document.querySelector('.chewables');
+  
+  if (supplements && parContainer && window.innerWidth < 768) {
+    parContainer.insertAdjacentElement('beforeend', supplements);
+  }
+}
+
+  
+</script>
+    
+{% schema %}
+{
+  "name": "Product Probiotic",
+  "tag": "section",
+  "class": "product-banner-main",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "limit": 1
+    },
+    {
+      "type": "Review",
+      "name": "Review",
+      "limit": 1
+    },
+    {
+      "type": "price",
+      "name": "price",
+      "limit": 1
+    },
+    {
+      "type": "short_discription",
+      "name": "short_discription",
+      "limit": 1
+    },
+    {
+      "type": "usp_bar",
+      "name": "USP Bar",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "label": "bar_text",
+          "id": "bar_text"
+        },
+        {
+          "type": "image_picker",
+          "label": "bar_image",
+          "id": "bar_image"
+        }
+      ]
+    },
+    {
+      "type": "metafield",
+      "name": "metafield Custom",
+      "limit": 1
+    },
+    {
+      "type": "variant_picker",
+      "name": "variant_picker",
+      "limit": 1
+    },
+         {
+      "type": "option_dropdown",
+      "name": "option_dropdown",
+      "limit": 1
+    },
+    {
+      "type": "atc_buttons",
+      "name": "atc_buttons",
+      "limit": 1
+    },
+    {
+      "type": "supplement_image_sec",
+      "name": "Supplement Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Supplement Image",
+          "id": "supplement_image"
+        }
+      ]
+    },
+    {
+      "type": "delivered_image_text",
+      "name": "Delivered Image text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "deliverd image",
+          "id": "deliverd_image"
+        },
+        {
+          "type": "text",
+          "label": "deliverd_text",
+          "id": "deliverd_text"
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "name": "accordion",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Probiotic"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

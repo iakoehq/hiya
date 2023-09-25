@@ -1,0 +1,75 @@
+<div class="container">
+  {% if section.settings.heading != blank %}
+  <h2 class="section-title">
+    {{ section.settings.heading }}
+  </h2>
+{% endif %}
+  <div class="description">
+    {% if section.settings.content != blank %}
+    <p>{{ section.settings.content }}</p>
+  {% endif %}
+  </div>
+
+  <hr>
+{% if section.settings.heading2 != blank %}
+  <h2 class="section-title">{{ section.settings.heading2 }}</h2>
+{% endif %}
+  <div class="description">
+    {% if section.settings.content2 != blank %}
+    <p>{{ section.settings.content2 }}</p>
+  {% endif %}
+  </div>
+
+  <div class="image-box">
+    {% if section.settings.main_image != blank %}
+    <img src="{{ section.settings.main_image | img_url : 'master' }}" alt="image">
+  {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "What Is Hiya",
+  "tag": "section",
+  "class": "what-is-hiya section",
+  "settings": [
+                  {
+                    "type": "text",
+                    "label": "Heading",
+                    "id": "heading"
+                  },
+                  {
+                    "type": "html",
+                    "label": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "type": "text",
+                    "label": "Heading 2",
+                    "id": "heading2"
+                  },
+                  {
+                    "type": "html",
+                    "label": "Content 2",
+                    "id": "content2"
+                  },
+                  {
+                    "type": "image_picker",
+                    "label": "Image",
+                    "id": "main_image"
+                  }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "What Is Hiya"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

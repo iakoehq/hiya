@@ -1,0 +1,163 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "7e81917f-579b-4d6b-95eb-a002103b1d4a": {
+      "type": "faq",
+      "blocks": {
+        "fc935d69-fd5e-4e87-bc0b-f4a2bf50f2a9": {
+          "type": "faq",
+          "settings": {
+            "questions": "If there’s no added sugar, how does your vitamin taste so sweet?",
+            "answer": "Instead of including added sugar, our vitamins are sweetened with monk fruit extract — a super-fruit that is sweeter and tastier than sugar for a taste kids love. Each vitamin also includes a touch of mannitol — a sweetener found in strawberries and pumpkins and often recommended by dentists."
+          }
+        },
+        "5e15f280-542f-4894-bdde-f5cf71e0bc27": {
+          "type": "faq",
+          "settings": {
+            "questions": "Wait — how much sugar is in a typical children’s vitamin?",
+            "answer": "Up to five grams of added sugar, which at five grams is as much sugar as in an Oreo cookie — typically given by parents to kids every day as a way to be “healthy.”"
+          }
+        },
+        "2733b9b0-38b6-4da8-b9f2-ebcbff360650": {
+          "type": "faq",
+          "settings": {
+            "questions": "Why is your vitamin a chewable, not a gummy? ",
+            "answer": "Gummy vitamins are often filled with pork-based additives and hard-to-pronounce ingredients, they can get stuck in your children’s teeth contributing to cavities, they can teach bad health habits by connecting health with candy, and they are often susceptible to heat and melting, which can result in fewer nutrients than expected. For parents concerned about keeping their kids strong and healthy, chewables is the preferred delivery method among many leading experts."
+          }
+        },
+        "a9233dd3-6fae-4abe-8272-f33f74a3fa91": {
+          "type": "faq",
+          "settings": {
+            "questions": "How bad is the sugar epidemic? ",
+            "answer": "According to the numbers, 98% of kids eat too much added sugar, which can lead to lifelong problems with childhood development, mental health, obesity, and more. We are only now beginning to understand the negative effects of daily sugar intake, which is why our vitamins will never contain added sugar."
+          }
+        },
+        "0f0b9f16-453b-49ed-917c-26eed281c2fb": {
+          "type": "faq",
+          "settings": {
+            "questions": "How healthy is your vitamin?",
+            "answer": "Our vitamin is made with 15 essential vitamins and minerals and includes a blend of 12 fruits and vegetables — and is sweetened with zero added sugar and zero gummy junk. It’s dynamically formulated by a team of pediatricians and nutritionists to fill in common gaps based on modern nutritional guidelines. It’s also gluten-free, vegan, GMO-free, nut-free, and pretty much everything good you can think of."
+          }
+        },
+        "70f921c6-d2fb-43d4-a173-4d1c3ad627d7": {
+          "type": "faq",
+          "settings": {
+            "questions": "Does my child really need a daily vitamin?",
+            "answer": "The short answer is probably yes. According to the numbers, more than 90% of children don’t reach their recommended levels of fruits and vegetables. Hiya helps fill in common nutritional gaps without being a sugar-coated gummy vitamin, which unfortunately has become the default way for kids to be healthy. As always, when making any decisions about vitamins, we suggest consulting with your pediatrician or dentist for a recommendation and further information about any risks associated with added sugar and gummy additives."
+          }
+        },
+        "e97aa15d-b946-44cf-83e9-53e7b3af948c": {
+          "type": "faq",
+          "settings": {
+            "questions": "What are your vitamins made with?",
+            "answer": "They’re made by taking 15 essential vitamins and minerals and a blend of 12 fruits and veggies, then combining them into one super-charged daily vitamin."
+          }
+        },
+        "4a663b69-c282-4a40-97be-cdbcd70460c2": {
+          "type": "faq",
+          "settings": {
+            "questions": "Wait — my child only needs to eat one vitamin per day? ",
+            "answer": "Yes. While most other vitamins include so much junk that your child is supposed to eat up to four per day, ours is super-charged with all the ingredients they need in just one. Which means less stress for those in charge. Please consult your pediatrician with questions about dosage."
+          }
+        },
+        "bf678ef5-291f-49a5-97f0-e25857a38c7c": {
+          "type": "faq",
+          "settings": {
+            "questions": "What happens if I have unused vitamins? ",
+            "answer": "When you get a new delivery of fresh vitamins, for optimal potency, we suggest you replace any remaining vitamins with your new ones. That way you can be sure your child is always putting the freshest nutrients in their growing bodies."
+          }
+        },
+        "6d771a6c-df13-4b2d-9fdd-f24485b48edb": {
+          "type": "faq",
+          "settings": {
+            "questions": "What ages should take your multivitamin?",
+            "answer": "Our vitamin is designed for boys and girls starting at age 2 through mid-teens. Since safety is a top priority, for kids 3 and under, we ask that parents use their best judgment to make sure their kids are supervised and can chew thoroughly. Please consult a pediatrician where appropriate."
+          }
+        },
+        "725607f9-52ba-4492-bf54-46bdc1aae299": {
+          "type": "faq",
+          "settings": {
+            "questions": "Is your multi-vitamin appropriate for both boys and girls?",
+            "answer": "Yes — experts suggest that boys and girls have similar nutritional needs throughout childhood and through their mid-teens. Please consult your pediatrician where appropriate."
+          }
+        },
+        "2b831a4e-6127-48e3-b21f-be860bad6f06": {
+          "type": "faq",
+          "settings": {
+            "questions": "When should I give my child their vitamin?",
+            "answer": "We suggest your child takes one vitamin per day with a meal — either breakfast or dinner — though you may take our vitamin with or without food."
+          }
+        },
+        "8d3f4cc1-eb0f-483a-a651-8daff4d22dc9": {
+          "type": "faq",
+          "settings": {
+            "questions": "Can your multivitamin and probiotic be taken together?",
+            "answer": "Definitely — our daily multivitamin and our daily probiotic are designed to co-exist with interconnected functions that support each other. So if you’re looking for maximum wellness, we typically suggest a child take both our multivitamin and probiotic."
+          }
+        },
+        "2c5b05da-682b-4f0b-9e57-ec791ee2891e": {
+          "type": "faq",
+          "settings": {
+            "questions": "Where are your vitamins manufactured?",
+            "answer": "Our vitamins are manufactured right here in the USA with best-in-class ingredients sourced globally and individually selected for optimal absorption. Our manufacturing facility is cGMP-compliant and certified for the highest standards to ensure quality, processing, handling, and labeling."
+          }
+        },
+        "7836be6c-6a0d-408a-82a0-ac9fd8db9d92": {
+          "type": "faq",
+          "settings": {
+            "questions": "Is Hiya free of the major allergens?",
+            "answer": "Yes — Hiya does not contain milk, soy, eggs, crustacean shellfish, fish, tree nuts (besides coconut oil powder), or wheat, and our facility is entirely peanut free. For additional allergens, we follow extremely rigorous cleaning routines designed to eliminate any risk of cross-contamination. These routines are part of our total commitment to good manufacturing practices (GMPs), all of which have been independently certified by leading quality organizations such as NSF."
+          }
+        },
+        "b06ed747-0e96-44d9-8214-1d89d6f5acf7": {
+          "type": "faq",
+          "settings": {
+            "questions": "How does your subscription work?",
+            "answer": "As parents ourselves, we know parents have enough to worry about let alone worrying about their daily vitamin order. That's why we created an easy-to-start, easy-to-cancel subscription for all orders. Your first month you receive a 30-day supply of fresh vitamins and a refillable glass bottle meant to be personalized with stickers. Each month thereafter you receive a recyclable refill pouch to fill up your bottle with fresh vitamins. The monthly experience is delivered automatically on a pediatrician-approved 30-day schedule to help teach your children healthy habits and care for the environment."
+          }
+        },
+        "caa2f2ca-d3c1-4804-899b-8c0402643644": {
+          "type": "faq",
+          "settings": {
+            "questions": "How do I adjust\/cancel my order?",
+            "answer": "All orders are easy-to-start, easy-to-cancel. If you want to adjust or cancel your order, please email us directly at support@hiyahealth.com, or you may update your account by clicking 'Manage Account' in your initial order email."
+          }
+        }
+      },
+      "block_order": [
+        "fc935d69-fd5e-4e87-bc0b-f4a2bf50f2a9",
+        "5e15f280-542f-4894-bdde-f5cf71e0bc27",
+        "2733b9b0-38b6-4da8-b9f2-ebcbff360650",
+        "a9233dd3-6fae-4abe-8272-f33f74a3fa91",
+        "0f0b9f16-453b-49ed-917c-26eed281c2fb",
+        "70f921c6-d2fb-43d4-a173-4d1c3ad627d7",
+        "e97aa15d-b946-44cf-83e9-53e7b3af948c",
+        "4a663b69-c282-4a40-97be-cdbcd70460c2",
+        "bf678ef5-291f-49a5-97f0-e25857a38c7c",
+        "6d771a6c-df13-4b2d-9fdd-f24485b48edb",
+        "725607f9-52ba-4492-bf54-46bdc1aae299",
+        "2b831a4e-6127-48e3-b21f-be860bad6f06",
+        "8d3f4cc1-eb0f-483a-a651-8daff4d22dc9",
+        "2c5b05da-682b-4f0b-9e57-ec791ee2891e",
+        "7836be6c-6a0d-408a-82a0-ac9fd8db9d92",
+        "b06ed747-0e96-44d9-8214-1d89d6f5acf7",
+        "caa2f2ca-d3c1-4804-899b-8c0402643644"
+      ],
+      "settings": {
+        "heading": "We Want You To Ask Questions!",
+        "content": "Seriously, our team of vitamin experts and scientists has answers."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7e81917f-579b-4d6b-95eb-a002103b1d4a"
+  ]
+}

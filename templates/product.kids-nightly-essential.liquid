@@ -1,0 +1,79 @@
+{% include 'product-content.zipifypages', contentprt: 'header' %}{{ 'product.css' | asset_url | stylesheet_tag }}
+
+{{ 'makes-hiya-different.css' | asset_url | stylesheet_tag }}
+
+{% section 'product-banner-sec-nightly' %}
+
+{% section 'why_nightly_sec' %}
+
+{% section 'bedtime-we-stack-sec' %}
+
+{% section 'bedtime-testimonial' %}
+
+{% section 'image_with_content_sec_nightly' %}
+
+{% section 'nightly-faq' %}
+
+<div class="reviews_stamped">
+  <div class="container-indent">
+    <div class="container container-fluid-custom-mobile-padding">
+  {% include 'okendo-reviews-widget' %}
+    </div>
+  </div>
+</div>
+<div class="yellow-btn pb20btn">
+  <a href="#shopify-section-product-banner-sec" class="ybtn">Get Hiya</a>
+</div>
+
+<style>
+  .product-banner-sec {
+    background-color: #E4F5F9 !important;
+    padding-bottom:100px !important;
+  }
+  .slick-track {
+    background-color: transparent !important;
+}
+  form#product-banner-buybox input#buy_now_new_button {
+    background-color: rgba(255, 230, 75);
+    color: #2376B4;
+}
+  button.accordion-header {
+    background-color: transparent;
+    font-weight: 700;
+}
+.makes_hiya_diff_section {
+    padding-bottom: 80px !important;
+    padding-top: 80px !important;
+}
+    .product-banner-sec .price_area>span:last-child {
+    background-color: #FFE6E1 !important;
+    color: #ED765F !important;
+    text-align: center;
+    font-family: Filson Pro;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+    padding-inline: 10px !important;
+}
+.optionList span.active {
+    background: #2376B4 !important;
+}  
+.optionList span {
+    background-color: #fff !important;
+}  
+#MainContent>section:nth-child(6)>section>div>div>div:nth-child(2) {
+    margin-bottom: 70px;
+}  
+  
+@media (max-width:767px){
+  .makes_hiya_diff_section {
+      padding-bottom: 50px !important;
+      padding-top: 50px !important;
+  }
+}
+</style>
+
+{{ 'unicode-converter.js' | asset_url | script_tag }}{% include 'product-content.zipifypages', contentprt: 'footer' %}

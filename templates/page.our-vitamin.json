@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "4b811c6d-de66-4d19-95e1-5a0d0f23780f": {
+      "type": "content-image-sec",
+      "settings": {
+        "heading": "Kids vitamins <span>re-imagined<\/span>",
+        "content": "We partnered with the best pediatricians, scientists, and nutrition experts to deliver a nutrient-dense chewable that tastes great without the junk found in other vitamins.",
+        "image": "shopify:\/\/shop_images\/download_10.webp",
+        "mo_image": "shopify:\/\/shop_images\/download_ec209040-bfd0-491d-a098-aaa0b4dcc086.webp"
+      }
+    },
+    "5ece310c-ea28-4aa5-8750-b158d1f17582": {
+      "type": "our-vitamin-sec",
+      "blocks": {
+        "8280d478-ae0c-4e98-9022-88014644e15c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hiya-Honest_100a2a88-fd5a-47d3-a02d-dc70c9f95386.svg"
+          }
+        },
+        "b95eaa13-3bfa-4f5e-94fc-611f5b935fd9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hiya-NoSUGAR_4879216d-cb60-4587-b261-bb5d034f3fe7.svg"
+          }
+        },
+        "eaeca44c-bbd5-4f6a-90b3-fc6f3c20ca86": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hiya-Experts_d75e532f-83e1-4b1e-a9d3-a6672c078951.svg"
+          }
+        }
+      },
+      "block_order": [
+        "8280d478-ae0c-4e98-9022-88014644e15c",
+        "b95eaa13-3bfa-4f5e-94fc-611f5b935fd9",
+        "eaeca44c-bbd5-4f6a-90b3-fc6f3c20ca86"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/download_12.webp",
+        "sub_heading": "Our Vitamin",
+        "heading": "What sets us apart",
+        "content": "Our vitamin is just one daily chewable made with 15 essential\nvitamins and minerals -- see the difference."
+      }
+    },
+    "253ab561-cb2a-4e0f-b5f5-ddaba2ba7232": {
+      "type": "good-bye-suger-sec",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/download_11.webp",
+        "heading": "Goodbye\n                       <span>sugar monsters<\/span>",
+        "content": "As a precaution, millions of parents give their kids vitamins. But look closely and you’ll see these vitamins are often filled with added sugar, unnecessary dyes, and gummy additives not ideal for growing bodies.",
+        "button_text": "",
+        "button_text_link": ""
+      }
+    },
+    "07eb649c-be6d-4a3b-b5fd-29cda7d9c490": {
+      "type": "get-started-sec",
+      "settings": {
+        "heading": "Get started with Hiya today",
+        "content": "Get full-body nourishment delivered to your door for $1\/day",
+        "main_image": "shopify:\/\/shop_images\/hiya-bottle-icon_80d0f415-9484-4c0b-a296-ad2e1dc3ebb5.svg",
+        "button_text": "Get Hiya",
+        "button_url": "\/products\/kids-daily-essential"
+      }
+    },
+    "dfa882ef-cf5a-4dba-ae9a-c49ca91e9771": {
+      "type": "join-the-hiya-life-sec",
+      "settings": {
+        "heading": "Join the Hiya Life",
+        "content": "<span>#hiyalife<\/span>\n<span>@hiyahealth<\/span>",
+        "main_image": "shopify:\/\/shop_images\/Hiya-Instagram_b371ad4f-860f-43a0-975c-20330225349e.svg"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4b811c6d-de66-4d19-95e1-5a0d0f23780f",
+    "5ece310c-ea28-4aa5-8750-b158d1f17582",
+    "253ab561-cb2a-4e0f-b5f5-ddaba2ba7232",
+    "07eb649c-be6d-4a3b-b5fd-29cda7d9c490",
+    "dfa882ef-cf5a-4dba-ae9a-c49ca91e9771"
+  ]
+}

@@ -1,0 +1,592 @@
+
+<div class="product-banner-sec">
+  <div class="container">
+    <div class="inner">
+      <div class="slider-wrapper">
+        <div id="product__slider">
+            <button class="product-image-zoom"><i></i></button>
+            <div class="product__slider-main">
+              {%- for media in product.media -%}
+              <div class="slide"><img src="{{ media | img_url: 'master' }}" alt="{{ media.alt }}" class="img-responsive"></div>
+              {% endfor %}
+             </div>
+            <div class="product__slider-thmb">
+              {%- for media in product.media -%}
+                <div class="slide"><img src="{{ media | img_url: 'master' }}" alt="{{ media.alt }}" class="img-responsive"></div>
+              {% endfor %}
+            </div>
+            <div class="product__slider-controls"></div>
+        </div>
+      </div>
+      <div class="prod-body">
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+          {% render block %}
+         {%- when 'title' -%}
+        <h2>{{ product.title | escape }}</h2>
+        {% when 'Review' %}
+        <div class="rating-star-count">
+         <div data-oke-reviews-product-listing-rating>{{ product.metafields.okendo.ProductListingSnippet }}</div>
+        </div>
+        {%- when 'price' -%}
+           <div class="price_area">
+             {% assign price = product.price | money_without_currency %}
+            {% assign splitPrice = price | split: '.' %}
+            {% if splitPrice.last == '0' %}{% assign price = price | remove: '.0'  %}{% endif %}
+            {% if splitPrice.last == '00' %}{% assign price = price | remove: '.00'  %}{% endif %}
+            {% if product.metafields.my_fields.discount != blank %}
+              {%- assign discount = 100 | minus: product.metafields.my_fields.discount | divided_by: 100.0 -%}
+              {% assign discPrice = price | times: discount %}
+              {% assign splitPrice = discPrice | split: '.' %}
+              {% if splitPrice.last == '0' %}
+                {% assign discPrice = discPrice | remove: '.0'  %}
+              {% elsif splitPrice.last.size < 2 %}
+                {% assign discPrice = discPrice | append: '0' %}
+              {% endif %}
+              <p><span class="r_price">${{ discPrice }}</span></p><p><span class="o_price">${{ price }}</span></p><span class="per_txt">per kid</span>{% if product.metafields.my_fields.discount != blank %}<span>{{product.metafields.my_fields.discount}}% Off First Order</span>{% endif %}
+            {% else %}
+              <p><span class="r_price">${{ price }}</span></p><span class="per_txt">per kid</span>
+            {% endif %}
+          </div>
+        {% if product.metafields.custom.short_product_description != blank %}
+          <div class="description">{{ product.metafields.custom.short_product_description }}</div>
+        {% endif %}
+         
+        {%- when 'short_discription' -%}
+         <div class="chewables">
+          <div class="usp_bar">
+             <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/upsell_check_icon_e0eef335-2a85-4b2d-ac4c-1658a9a7cee9.png?v=1674629252" alt="checkmark-icon">
+             <span>30-Day Supply</span>
+             <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/upsell_check_icon_e0eef335-2a85-4b2d-ac4c-1658a9a7cee9.png?v=1674629252" alt="checkmark-icon">
+             <span>Refillable Glass Bottle</span>
+             <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/upsell_check_icon_e0eef335-2a85-4b2d-ac4c-1658a9a7cee9.png?v=1674629252" alt="checkmark-icon">
+             <span>Sticker Pack to Decorate</span>
+           </div>
+          <hr>
+        </div>
+      
+        {%- when 'variant_picker' -%}
+        <p class="k_text">How many kids are you purchasing for?</p>
+        <div class="optionList hide">
+             {% for variant in product.variants %}
+               {% assign VariantTitle = variant.title | split: '/' | first  %}
+               {% assign OptionPrice =  VariantTitle | split: ' - ' | last %}
+               {% assign RegPrice = variant.title | split: ' (Reg: ' | last | replace: ')', '' %}
+                {% assign RegPrice1 = variant.title | split: '(Reg:' | last | replace: ')', ''| replace: ' ', '' %}
+               <span class="{% if forloop.first %}active{% endif %}" data-item="{{ forloop.index }}" data_variantID="{{ variant.id }}" data-price="{{ OptionPrice }}" data-regulerPrice="{{ RegPrice }}">{{ variant.title | split: ' - ' | first }}</span>
+              {% endfor %}
+        </div>
+        
+         {%- when 'bundle_selector' -%}
+      <section class="bundle-selector-wrap">
+          <!-- Markup for variant 1 -->
+               <div class="bundle-selector-v1" style="display: none;">
+                 <input class="hidden-js v1" data-var-id="39450680066129" type="text" style="display: none;" >
+            <label for="image-group" class="image-group multi-group">
+                <input class="multi-radio" type="radio" name="bundle" value="multi" checked="checked" onchange="handleChange(this);"/>
+                <img class="active-option" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/multi.png?v=1693691960" alt="Option 1" />
+                <div class="price-box">
+                    <h4 class="multi-title">
+                        Daily Multivitamin <br class="hide-desk" />
+                        Only
+                    </h4>
+                    <span class="first-price">$15</span><span class="per-kid">/kid</span><span class="strike multi-strike">$30</span>
+                </div>
+            </label>
+            <label for="image-group" class="image-group bundle-group">
+                <span class="better-together">Better Together</span>
+                <input class="bundle-radio" type="radio" name="bundle" value="bundle" onchange="handleChange(this);" />
+                <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/bundle.png?v=1693691973" alt="Option 2" />
+                <div class="price-box">
+                    <h4 class="bundle-title">
+                        Daily Multivitamin <br class="hide-desk" />
+                        + Probiotic
+                    </h4>
+                    <span class="first-bundle-price">$30</span><span class="per-kid-bundle">/kid</span><span class="strike bundle-strike">$60</span>
+                </div>
+            </label>
+        </div>
+        <!-- Markup for variant 2 -->
+        <div class="bundle-selector-v2" style="display: none;">
+           <input class="hidden-js-2" data-var-id="39450680066129" type="text" style="display: none;" >
+          <div class="select-bundle-box">
+            <h3 class="select-bundle">Select Your Bundle:</h3>
+          </div>
+            <label for="image-group" class="image-group-v2 multi-group smaller active-option-2">
+                <div class="price-box center-vertical">
+                    <h4 class="multi-title">
+                        Daily Multivitamin Only
+                    </h4>
+                <div class="price-container"><span class="first-price-v2">$15</span><span class="per-kid">/kid</span><span class="strike multi-strike-v2">$30</span></div>
+                </div>
+                <input class="multi-radio v2" type="radio" name="bundle" value="multi" onchange="handleChange2(this);" />
+            </label>
+            <label for="image-group" class="image-group-v2 bundle-group bigger">
+                <input class="bundle-radio v2" type="radio" name="bundle" value="bundle" onchange="handleChange2(this);" />
+                <div class="price-box padding-top">
+                    <h4 class="bundle-title">
+                        Daily Multivitamin + Probiotic
+                    </h4>
+                    <div class="price-container">
+                      <span class="first-bundle-price-v2">$30</span><span class="per-kid-bundle">/kid</span><span class="strike bundle-strike-v2">$60</span>
+                    </div>
+                </div>
+                <div class="flex-wrap">
+                    <img class="eightyseven" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/Group_25.png?v=1693847836" alt="Option 2" />
+                    <ul class="bundle-bullets">
+                        <li>Support immunity</li>
+                        <li>Support growth, & development.</li>
+                        <li>
+                            Support childhood gut health, <br />
+                            & nutrient absorption
+                        </li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+      </section>
+
+        
+{{ 'bundle-selector-v1.js' | asset_url | script_tag }} 
+{{ 'bundle-selector-v2.js' | asset_url | script_tag }}
+
+
+          
+      {%- when 'supplement_image_sec' -%}
+      {% if product.tags contains 'affiliate' %}{% else %}
+      <div role="button" class="supplements-modal hide-modal">
+        <p>Supplement Facts</p>
+        <div class="supplement-overlay">
+          <img src="{{ product.metafields.custom.supplement_facts_modal_image }} ">
+        </div>
+      </div>
+      {% endif %}
+
+      {%- when 'option_dropdown' -%}
+       {% if product.metafields.custom.supplement_facts_modal_image != blank %}
+          {% if product.tags contains 'affiliate' %}{% else %}
+          <div role="button" class="supplements-modal show-modal" style="display:none;">
+            <p>Supplement Facts</p>
+            <div class="supplement-overlay">
+              <!--img src="{{ block.settings.supplement_image  | img_url: 'master'  }} "-->
+              <img src="{{ product.metafields.custom.supplement_facts_modal_image }} ">
+            </div>
+          </div>
+          {% endif %}
+        {% endif %}
+      <div class="form-default">
+       <p class="k_text mobile-show">Kids:</p>
+        <div class="optionList mvpdp-hide form-group">
+          <select class="form-control">
+          {% for variant in product.variants %}
+            {% assign VariantTitle = variant.title | split: '/' | first  %}
+            {% assign OptionPrice2 =  VariantTitle | split: ' - ' | last %}
+            {% assign RegPrice2 = variant.title | split: ' (Reg: ' | last | replace: ')', '' %}
+          <option class="{% if forloop.first %}active{% endif %}" data-item="{{ forloop.index }}" data_variantID="{{ variant.id }}"
+            data-price="{{ OptionPrice2 }}" value="{{ variant.id }}" data-regulerPrice="{{ RegPrice2 }}">{{ variant.title }}
+          </option>
+          {% endfor %}
+          </select>
+        </div>
+      </div>
+
+
+          
+        {%- when 'atc_buttons' -%}
+         
+        <form method="post" action="/cart/add" id="product-banner-buybox">
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+           <input type="hidden" name="return_to" value="/checkout/" />
+          <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
+          <input type="submit" value="{% if product.id == 6817426505809 or product.id == 6821667864657 %}Buy Now{% else %}Try Now{% endif %}" class="btn btn btn-lg" id="buy_now_new_button" />
+        </form>
+        
+        {%- when 'delivered_image_text' -%}
+        {% if product.id != 6817426505809 and product.id != 6821667864657  %}
+         <div class="guarantee_text">
+          {{ block.settings.deliverd_text }} 
+        </div>
+        {% endif %}
+        <div class="tt-promo-brand">
+          <img src="{{ block.settings.deliverd_image | img_url: 'master' }}" alt="{{ block.settings.alt }}">
+        </div>
+         <div class="accordion-wrapper">
+         {% when 'Benefits' %}
+         {% if product.metafields.custom.benefits_accordion_tab != blank %}
+         <button class="accordion-header">Benefits</button>
+         <div class="accordion-panel active" style="">
+            {{ product.metafields.custom.benefits_accordion_tab }}
+         </div>
+         {% endif %}
+          {% when 'Ingredients' %}
+         {% if product.metafields.custom.ingredients_accordion_tab != blank %}
+         <button class="accordion-header">
+           {%- if product.template_suffix contains 'variant-swatches' -%}
+             Ingredients
+           {%- else -%}
+             Key Nutrients
+           {%- endif -%}
+          </button>
+         <div class="accordion-panel active">
+            {{ product.metafields.custom.ingredients_accordion_tab }}
+         </div>
+         {% endif %}
+          {% when 'Subscription_Details' %}
+         {% if product.metafields.custom.subscription_accordion_tab != blank %}
+         <button class="accordion-header">Subscription Details</button>
+         <div class="accordion-panel active">
+           {{ product.metafields.custom.subscription_accordion_tab }}
+         </div>
+          {% endif %}
+      </div>
+        {% endcase %}
+        {% endfor %}
+      </div>
+    </div>   
+  </div>
+</div>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 97.9" style="enable-background:new 0 0 1920 97.9;" xml:space="preserve">
+  <path id="Path_2" class="st59" d="M1920,17.3c0,0-256,80.6-960,80.6S0,17.3,0,17.3V0h1920L1920,17.3z"></path>
+</svg>
+
+<script>
+let mainProductSliderSettings = {
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  asNavFor: '.product__slider-thmb',
+  swipe: false,
+  swipeToSlide: false,
+  touchMove: false,
+  draggable: false,
+  responsive: [
+  {
+    breakpoint: 768,
+    settings: {
+      arrows: true,
+    },
+  }]
+};
+let tmbProductSliderSettings = {
+  arrows: false,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '.product__slider-main',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 4,
+        arrows: true,
+        appendArrows: $('.product__slider-controls')
+      }
+    }
+  ]
+};
+let imageZoomBtn = document.querySelector('button.product-image-zoom');
+imageZoomBtn.addEventListener('click',function(e){
+  if(!document.querySelector('div.product-img-overlay')){
+    let productImgSrc = imageZoomBtn.parentElement.querySelector('div.slick-active > img').getAttribute('src');
+    let body = document.body, html = document.documentElement;
+    let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    let el = document.createElement('div');
+    el.classList.add('product-img-overlay');
+    el.setAttribute('style','height:'+height+'px;');
+    document.body.appendChild(el);
+    el = document.createElement('div');
+    el.classList.add('img');
+    el.innerHTML = '<div><button type="button" class="product-img-close">×</button><div class="product-zoom-slick"></div></div>';
+    document.querySelector('div.product-img-overlay').appendChild(el);
+    el = document.createElement('div');
+    el.classList.add('cover');
+    document.querySelector('div.product-img-overlay').appendChild(el);
+    document.querySelector('button.product-img-close').addEventListener('click',function(){
+      document.querySelector('div.product-img-overlay').remove();
+    });
+    $('.product__slider-main').slick('unslick');
+    let carouselOverlay = document.querySelector('div.product__slider-main').cloneNode(true);
+    document.querySelector('div.product-zoom-slick').appendChild(carouselOverlay);
+    $('#product__slider .product__slider-main').slick(mainProductSliderSettings);
+    $('.product-img-overlay .product__slider-main').slick();
+  }
+});
+if ($('.product__slider-main').length) {
+  var $slider = $('.product__slider-main').slick(mainProductSliderSettings);
+  var $slider2 = $('.product__slider-thmb').slick(tmbProductSliderSettings);
+
+  $('.product__slider-thmb .slick-slide').removeClass('slick-active');
+  $('.product__slider-thmb .slick-slide').eq(0).addClass('slick-active');
+
+  $('.product__slider-main').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    var mySlideNumber = nextSlide;
+    $('.product__slider-thmb .slick-slide').removeClass('slick-active');
+    $('.product__slider-thmb .slick-slide').eq(mySlideNumber).addClass('slick-active');
+  });
+}
+
+$( document ).ready(function() {
+  $('.optionList span[data-item="1"]').addClass('active');
+  $('.optionList > select > option[data-item="1"]').addClass('active');
+  var First_price = $('.optionList span.active').attr('data-price');
+  $('.r_price').text(First_price);
+  var ComprePrice = $('.optionList span.active').attr('data-regulerprice');
+  $('.o_price').text(ComprePrice);
+
+  $(document).on("click",".optionList span",function() {console.log('click');
+     var First_price = $(this).attr('data-price');
+     $('.r_price').text(First_price);
+     var ComprePrice = $(this).attr('data-regulerprice');
+     $('.o_price').text(ComprePrice);
+     var GetVariantID = $(this).attr('data_variantid');
+     $('form input[type="hidden"][name="id"]').val(GetVariantID);
+    $('.price_area p:nth-child(2)').css('text-decoration','none !important');
+  });
+
+  let activeOption, r_price, o_price;
+
+  $(document).on("change",".optionList select",function() {
+    var variant_id = this.value;
+    var data_price = this.selectedIndex;
+    var allOptions = this.options;
+    r_price = document.querySelector('.r_price');
+    o_price = document.querySelector('.o_price');
+
+    for (let index = 0; index < allOptions.length; index++) {
+      const element = allOptions[index];
+  
+      if (index === this.selectedIndex) {
+        element.classList.add('active');
+        activeOption = document.querySelector('.form-control > option.active');
+        activeOptionDataPrice = activeOption.dataset.price;
+        regularPrice = activeOption.dataset.regulerprice;
+        r_price.textContent = activeOptionDataPrice; 
+        o_price.innerText = regularPrice;
+      } else {
+        element.classList.remove('active');
+      }
+    }
+    var GetVariantID = variant_id;
+    $('form input[type="hidden"][name="id"]').val(GetVariantID);
+    $('.price_area p:nth-child(2)').css('text-decoration','none !important');
+  });
+});
+</script>
+
+{% if product.id == 6817426505809 or product.id == 6821667864657  %}
+<style>
+div.prod-body form .btn.btn.btn-lg {
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: 100%;
+  --sf-z-index-program-widget-modal: 2147483000;
+  --rc-color: #040404;
+  --rc-icon-color: #191D48;
+  --rc-active-bg: #efefef;
+  --rc-active-color: #000000;
+  box-sizing: border-box;
+  margin: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  background: #ffe64b;
+  font-family: 'Filson Pro', sans-serif;
+  border: none;
+  line-height: 1.0;
+  letter-spacing: 0.03em;
+  position: relative;
+  outline: none;
+  padding: 6px 31px 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  margin-right: 0px;
+  font-weight: 600;
+  height: 55px;
+  border-radius: 15px;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 23px;
+}
+</style>
+{% endif %}
+{{ 'product-banner-sec.css' | asset_url | stylesheet_tag }}
+
+<!-- Temporary JS to move supplements modal on mobile until we have the time to do better 
+Gabe.T Acadia 6-26-2023 
+-->
+
+<script>
+
+function waitFor(selector) {
+    return new Promise(function (res, rej) {
+        waitForElementToDisplay(selector, 200);
+        function waitForElementToDisplay(selector, time) {
+            if (document.querySelector(selector) != null) {
+                res(document.querySelector(selector));
+                swapLocation();
+            }
+            else {
+                setTimeout(function () {
+                    waitForElementToDisplay(selector, time);
+                }, time);
+            }
+        }
+    });
+}
+
+waitFor('.supplements-modal');
+
+function swapLocation () {
+  let supplements = document.querySelector('.supplements-modal');
+  let parContainer = document.querySelector('.chewables');
+  
+  if (supplements && parContainer && window.innerWidth < 768) {
+    parContainer.insertAdjacentElement('beforeend', supplements);
+  }
+}
+
+  
+</script>
+
+{% schema %}
+{
+  "name": "Product Banner Sec",
+  "tag": "section",
+  "class": "product-banner-main",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "title",
+      "limit": 1
+    },
+    {
+      "type": "Review",
+      "name": "Review",
+      "limit": 1
+    },
+    {
+      "type": "price",
+      "name": "price",
+      "limit": 1
+    },
+    {
+      "type": "short_discription",
+      "name": "short_discription",
+      "limit": 1
+    },
+    {
+      "type": "usp_bar",
+      "name": "USP Bar",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "label": "bar_text",
+          "id": "bar_text"
+        },
+        {
+          "type": "image_picker",
+          "label": "bar_image",
+          "id": "bar_image"
+        }
+      ]
+    },
+    {
+      "type": "variant_picker",
+      "name": "variant_picker",
+      "limit": 1
+    },
+      {
+      "type": "bundle_selector",
+      "name": "Bundle Selector",
+      "limit": 1
+    },
+       {
+      "type": "option_dropdown",
+      "name": "option_dropdown",
+      "limit": 1
+    },
+    {
+      "type": "metafield",
+      "name": "metafield Custom",
+      "limit": 1
+    },
+    {
+      "type": "atc_buttons",
+      "name": "atc_buttons",
+      "limit": 1
+    },
+    {
+      "type": "supplement_image_sec",
+      "name": "Supplement Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Supplement Image",
+          "id": "supplement_image"
+        }
+      ]
+    },
+    {
+      "type": "delivered_image_text",
+      "name": "Delivered Image text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "deliverd image",
+          "id": "deliverd_image"
+        },
+        {
+          "type": "text",
+          "label": "deliverd_text",
+          "id": "deliverd_text"
+        }
+      ]
+    },
+    {
+      "type": "Benefits",
+      "name": "Benefits",
+      "limit": 1
+    },
+    {
+      "type": "Ingredients",
+      "name": "Ingredients",
+      "limit": 1
+    },
+    {
+      "type": "Subscription_Details",
+      "name": "Subscription Details",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Banner Sec"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

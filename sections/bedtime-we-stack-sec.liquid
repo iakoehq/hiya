@@ -1,0 +1,147 @@
+<div class="how-we-stack-sec">
+  <div class="container">
+    <h2>How do we stack up?</h2>
+    <p>Typical kids vitamins are sugar-coated gummies stored in plastic bottles. Hiya is different. See how we compare.</p>
+    <div class="table-main">
+      <table>
+        <thead>
+          <th></th>
+          <th><img src="{{ section.settings.hiya_logo | img_url: 'master' }}" /></th>
+          <th>{{ section.settings.row_title }}</th>
+        </thead>
+        <tbody>
+          {%- for block in section.blocks -%}
+            <tr>
+            <td>{{ block.settings.name }}</td>
+            <td><img src="{{ block.settings.hiya_chart_heart | img_url: 'master' }}" /></td>
+            <td><img src="{{ block.settings.mark_icon | img_url: 'master' }}" /></td>
+           </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{{ 'how-we-stack.css' | asset_url | stylesheet_tag }}
+
+<style>
+.bedtime-we-stack-main .how-we-stack-sec {
+    background-color: #2376B4;
+}
+
+.bedtime-we-stack-main h2 {
+    color: #FFF;
+}
+
+.bedtime-we-stack-main p {
+    color: var(--brand-milk, #FFF);
+    max-width: 544px;
+    letter-spacing: normal;
+    margin: 0 0 40px;
+}
+
+.bedtime-we-stack-main table tbody:nth-child(even) {
+    background: #E4F5F9;
+}
+
+.bedtime-we-stack-main .table-main tbody tr td {
+    color: #2376B4 !important;
+}
+
+.bedtime-we-stack-main .table-main tbody tr td:not(:first-child) {
+    width: 100px !important;
+}
+
+.bedtime-we-stack-main .table-main tbody tr td:not(:first-child) img {
+    max-width: 34px;
+}
+
+.bedtime-we-stack-main table thead th {
+    color: #FFF !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+}
+
+.how-we-stack-sec .table-main tbody tr td:first-child {
+    width: 71.018% !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    color: #2376B4 !important;
+}
+
+.bedtime-we-stack-main .table-main tbody tr td:nth-child(2) img {
+    max-width: 34px;
+}
+
+.bedtime-we-stack-main .table-main tbody tr td:nth-child(3) img {
+    max-width: 26px;
+}
+  @media(max-width:767px){
+.bedtime-we-stack-main h2 {
+    font-size: 26px;
+}
+    .how-we-stack-sec .table-main tbody tr td:first-child {
+      padding: 10px !important;      
+    }
+    #MainContent>section:nth-child(6)>section>div>div>div:nth-child(2) {
+      margin-bottom: 70px !important;
+  }
+  }
+  </style>
+
+{% schema %}
+{
+  "name": "Bedtime We Stack",
+  "tag": "section",
+"class": "how-we-stack-main bedtime-we-stack-main",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "hiya Logo",
+      "id": "hiya_logo"
+    },
+    {
+      "type": "text",
+      "label": "Row Title",
+      "id": "row_title",
+      "default": "MANY PROBIOTICS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "chart",
+      "name": "Chart",
+      "settings": [
+        {
+          "type": "text",
+          "label": "name",
+          "id": "name"
+        },
+        {
+          "type": "image_picker",
+          "label": "hiya chart heart",
+          "id": "hiya_chart_heart"
+        },
+        {
+          "type": "image_picker",
+          "label": "Mark Icon",
+          "id": "mark_icon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bedtime We Stack"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
